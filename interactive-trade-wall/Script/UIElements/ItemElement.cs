@@ -43,7 +43,12 @@ public class ItemElement : MonoBehaviour
 
     public void ViewDetails()
     {
-        BookController.instance.ShowDetails(m_ItemData,material_rawimage.texture);
-    }
+        // Call for the TV Screen.
+        ConnectionManager.Instance.MaterialClickedinBook();   
 
+        BookController.instance.ShowDetails(m_ItemData, material_rawimage.texture);
+    }
+    
+
+        
 }
