@@ -1,0 +1,1313 @@
+fileFormatVersion: 2
+guid: a76c0d2563ec54006af1d0cf440768c9
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -8000088341797690683
+    second: map base 2 Path line 1_0
+  - first:
+      213: -8116295941242316386
+    second: map base 2 Path line 1_1
+  - first:
+      213: -3073677984972625412
+    second: map base 2 Path line 1_2
+  - first:
+      213: 4556534078427216247
+    second: map base 2 Path line 1_3
+  - first:
+      213: -8214825338330928542
+    second: map base 2 Path line 1_4
+  - first:
+      213: -7558536405203031509
+    second: map base 2 Path line 1_5
+  - first:
+      213: 5997896080224052622
+    second: map base 2 Path line 1_6
+  - first:
+      213: 6504375053422062351
+    second: map base 2 Path line 1_7
+  - first:
+      213: 3755885112078509342
+    second: map base 2 Path line 1_8
+  - first:
+      213: -1833754972359004224
+    second: map base 2 Path line 1_9
+  - first:
+      213: 6292971555393040798
+    second: map base 2 Path line 1_10
+  - first:
+      213: 5777312328010366109
+    second: map base 2 Path line 1_11
+  - first:
+      213: 3194014290756732427
+    second: map base 2 Path line 1_12
+  - first:
+      213: 6097586832868052628
+    second: map base 2 Path line 1_13
+  - first:
+      213: 2991645774710411489
+    second: map base 2 Path line 1_14
+  - first:
+      213: 8090740176277090353
+    second: map base 2 Path line 1_15
+  - first:
+      213: 8300374870921843775
+    second: map base 2 Path line 1_16
+  - first:
+      213: -4999319881065855353
+    second: map base 2 Path line 1_17
+  - first:
+      213: -5739785494015071422
+    second: map base 2 Path line 1_18
+  - first:
+      213: -5779230832856441975
+    second: map base 2 Path line 1_19
+  - first:
+      213: -8228643150824415724
+    second: map base 2 Path line 1_20
+  - first:
+      213: 8756990962803028671
+    second: map base 2 Path line 1_21
+  - first:
+      213: -6735983845732003882
+    second: map base 2 Path line 1_22
+  - first:
+      213: 8652292179827499417
+    second: map base 2 Path line 1_23
+  - first:
+      213: -4227247373810017767
+    second: map base 2 Path line 1_24
+  - first:
+      213: -2029108334720832410
+    second: map base 2 Path line 1_25
+  - first:
+      213: -3303311194082792394
+    second: map base 2 Path line 1_26
+  - first:
+      213: -104324849612551839
+    second: map base 2 Path line 1_27
+  - first:
+      213: 2314046694213019407
+    second: map base 2 Path line 1_28
+  - first:
+      213: 2709974066652929312
+    second: map base 2 Path line 1_29
+  - first:
+      213: -5996894232987352239
+    second: map base 2 Path line 1_30
+  - first:
+      213: -7377734237670540231
+    second: map base 2 Path line 1_31
+  - first:
+      213: 5536511780525786022
+    second: map base 2 Path line 1_32
+  - first:
+      213: -3218654799826364284
+    second: map base 2 Path line 1_33
+  - first:
+      213: 3366575766627650718
+    second: map base 2 Path line 1_34
+  - first:
+      213: -3302441622792427054
+    second: map base 2 Path line 1_35
+  - first:
+      213: -4228692210701330110
+    second: map base 2 Path line 1_36
+  - first:
+      213: -1689438236654650717
+    second: map base 2 Path line 1_37
+  - first:
+      213: -4823590853052689625
+    second: map base 2 Path line 1_38
+  - first:
+      213: 8211288247238604319
+    second: map base 2 Path line 1_39
+  - first:
+      213: 2823063396783878419
+    second: map base 2 Path line 1_40
+  - first:
+      213: 3768007986666686812
+    second: map base 2 Path line 1_41
+  - first:
+      213: 2272657472563750630
+    second: map base 2 Path line 1_42
+  - first:
+      213: 204223064701437269
+    second: map base 2 Path line 1_43
+  - first:
+      213: -3816490171607971187
+    second: map base 2 Path line 1_44
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: map base 2 Path line 1_0
+      rect:
+        serializedVersion: 2
+        x: 473
+        y: 737
+        width: 10
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c2a7671a0af9f090800000000000000
+      internalID: -8000088341797690683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: map base 2 Path line 1_1
+      rect:
+        serializedVersion: 2
+        x: 484
+        y: 718
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e999e4ae7df1d5f80800000000000000
+      internalID: -8116295941242316386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: map base 2 Path line 1_2
+      rect:
+        serializedVersion: 2
+        x: 499
+        y: 699
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf9a4cf582a1855d0800000000000000
+      internalID: -3073677984972625412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: map base 2 Path line 1_3
+      rect:
+        serializedVersion: 2
+        x: 515
+        y: 681
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 779bd9f4a9f0c3f30800000000000000
+      internalID: 4556534078427216247
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: map base 2 Path line 1_4
+      rect:
+        serializedVersion: 2
+        x: 532
+        y: 656
+        width: 23
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 26a28e8f0e31ffd80800000000000000
+      internalID: -8214825338330928542
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: map base 2 Path line 1_5
+      rect:
+        serializedVersion: 2
+        x: 550
+        y: 649
+        width: 17
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b2ae302bf2faa1790800000000000000
+      internalID: -7558536405203031509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: map base 2 Path line 1_6
+      rect:
+        serializedVersion: 2
+        x: 571
+        y: 636
+        width: 18
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e85667de4becc3350800000000000000
+      internalID: 5997896080224052622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: map base 2 Path line 1_7
+      rect:
+        serializedVersion: 2
+        x: 593
+        y: 626
+        width: 19
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f0b622146ae244a50800000000000000
+      internalID: 6504375053422062351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: map base 2 Path line 1_8
+      rect:
+        serializedVersion: 2
+        x: 617
+        y: 618
+        width: 19
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e152e922c959f1430800000000000000
+      internalID: 3755885112078509342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: map base 2 Path line 1_9
+      rect:
+        serializedVersion: 2
+        x: 642
+        y: 613
+        width: 19
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0cf6f6b71913d86e0800000000000000
+      internalID: -1833754972359004224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: map base 2 Path line 1_10
+      rect:
+        serializedVersion: 2
+        x: 667
+        y: 610
+        width: 19
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e91f6dcb940255750800000000000000
+      internalID: 6292971555393040798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: map base 2 Path line 1_11
+      rect:
+        serializedVersion: 2
+        x: 692
+        y: 607
+        width: 19
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d9cfa8be3f22d2050800000000000000
+      internalID: 5777312328010366109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: map base 2 Path line 1_12
+      rect:
+        serializedVersion: 2
+        x: 717
+        y: 606
+        width: 19
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b068318231b635c20800000000000000
+      internalID: 3194014290756732427
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: map base 2 Path line 1_13
+      rect:
+        serializedVersion: 2
+        x: 742
+        y: 606
+        width: 20
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 49e03380beafe9450800000000000000
+      internalID: 6097586832868052628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: map base 2 Path line 1_14
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 606
+        width: 19
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e0996f4bf5748920800000000000000
+      internalID: 2991645774710411489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: map base 2 Path line 1_15
+      rect:
+        serializedVersion: 2
+        x: 792
+        y: 605
+        width: 19
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1303af0e255184070800000000000000
+      internalID: 8090740176277090353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: map base 2 Path line 1_16
+      rect:
+        serializedVersion: 2
+        x: 817
+        y: 602
+        width: 19
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f3410e3c7fad03370800000000000000
+      internalID: 8300374870921843775
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: map base 2 Path line 1_17
+      rect:
+        serializedVersion: 2
+        x: 841
+        y: 598
+        width: 19
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 78685824e09de9ab0800000000000000
+      internalID: -4999319881065855353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: map base 2 Path line 1_18
+      rect:
+        serializedVersion: 2
+        x: 865
+        y: 592
+        width: 19
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 24baa4ef08f2850b0800000000000000
+      internalID: -5739785494015071422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: map base 2 Path line 1_19
+      rect:
+        serializedVersion: 2
+        x: 889
+        y: 586
+        width: 19
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 98b5b9c5d2c0ccfa0800000000000000
+      internalID: -5779230832856441975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: map base 2 Path line 1_20
+      rect:
+        serializedVersion: 2
+        x: 913
+        y: 578
+        width: 18
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 41ed8abc6acfdcd80800000000000000
+      internalID: -8228643150824415724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: map base 2 Path line 1_21
+      rect:
+        serializedVersion: 2
+        x: 936
+        y: 569
+        width: 18
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb23e2752e4178970800000000000000
+      internalID: 8756990962803028671
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: map base 2 Path line 1_22
+      rect:
+        serializedVersion: 2
+        x: 958
+        y: 559
+        width: 19
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6dfcf5e816af482a0800000000000000
+      internalID: -6735983845732003882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: map base 2 Path line 1_23
+      rect:
+        serializedVersion: 2
+        x: 981
+        y: 533
+        width: 39
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 991228f45ed131870800000000000000
+      internalID: 8652292179827499417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: map base 2 Path line 1_24
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 525
+        width: 18
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 91ad95219ecc555c0800000000000000
+      internalID: -4227247373810017767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: map base 2 Path line 1_25
+      rect:
+        serializedVersion: 2
+        x: 1045
+        y: 511
+        width: 17
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 66c2e2268b827d3e0800000000000000
+      internalID: -2029108334720832410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: map base 2 Path line 1_26
+      rect:
+        serializedVersion: 2
+        x: 1066
+        y: 497
+        width: 16
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 63caf1e78f74822d0800000000000000
+      internalID: -3303311194082792394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: map base 2 Path line 1_27
+      rect:
+        serializedVersion: 2
+        x: 1085
+        y: 482
+        width: 17
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 169099d1a1d5d8ef0800000000000000
+      internalID: -104324849612551839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: map base 2 Path line 1_28
+      rect:
+        serializedVersion: 2
+        x: 1105
+        y: 467
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f07eb3245352d1020800000000000000
+      internalID: 2314046694213019407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: map base 2 Path line 1_29
+      rect:
+        serializedVersion: 2
+        x: 1123
+        y: 450
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 02d5e593e03cb9520800000000000000
+      internalID: 2709974066652929312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: map base 2 Path line 1_30
+      rect:
+        serializedVersion: 2
+        x: 1141
+        y: 433
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 153433fc770c6cca0800000000000000
+      internalID: -5996894232987352239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: map base 2 Path line 1_31
+      rect:
+        serializedVersion: 2
+        x: 1158
+        y: 415
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 93cf86cbcc50d9990800000000000000
+      internalID: -7377734237670540231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: map base 2 Path line 1_32
+      rect:
+        serializedVersion: 2
+        x: 1173
+        y: 395
+        width: 14
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a341057124a5dc40800000000000000
+      internalID: 5536511780525786022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: map base 2 Path line 1_33
+      rect:
+        serializedVersion: 2
+        x: 1187
+        y: 376
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4885eb1438a0553d0800000000000000
+      internalID: -3218654799826364284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: map base 2 Path line 1_34
+      rect:
+        serializedVersion: 2
+        x: 1201
+        y: 354
+        width: 20
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e9c8747a2da78be20800000000000000
+      internalID: 3366575766627650718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: map base 2 Path line 1_35
+      rect:
+        serializedVersion: 2
+        x: 1216
+        y: 341
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d92ef557de5b22d0800000000000000
+      internalID: -3302441622792427054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: map base 2 Path line 1_36
+      rect:
+        serializedVersion: 2
+        x: 1232
+        y: 324
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2499fa4c6daa055c0800000000000000
+      internalID: -4228692210701330110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: map base 2 Path line 1_37
+      rect:
+        serializedVersion: 2
+        x: 1249
+        y: 308
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3aabc32ffd8ed88e0800000000000000
+      internalID: -1689438236654650717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: map base 2 Path line 1_38
+      rect:
+        serializedVersion: 2
+        x: 1266
+        y: 292
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 72398f5fca92f0db0800000000000000
+      internalID: -4823590853052689625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: map base 2 Path line 1_39
+      rect:
+        serializedVersion: 2
+        x: 1283
+        y: 278
+        width: 16
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f163ff4d72b54f170800000000000000
+      internalID: 8211288247238604319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: map base 2 Path line 1_40
+      rect:
+        serializedVersion: 2
+        x: 1302
+        y: 263
+        width: 16
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 311f5bfb3398d2720800000000000000
+      internalID: 2823063396783878419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: map base 2 Path line 1_41
+      rect:
+        serializedVersion: 2
+        x: 1320
+        y: 250
+        width: 17
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c594a14dc47aa4430800000000000000
+      internalID: 3768007986666686812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: map base 2 Path line 1_42
+      rect:
+        serializedVersion: 2
+        x: 1339
+        y: 237
+        width: 17
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e6ac442ee91a8f10800000000000000
+      internalID: 2272657472563750630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: map base 2 Path line 1_43
+      rect:
+        serializedVersion: 2
+        x: 1359
+        y: 228
+        width: 12
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 555887a9bcb85d200800000000000000
+      internalID: 204223064701437269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: map base 2 Path line 1_44
+      rect:
+        serializedVersion: 2
+        x: 1371
+        y: 221
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8a8988d86a190bc0800000000000000
+      internalID: -3816490171607971187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      map base 2 Path line 1_0: -8000088341797690683
+      map base 2 Path line 1_1: -8116295941242316386
+      map base 2 Path line 1_10: 6292971555393040798
+      map base 2 Path line 1_11: 5777312328010366109
+      map base 2 Path line 1_12: 3194014290756732427
+      map base 2 Path line 1_13: 6097586832868052628
+      map base 2 Path line 1_14: 2991645774710411489
+      map base 2 Path line 1_15: 8090740176277090353
+      map base 2 Path line 1_16: 8300374870921843775
+      map base 2 Path line 1_17: -4999319881065855353
+      map base 2 Path line 1_18: -5739785494015071422
+      map base 2 Path line 1_19: -5779230832856441975
+      map base 2 Path line 1_2: -3073677984972625412
+      map base 2 Path line 1_20: -8228643150824415724
+      map base 2 Path line 1_21: 8756990962803028671
+      map base 2 Path line 1_22: -6735983845732003882
+      map base 2 Path line 1_23: 8652292179827499417
+      map base 2 Path line 1_24: -4227247373810017767
+      map base 2 Path line 1_25: -2029108334720832410
+      map base 2 Path line 1_26: -3303311194082792394
+      map base 2 Path line 1_27: -104324849612551839
+      map base 2 Path line 1_28: 2314046694213019407
+      map base 2 Path line 1_29: 2709974066652929312
+      map base 2 Path line 1_3: 4556534078427216247
+      map base 2 Path line 1_30: -5996894232987352239
+      map base 2 Path line 1_31: -7377734237670540231
+      map base 2 Path line 1_32: 5536511780525786022
+      map base 2 Path line 1_33: -3218654799826364284
+      map base 2 Path line 1_34: 3366575766627650718
+      map base 2 Path line 1_35: -3302441622792427054
+      map base 2 Path line 1_36: -4228692210701330110
+      map base 2 Path line 1_37: -1689438236654650717
+      map base 2 Path line 1_38: -4823590853052689625
+      map base 2 Path line 1_39: 8211288247238604319
+      map base 2 Path line 1_4: -8214825338330928542
+      map base 2 Path line 1_40: 2823063396783878419
+      map base 2 Path line 1_41: 3768007986666686812
+      map base 2 Path line 1_42: 2272657472563750630
+      map base 2 Path line 1_43: 204223064701437269
+      map base 2 Path line 1_44: -3816490171607971187
+      map base 2 Path line 1_5: -7558536405203031509
+      map base 2 Path line 1_6: 5997896080224052622
+      map base 2 Path line 1_7: 6504375053422062351
+      map base 2 Path line 1_8: 3755885112078509342
+      map base 2 Path line 1_9: -1833754972359004224
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

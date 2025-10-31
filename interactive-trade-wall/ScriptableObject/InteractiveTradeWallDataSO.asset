@@ -1,0 +1,1121 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 206a79b34a41af4429daa5471a446533, type: 3}
+  m_Name: InteractiveTradeWallDataSO
+  m_EditorClassIdentifier: 
+  textAsset: {fileID: 4900000, guid: cdc2be8b0b11b7e48b6c4aec500afa11, type: 3}
+  root:
+    bookmarks:
+    - title: Semi-Precious Stones & Beads
+      pageNumber: 5
+      items:
+      - title: Carnelian
+        thumbnailPath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
+        bookmarkMetadata:
+          images:
+          - imagePath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
+            title: Carnelian 1
+            subtitle: Popular in Indus Valley ornaments 1
+          - imagePath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
+            title: Carnelian 2
+            subtitle: Popular in Indus Valley ornaments 2
+          - imagePath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
+            title: Carnelian 3
+            subtitle: Popular in Indus Valley ornaments 3
+          title: Carnelian
+          description: A red-orange chalcedony widely traded in antiquity.
+          importRoutes: []
+          exportRoutes: []
+          distance: 4100km
+          meritimeRoute: Lothal to Kish
+          overlandRoute: Lothal to Susa
+          challenges: Sandstorms
+          thenDuration: Ancient trade
+          nowDuration: Still used
+          thenMiningProcess: Manual extraction
+          nowMiningProcess: Modern quarrying
+      - title: Agate
+        thumbnailPath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
+        bookmarkMetadata:
+          images:
+          - imagePath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
+            title: Agate 1
+            subtitle: Used for beads & seals 1
+          - imagePath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
+            title: Agate 2
+            subtitle: Used for beads & seals 2
+          - imagePath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
+            title: Agate 3
+            subtitle: Used for beads & seals 3
+          title: Agate
+          description: A multicolored banded chalcedony used since ancient Mesopotamia.
+          importRoutes: []
+          exportRoutes: []
+          distance: 4000km
+          meritimeRoute: Lothal to Kish
+          overlandRoute: Lothal to Susa
+          challenges: Sandstorms
+          thenDuration: Bronze Age
+          nowDuration: Jewelry industry
+          thenMiningProcess: Hand collection
+          nowMiningProcess: Industrial mining
+      - title: Jasper
+        thumbnailPath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
+        bookmarkMetadata:
+          images:
+          - imagePath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
+            title: Jasper 1
+            subtitle: Decorative stone 1
+          - imagePath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
+            title: Jasper 2
+            subtitle: Decorative stone 2
+          title: Jasper
+          description: Opaque quartz used in beads and seals.
+          importRoutes: []
+          exportRoutes: []
+          distance: 1900km
+          meritimeRoute: Lothal to Kish
+          overlandRoute: Lothal to Susa
+          challenges: Sandstorms
+          thenDuration: Ancient Egypt
+          nowDuration: Gemstone trade
+          thenMiningProcess: Surface collection
+          nowMiningProcess: Mined in quarries
+      - title: Lapis Lazuli
+        thumbnailPath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
+        bookmarkMetadata:
+          images:
+          - imagePath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
+            title: Lapis Lazuli 1
+            subtitle: Valued blue stone 1
+          - imagePath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
+            title: Lapis Lazuli 2
+            subtitle: Valued blue stone 2
+          - imagePath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
+            title: Lapis Lazuli 3
+            subtitle: Valued blue stone 3
+          title: Lapis Lazuli
+          description: Traded from Afghanistan to Egypt and Mesopotamia.
+          importRoutes: []
+          exportRoutes: []
+          distance: 700km
+          meritimeRoute: Lothal to Kish
+          overlandRoute: Lothal to Susa
+          challenges: Sandstorms
+          thenDuration: 5000 years ago
+          nowDuration: Still valued
+          thenMiningProcess: Ancient quarrying
+          nowMiningProcess: Modern quarrying
+      - title: Etched Carnelian Beads
+        thumbnailPath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
+        bookmarkMetadata:
+          images:
+          - imagePath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
+            title: Etched Carnelian 1
+            subtitle: Indus Valley craft 1
+          - imagePath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
+            title: Etched Carnelian 2
+            subtitle: Indus Valley craft 2
+          - imagePath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
+            title: Etched Carnelian 3
+            subtitle: Indus Valley craft 3
+          - imagePath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
+            title: Etched Carnelian 4
+            subtitle: Indus Valley craft 4
+          title: Etched Carnelian Beads
+          description: Specialty beads of the Indus Valley Civilization, often etched
+            with designs.
+          importRoutes: []
+          exportRoutes: []
+          distance: 2000km
+          meritimeRoute: Lothal to Kish
+          overlandRoute: Lothal to Susa
+          challenges: Sandstorms
+          thenDuration: c. 2500 BCE
+          nowDuration: Museum artifacts / replicas
+          thenMiningProcess: Bead cutting & etching
+          nowMiningProcess: Replicas produced for sale
+      - title: Amethyst
+        thumbnailPath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
+        bookmarkMetadata:
+          images:
+          - imagePath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
+            title: Amethyst 1
+            subtitle: Purple quartz 1
+          - imagePath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
+            title: Amethyst 2
+            subtitle: Purple quartz 2
+          title: Amethyst
+          description: Traded by Greeks and Romans as a gemstone and amulet material.
+          importRoutes: []
+          exportRoutes: []
+          distance: 1350km
+          meritimeRoute: Lothal to Kish
+          overlandRoute: Lothal to Susa
+          challenges: Sandstorms
+          thenDuration: Classical Age
+          nowDuration: Jewelry market
+          thenMiningProcess: Mining by hand
+          nowMiningProcess: Modern mining
+      - title: Chalcedony
+        thumbnailPath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
+        bookmarkMetadata:
+          images:
+          - imagePath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
+            title: Chalcedony 1
+            subtitle: Beads and seals 1
+          - imagePath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
+            title: Chalcedony 2
+            subtitle: Beads and seals 2
+          - imagePath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
+            title: Chalcedony 3
+            subtitle: Beads and seals 3
+          title: Chalcedony
+          description: Widely used for carving seals, beads and small ornaments.
+          importRoutes: []
+          exportRoutes: []
+          distance: 500km
+          meritimeRoute: Lothal to Kish
+          overlandRoute: Lothal to Susa
+          challenges: Sandstorms
+          thenDuration: Mesopotamian era
+          nowDuration: Carvings & beads
+          thenMiningProcess: Manual gathering
+          nowMiningProcess: Industrial mining
+      - title: Turquoise
+        thumbnailPath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
+        bookmarkMetadata:
+          images:
+          - imagePath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
+            title: Turquoise 1
+            subtitle: Traded from Persia 1
+          - imagePath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
+            title: Turquoise 2
+            subtitle: Traded from Persia 2
+          - imagePath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
+            title: Turquoise 3
+            subtitle: Traded from Persia 3
+          - imagePath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
+            title: Turquoise 4
+            subtitle: Traded from Persia 4
+          title: Turquoise
+          description: Ancient Egyptians, Persians and Native Americans prized turquoise
+            for jewelry.
+          importRoutes: []
+          exportRoutes: []
+          distance: 2850km
+          meritimeRoute: Lothal to Kish
+          overlandRoute: Lothal to Susa
+          challenges: Sandstorms
+          thenDuration: Bronze Age to Classical
+          nowDuration: Global gem trade
+          thenMiningProcess: Hand quarrying
+          nowMiningProcess: Large-scale mining
+      - title: Onyx
+        thumbnailPath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
+        bookmarkMetadata:
+          images:
+          - imagePath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
+            title: Onyx 1
+            subtitle: Decorative stone 1
+          - imagePath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
+            title: Onyx 2
+            subtitle: Decorative stone 2
+          - imagePath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
+            title: Onyx 3
+            subtitle: Decorative stone 3
+          - imagePath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
+            title: Onyx 4
+            subtitle: Decorative stone 4
+          title: Onyx
+          description: Used in ancient Rome for seals, intaglios and cameos.
+          importRoutes: []
+          exportRoutes: []
+          distance: 2800km
+          meritimeRoute: Lothal to Kish
+          overlandRoute: Lothal to Susa
+          challenges: Sandstorms
+          thenDuration: Roman era
+          nowDuration: Gem carvings
+          thenMiningProcess: Hand quarrying
+          nowMiningProcess: Modern quarrying
+      - title: Garnet
+        thumbnailPath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
+        bookmarkMetadata:
+          images:
+          - imagePath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
+            title: Garnet 1
+            subtitle: Blood-red gem 1
+          - imagePath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
+            title: Garnet 2
+            subtitle: Blood-red gem 2
+          - imagePath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
+            title: Garnet 3
+            subtitle: Blood-red gem 3
+          - imagePath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
+            title: Garnet 4
+            subtitle: Blood-red gem 4
+          title: Garnet
+          description: Traded as a gemstone since antiquity, used in jewelry and
+            beads.
+          importRoutes: []
+          exportRoutes: []
+          distance: 1750km
+          meritimeRoute: Lothal to Kish
+          overlandRoute: Lothal to Susa
+          challenges: Sandstorms
+          thenDuration: Ancient trade
+          nowDuration: Jewelry
+          thenMiningProcess: River panning and manual collection
+          nowMiningProcess: Industrial mining
+    - title: Shells & Ivory
+      pageNumber: 10
+      items:
+      - title: Cowrie Shell
+        thumbnailPath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
+        bookmarkMetadata:
+          images:
+          - imagePath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
+            title: Cowrie Shell 1
+            subtitle: Ancient currency 1
+          - imagePath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
+            title: Cowrie Shell 2
+            subtitle: Ancient currency 2
+          - imagePath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
+            title: Cowrie Shell 3
+            subtitle: Ancient currency 3
+          title: Cowrie Shell
+          description: Used as currency and ornament across Africa and Asia for centuries.
+          importRoutes: []
+          exportRoutes: []
+          distance: 2950km
+          meritimeRoute: Lothal to Kish
+          overlandRoute: Lothal to Susa
+          challenges: Sandstorms
+          thenDuration: Iron Age / Medieval
+          nowDuration: Decorative use
+          thenMiningProcess: Collected from sea
+          nowMiningProcess: Still collected
+      - title: Textile Cone (Conus textile)
+        thumbnailPath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
+        bookmarkMetadata:
+          images:
+          - imagePath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
+            title: Textile Cone 1
+            subtitle: Valued shell 1
+          - imagePath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
+            title: Textile Cone 2
+            subtitle: Valued shell 2
+          - imagePath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
+            title: Textile Cone 3
+            subtitle: Valued shell 3
+          - imagePath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
+            title: Textile Cone 4
+            subtitle: Valued shell 4
+          title: Textile Cone
+          description: A striking cone shell collected historically as an exotic
+            object.
+          importRoutes: []
+          exportRoutes: []
+          distance: 3900km
+          meritimeRoute: Lothal to Kish
+          overlandRoute: Lothal to Susa
+          challenges: Sandstorms
+          thenDuration: Pacific Island trade
+          nowDuration: Collectors
+          thenMiningProcess: Hand collection
+          nowMiningProcess: Limited trade
+      - title: Pearl Oyster
+        thumbnailPath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
+        bookmarkMetadata:
+          images:
+          - imagePath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
+            title: Pearl Oyster 1
+            subtitle: Source of pearls 1
+          - imagePath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
+            title: Pearl Oyster 2
+            subtitle: Source of pearls 2
+          - imagePath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
+            title: Pearl Oyster 3
+            subtitle: Source of pearls 3
+          title: Pearl Oyster
+          description: "Harvested for natural and cultured pearls\u2014highly valuable
+            historically."
+          importRoutes: []
+          exportRoutes: []
+          distance: 3850km
+          meritimeRoute: Lothal to Kish
+          overlandRoute: Lothal to Susa
+          challenges: Sandstorms
+          thenDuration: Ancient Gulf & Indian Ocean trade
+          nowDuration: Pearl industry
+          thenMiningProcess: Diving and collecting
+          nowMiningProcess: Pearl farming (cultured pearls)
+      - title: Hawksbill Turtle Shell
+        thumbnailPath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
+        bookmarkMetadata:
+          images:
+          - imagePath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
+            title: Hawksbill Turtle Shell 1
+            subtitle: Tortoiseshell material 1
+          - imagePath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
+            title: Hawksbill Turtle Shell 2
+            subtitle: Tortoiseshell material 2
+          - imagePath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
+            title: Hawksbill Turtle Shell 3
+            subtitle: Tortoiseshell material 3
+          title: Hawksbill Turtle Shell
+          description: Tortoiseshell used for luxury objects (now illegal/protected).
+          importRoutes: []
+          exportRoutes: []
+          distance: 1900km
+          meritimeRoute: Lothal to Kish
+          overlandRoute: Lothal to Susa
+          challenges: Sandstorms
+          thenDuration: Roman & Asian luxury trade
+          nowDuration: Illegal / protected
+          thenMiningProcess: Hunting turtles
+          nowMiningProcess: Trade banned / conservation
+      - title: Elephant Ivory
+        thumbnailPath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
+        bookmarkMetadata:
+          images:
+          - imagePath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
+            title: Elephant Ivory 1
+            subtitle: Luxury carving material 1
+          - imagePath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
+            title: Elephant Ivory 2
+            subtitle: Luxury carving material 2
+          - imagePath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
+            title: Elephant Ivory 3
+            subtitle: Luxury carving material 3
+          title: Elephant Ivory
+          description: Ivory tusks were carved into combs, inlays and luxury goods
+            across continents.
+          importRoutes: []
+          exportRoutes: []
+          distance: 4750km
+          meritimeRoute: Lothal to Kish
+          overlandRoute: Lothal to Susa
+          challenges: Sandstorms
+          thenDuration: Ancient to Early Modern
+          nowDuration: Strictly regulated / mostly banned
+          thenMiningProcess: Hunting elephants
+          nowMiningProcess: Trade heavily restricted
+      - title: Mother of Pearl
+        thumbnailPath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
+        bookmarkMetadata:
+          images:
+          - imagePath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
+            title: Mother of Pearl 1
+            subtitle: Nacre inlay 1
+          - imagePath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
+            title: Mother of Pearl 2
+            subtitle: Nacre inlay 2
+          title: Mother of Pearl
+          description: Nacre used in inlays, buttons and decorative arts from antiquity
+            to present.
+          importRoutes: []
+          exportRoutes: []
+          distance: 1550km
+          meritimeRoute: Lothal to Kish
+          overlandRoute: Lothal to Susa
+          challenges: Sandstorms
+          thenDuration: Ancient Mediterranean & Asian trade
+          nowDuration: Luxury crafts & buttons
+          thenMiningProcess: Harvested from oysters
+          nowMiningProcess: Farming & sustainable collection
+      - title: Giant Clam
+        thumbnailPath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
+        bookmarkMetadata:
+          images:
+          - imagePath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
+            title: Giant Clam 1
+            subtitle: Massive shell 1
+          - imagePath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
+            title: Giant Clam 2
+            subtitle: Massive shell 2
+          title: Giant Clam
+          description: Large shells prized as curios and for nacre; many species
+            now protected.
+          importRoutes: []
+          exportRoutes: []
+          distance: 3050km
+          meritimeRoute: Lothal to Kish
+          overlandRoute: Lothal to Susa
+          challenges: Sandstorms
+          thenDuration: Asian island trade
+          nowDuration: Conservation / restricted
+          thenMiningProcess: Diving & collecting
+          nowMiningProcess: Protected / illegal collection
+      - title: Dentalium
+        thumbnailPath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
+        bookmarkMetadata:
+          images:
+          - imagePath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
+            title: Dentalium 1
+            subtitle: Tusk shell currency 1
+          - imagePath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
+            title: Dentalium 2
+            subtitle: Tusk shell currency 2
+          - imagePath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
+            title: Dentalium 3
+            subtitle: Tusk shell currency 3
+          title: Dentalium
+          description: Used as currency, trade beads and ornament among Indigenous
+            peoples.
+          importRoutes: []
+          exportRoutes: []
+          distance: 2250km
+          meritimeRoute: Lothal to Kish
+          overlandRoute: Lothal to Susa
+          challenges: Sandstorms
+          thenDuration: Pre-Columbian & Indigenous trade
+          nowDuration: Cultural artifact
+          thenMiningProcess: Collected by hand/diving
+          nowMiningProcess: Rare / archaeological
+      - title: Helmet Shell
+        thumbnailPath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
+        bookmarkMetadata:
+          images:
+          - imagePath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
+            title: Helmet Shell 1
+            subtitle: Decorative shell 1
+          - imagePath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
+            title: Helmet Shell 2
+            subtitle: Decorative shell 2
+          - imagePath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
+            title: Helmet Shell 3
+            subtitle: Decorative shell 3
+          - imagePath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
+            title: Helmet Shell 4
+            subtitle: Decorative shell 4
+          title: Helmet Shell
+          description: Large decorative shell traded in Indian Ocean markets.
+          importRoutes: []
+          exportRoutes: []
+          distance: 3600km
+          meritimeRoute: Lothal to Kish
+          overlandRoute: Lothal to Susa
+          challenges: Sandstorms
+          thenDuration: Indian Ocean trade era
+          nowDuration: Collectors / decorative use
+          thenMiningProcess: Coastal collection
+          nowMiningProcess: Limited & regulated
+      - title: Spondylus Shell
+        thumbnailPath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
+        bookmarkMetadata:
+          images:
+          - imagePath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
+            title: Spondylus Shell 1
+            subtitle: Andean ritual shell 1
+          - imagePath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
+            title: Spondylus Shell 2
+            subtitle: Andean ritual shell 2
+          - imagePath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
+            title: Spondylus Shell 3
+            subtitle: Andean ritual shell 3
+          title: Spondylus Shell
+          description: Highly valued in Andean and pre-Columbian cultures for ritual
+            and trade.
+          importRoutes: []
+          exportRoutes: []
+          distance: 950km
+          meritimeRoute: Lothal to Kish
+          overlandRoute: Lothal to Susa
+          challenges: Sandstorms
+          thenDuration: Pre-Columbian era
+          nowDuration: Archaeological / collectors
+          thenMiningProcess: Diving and collection
+          nowMiningProcess: Archaeological recovery
+    - title: Textile & Agriculture
+      pageNumber: 15
+      items:
+      - title: Silk
+        thumbnailPath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
+        bookmarkMetadata:
+          images:
+          - imagePath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
+            title: Silk 1
+            subtitle: Silkworm cocoons 1
+          - imagePath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
+            title: Silk 2
+            subtitle: Silkworm cocoons 2
+          - imagePath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
+            title: Silk 3
+            subtitle: Silkworm cocoons 3
+          - imagePath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
+            title: Silk 4
+            subtitle: Silkworm cocoons 4
+          title: Silk
+          description: Produced in China and traded widely along the Silk Road as
+            a luxury textile.
+          importRoutes: []
+          exportRoutes: []
+          distance: 1200km
+          meritimeRoute: Lothal to Kish
+          overlandRoute: Lothal to Susa
+          challenges: Sandstorms
+          thenDuration: Silk Road era
+          nowDuration: Global textile industry
+          thenMiningProcess: Hand-reeling from cocoons
+          nowMiningProcess: Industrial sericulture & processing
+      - title: Cotton
+        thumbnailPath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
+        bookmarkMetadata:
+          images:
+          - imagePath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
+            title: Cotton 1
+            subtitle: Cotton plant 1
+          - imagePath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
+            title: Cotton 2
+            subtitle: Cotton plant 2
+          - imagePath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
+            title: Cotton 3
+            subtitle: Cotton plant 3
+          - imagePath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
+            title: Cotton 4
+            subtitle: Cotton plant 4
+          title: Cotton
+          description: Cultivated historically in South Asia and Egypt; a major traded
+            textile raw material.
+          importRoutes: []
+          exportRoutes: []
+          distance: 4850km
+          meritimeRoute: Lothal to Kish
+          overlandRoute: Lothal to Susa
+          challenges: Sandstorms
+          thenDuration: Indus Valley onward
+          nowDuration: Global commodity
+          thenMiningProcess: Hand picking
+          nowMiningProcess: Mechanical harvesting & processing
+      - title: Flax / Linen
+        thumbnailPath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
+        bookmarkMetadata:
+          images:
+          - imagePath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
+            title: Flax / Linen 1
+            subtitle: Flax fibres 1
+          - imagePath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
+            title: Flax / Linen 2
+            subtitle: Flax fibres 2
+          title: Flax / Linen
+          description: Fiber from flax used to make linen; important textile in ancient
+            Mediterranean cultures.
+          importRoutes: []
+          exportRoutes: []
+          distance: 1650km
+          meritimeRoute: Lothal to Kish
+          overlandRoute: Lothal to Susa
+          challenges: Sandstorms
+          thenDuration: Ancient Mediterranean
+          nowDuration: Specialty fabrics
+          thenMiningProcess: Retting & hand-processing
+          nowMiningProcess: Mechanized processing
+      - title: Wool
+        thumbnailPath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
+        bookmarkMetadata:
+          images:
+          - imagePath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
+            title: Wool 1
+            subtitle: Sheep fleece 1
+          - imagePath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
+            title: Wool 2
+            subtitle: Sheep fleece 2
+          - imagePath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
+            title: Wool 3
+            subtitle: Sheep fleece 3
+          - imagePath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
+            title: Wool 4
+            subtitle: Sheep fleece 4
+          - imagePath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
+            title: Wool 5
+            subtitle: Sheep fleece 5
+          title: Wool
+          description: A primary textile fibre from pastoral societies, traded inland
+            and across seas.
+          importRoutes: []
+          exportRoutes: []
+          distance: 4400km
+          meritimeRoute: Lothal to Kish
+          overlandRoute: Lothal to Susa
+          challenges: Sandstorms
+          thenDuration: Bronze Age / Iron Age
+          nowDuration: Global textile industry
+          thenMiningProcess: Shearing & hand-spinning
+          nowMiningProcess: Industrial shearing & processing
+      - title: Indigo
+        thumbnailPath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
+        bookmarkMetadata:
+          images:
+          - imagePath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
+            title: Indigo 1
+            subtitle: Dye cakes 1
+          - imagePath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
+            title: Indigo 2
+            subtitle: Dye cakes 2
+          - imagePath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
+            title: Indigo 3
+            subtitle: Dye cakes 3
+          - imagePath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
+            title: Indigo 4
+            subtitle: Dye cakes 4
+          title: Indigo
+          description: Natural indigo dye produced in South Asia and West Africa,
+            highly traded for textiles.
+          importRoutes: []
+          exportRoutes: []
+          distance: 4800km
+          meritimeRoute: Lothal to Kish
+          overlandRoute: Lothal to Susa
+          challenges: Sandstorms
+          thenDuration: Medieval & Early Modern
+          nowDuration: Dye industry / specialty
+          thenMiningProcess: Extraction from plants & processing
+          nowMiningProcess: Synthetic dyes & natural cultivation
+      - title: Black Pepper
+        thumbnailPath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
+        bookmarkMetadata:
+          images:
+          - imagePath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
+            title: Black Pepper 1
+            subtitle: Spice dried fruits 1
+          - imagePath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
+            title: Black Pepper 2
+            subtitle: Spice dried fruits 2
+          title: Black Pepper
+          description: Spice traded from South India across the Roman and later medieval
+            trade networks.
+          importRoutes: []
+          exportRoutes: []
+          distance: 4700km
+          meritimeRoute: Lothal to Kish
+          overlandRoute: Lothal to Susa
+          challenges: Sandstorms
+          thenDuration: Classical & Medieval trade
+          nowDuration: Global spice trade
+          thenMiningProcess: Hand harvesting & drying
+          nowMiningProcess: Cultivated plantations
+      - title: Cinnamon
+        thumbnailPath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
+        bookmarkMetadata:
+          images:
+          - imagePath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
+            title: Cinnamon 1
+            subtitle: Quills 1
+          - imagePath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
+            title: Cinnamon 2
+            subtitle: Quills 2
+          - imagePath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
+            title: Cinnamon 3
+            subtitle: Quills 3
+          - imagePath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
+            title: Cinnamon 4
+            subtitle: Quills 4
+          title: Cinnamon
+          description: Highly prized spice originating in South/Southeast Asia, traded
+            in luxury markets.
+          importRoutes: []
+          exportRoutes: []
+          distance: 1150km
+          meritimeRoute: Lothal to Kish
+          overlandRoute: Lothal to Susa
+          challenges: Sandstorms
+          thenDuration: Ancient luxury trade
+          nowDuration: Global spice supply
+          thenMiningProcess: Bark harvesting & drying
+          nowMiningProcess: Cultivated plantations
+      - title: Saffron
+        thumbnailPath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
+        bookmarkMetadata:
+          images:
+          - imagePath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
+            title: Saffron 1
+            subtitle: Stigmas (threads) 1
+          - imagePath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
+            title: Saffron 2
+            subtitle: Stigmas (threads) 2
+          - imagePath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
+            title: Saffron 3
+            subtitle: Stigmas (threads) 3
+          - imagePath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
+            title: Saffron 4
+            subtitle: Stigmas (threads) 4
+          title: Saffron
+          description: Expensive spice and dye produced in small quantities and traded
+            widely.
+          importRoutes: []
+          exportRoutes: []
+          distance: 50km
+          meritimeRoute: Lothal to Kish
+          overlandRoute: Lothal to Susa
+          challenges: Sandstorms
+          thenDuration: Ancient & Medieval
+          nowDuration: Premium spice market
+          thenMiningProcess: Hand-picking stigmas
+          nowMiningProcess: Labor-intensive cultivation
+      - title: Tea
+        thumbnailPath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
+        bookmarkMetadata:
+          images:
+          - imagePath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
+            title: Tea 1
+            subtitle: Processed leaves 1
+          - imagePath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
+            title: Tea 2
+            subtitle: Processed leaves 2
+          - imagePath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
+            title: Tea 3
+            subtitle: Processed leaves 3
+          - imagePath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
+            title: Tea 4
+            subtitle: Processed leaves 4
+          - imagePath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
+            title: Tea 5
+            subtitle: Processed leaves 5
+          title: Tea
+          description: Originating in East Asia, tea became a major traded commodity
+            by the 17th century.
+          importRoutes: []
+          exportRoutes: []
+          distance: 1450km
+          meritimeRoute: Lothal to Kish
+          overlandRoute: Lothal to Susa
+          challenges: Sandstorms
+          thenDuration: Early Modern trade
+          nowDuration: Global beverage commodity
+          thenMiningProcess: Hand plucking & processing
+          nowMiningProcess: Scale cultivation & industrial processing
+      - title: Rice
+        thumbnailPath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
+        bookmarkMetadata:
+          images:
+          - imagePath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
+            title: Rice 1
+            subtitle: Staple grain 1
+          - imagePath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
+            title: Rice 2
+            subtitle: Staple grain 2
+          - imagePath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
+            title: Rice 3
+            subtitle: Staple grain 3
+          - imagePath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
+            title: Rice 4
+            subtitle: Staple grain 4
+          - imagePath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
+            title: Rice 5
+            subtitle: Staple grain 5
+          title: Rice
+          description: Staple food crop cultivated and traded across riverine and
+            coastal networks.
+          importRoutes: []
+          exportRoutes: []
+          distance: 100km
+          meritimeRoute: Lothal to Kish
+          overlandRoute: Lothal to Susa
+          challenges: Sandstorms
+          thenDuration: Ancient agricultural trade
+          nowDuration: Major global commodity
+          thenMiningProcess: Manual harvesting & winnowing
+          nowMiningProcess: Mechanized harvesting & processing
+    - title: Timber & Exotic Animals
+      pageNumber: 20
+      items:
+      - title: Teak
+        thumbnailPath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
+        bookmarkMetadata:
+          images:
+          - imagePath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
+            title: Teak 1
+            subtitle: Tectona grandis 1
+          - imagePath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
+            title: Teak 2
+            subtitle: Tectona grandis 2
+          - imagePath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
+            title: Teak 3
+            subtitle: Tectona grandis 3
+          - imagePath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
+            title: Teak 4
+            subtitle: Tectona grandis 4
+          - imagePath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
+            title: Teak 5
+            subtitle: Tectona grandis 5
+          title: Teak
+          description: Durable hardwood from South & Southeast Asia prized for shipbuilding
+            and furniture.
+          importRoutes: []
+          exportRoutes: []
+          distance: 4300km
+          meritimeRoute: Lothal to Kish
+          overlandRoute: Lothal to Susa
+          challenges: Sandstorms
+          thenDuration: Maritime & colonial trade
+          nowDuration: Global timber trade
+          thenMiningProcess: Selective felling
+          nowMiningProcess: Commercial logging & regulation
+      - title: Sandalwood
+        thumbnailPath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
+        bookmarkMetadata:
+          images:
+          - imagePath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
+            title: Sandalwood 1
+            subtitle: Santalum album 1
+          - imagePath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
+            title: Sandalwood 2
+            subtitle: Santalum album 2
+          - imagePath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
+            title: Sandalwood 3
+            subtitle: Santalum album 3
+          title: Sandalwood
+          description: Fragrant wood used for incense, carvings and perfume; historically
+            valuable.
+          importRoutes: []
+          exportRoutes: []
+          distance: 1700km
+          meritimeRoute: Lothal to Kish
+          overlandRoute: Lothal to Susa
+          challenges: Sandstorms
+          thenDuration: Ancient & Medieval trade
+          nowDuration: Perfume & sacred uses
+          thenMiningProcess: Wild harvest
+          nowMiningProcess: Cultivation & strict controls
+      - title: Ebony
+        thumbnailPath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
+        bookmarkMetadata:
+          images:
+          - imagePath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
+            title: Ebony 1
+            subtitle: Dense black wood 1
+          - imagePath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
+            title: Ebony 2
+            subtitle: Dense black wood 2
+          title: Ebony
+          description: Very dense dark wood used for fine inlay, instrument parts
+            and luxury goods.
+          importRoutes: []
+          exportRoutes: []
+          distance: 3950km
+          meritimeRoute: Lothal to Kish
+          overlandRoute: Lothal to Susa
+          challenges: Sandstorms
+          thenDuration: Ancient trade routes
+          nowDuration: Luxury wood market
+          thenMiningProcess: Selective cutting
+          nowMiningProcess: Regulated logging
+      - title: Rosewood (Dalbergia)
+        thumbnailPath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
+        bookmarkMetadata:
+          images:
+          - imagePath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
+            title: Rosewood 1
+            subtitle: Dalbergia species 1
+          - imagePath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
+            title: Rosewood 2
+            subtitle: Dalbergia species 2
+          - imagePath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
+            title: Rosewood 3
+            subtitle: Dalbergia species 3
+          - imagePath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
+            title: Rosewood 4
+            subtitle: Dalbergia species 4
+          title: Rosewood
+          description: Highly prized for fine furniture and musical instruments;
+            many species are now protected.
+          importRoutes: []
+          exportRoutes: []
+          distance: 200km
+          meritimeRoute: Lothal to Kish
+          overlandRoute: Lothal to Susa
+          challenges: Sandstorms
+          thenDuration: Colonial & global trade
+          nowDuration: Regulated / restricted
+          thenMiningProcess: Logging
+          nowMiningProcess: CITES-regulated harvest
+      - title: Cedar of Lebanon
+        thumbnailPath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
+        bookmarkMetadata:
+          images:
+          - imagePath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
+            title: Cedar of Lebanon 1
+            subtitle: Cedrus libani 1
+          - imagePath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
+            title: Cedar of Lebanon 2
+            subtitle: Cedrus libani 2
+          - imagePath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
+            title: Cedar of Lebanon 3
+            subtitle: Cedrus libani 3
+          - imagePath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
+            title: Cedar of Lebanon 4
+            subtitle: Cedrus libani 4
+          - imagePath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
+            title: Cedar of Lebanon 5
+            subtitle: Cedrus libani 5
+          title: Cedar of Lebanon
+          description: Anciently prized timber used by Phoenicians, Egyptians and
+            others for shipbuilding and temples.
+          importRoutes: []
+          exportRoutes: []
+          distance: 3900km
+          meritimeRoute: Lothal to Kish
+          overlandRoute: Lothal to Susa
+          challenges: Sandstorms
+          thenDuration: Bronze Age / Iron Age
+          nowDuration: Heritage & limited use
+          thenMiningProcess: Royal logging
+          nowMiningProcess: Conservation & limited harvest
+      - title: Mahogany
+        thumbnailPath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
+        bookmarkMetadata:
+          images:
+          - imagePath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
+            title: Mahogany 1
+            subtitle: Swietenia species 1
+          - imagePath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
+            title: Mahogany 2
+            subtitle: Swietenia species 2
+          - imagePath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
+            title: Mahogany 3
+            subtitle: Swietenia species 3
+          - imagePath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
+            title: Mahogany 4
+            subtitle: Swietenia species 4
+          title: Mahogany
+          description: Tropical hardwood used for high-quality furniture and ship
+            fittings.
+          importRoutes: []
+          exportRoutes: []
+          distance: 4700km
+          meritimeRoute: Lothal to Kish
+          overlandRoute: Lothal to Susa
+          challenges: Sandstorms
+          thenDuration: Colonial export commodity
+          nowDuration: Regulated timber trade
+          thenMiningProcess: Tropical logging
+          nowMiningProcess: Sustainable forestry & regulation
+      - title: Peacock Feathers
+        thumbnailPath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
+        bookmarkMetadata:
+          images:
+          - imagePath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
+            title: Peacock Feather 1
+            subtitle: Feathers traded historically 1
+          - imagePath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
+            title: Peacock Feather 2
+            subtitle: Feathers traded historically 2
+          - imagePath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
+            title: Peacock Feather 3
+            subtitle: Feathers traded historically 3
+          - imagePath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
+            title: Peacock Feather 4
+            subtitle: Feathers traded historically 4
+          title: Peacock Feathers
+          description: Feathers used decoratively and ritually; traded regionally
+            in Asia.
+          importRoutes: []
+          exportRoutes: []
+          distance: 4600km
+          meritimeRoute: Lothal to Kish
+          overlandRoute: Lothal to Susa
+          challenges: Sandstorms
+          thenDuration: Regional trade
+          nowDuration: Decorative & cultural use
+          thenMiningProcess: Collected naturally
+          nowMiningProcess: Collected ethically / captive birds
+      - title: Arabian Horse
+        thumbnailPath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
+        bookmarkMetadata:
+          images:
+          - imagePath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
+            title: Arabian Horse 1
+            subtitle: Historic horse breed 1
+          - imagePath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
+            title: Arabian Horse 2
+            subtitle: Historic horse breed 2
+          - imagePath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
+            title: Arabian Horse 3
+            subtitle: Historic horse breed 3
+          title: Arabian Horse
+          description: Elegant and valuable horses historically traded across the
+            Middle East and beyond.
+          importRoutes: []
+          exportRoutes: []
+          distance: 2900km
+          meritimeRoute: Lothal to Kish
+          overlandRoute: Lothal to Susa
+          challenges: Sandstorms
+          thenDuration: Ancient & medieval equine trade
+          nowDuration: Equestrian & breeding
+          thenMiningProcess: Breeding & caravan transport
+          nowMiningProcess: Registered breeding programs
+      - title: Leopard Skin
+        thumbnailPath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
+        bookmarkMetadata:
+          images:
+          - imagePath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
+            title: Leopard Skin 1
+            subtitle: Historic trophy/garment 1
+          - imagePath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
+            title: Leopard Skin 2
+            subtitle: Historic trophy/garment 2
+          - imagePath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
+            title: Leopard Skin 3
+            subtitle: Historic trophy/garment 3
+          - imagePath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
+            title: Leopard Skin 4
+            subtitle: Historic trophy/garment 4
+          - imagePath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
+            title: Leopard Skin 5
+            subtitle: Historic trophy/garment 5
+          title: Leopard Skin
+          description: Furs and skins were historically luxury items; many species
+            are now protected.
+          importRoutes: []
+          exportRoutes: []
+          distance: 850km
+          meritimeRoute: Lothal to Kish
+          overlandRoute: Lothal to Susa
+          challenges: Sandstorms
+          thenDuration: Ancient to recent historic trade
+          nowDuration: Illegal / protected
+          thenMiningProcess: Hunting & skinning
+          nowMiningProcess: Illegal trade / conservation
+      - title: Scarlet Macaw
+        thumbnailPath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
+        bookmarkMetadata:
+          images:
+          - imagePath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
+            title: Scarlet Macaw 1
+            subtitle: Colorful parrot species 1
+          - imagePath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
+            title: Scarlet Macaw 2
+            subtitle: Colorful parrot species 2
+          - imagePath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
+            title: Scarlet Macaw 3
+            subtitle: Colorful parrot species 3
+          - imagePath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
+            title: Scarlet Macaw 4
+            subtitle: Colorful parrot species 4
+          title: Scarlet Macaw
+          description: Exotic birds traded historically as prestige pets and ornaments;
+            many species now protected.
+          importRoutes: []
+          exportRoutes: []
+          distance: 1500km
+          meritimeRoute: Lothal to Kish
+          overlandRoute: Lothal to Susa
+          challenges: Sandstorms
+          thenDuration: Indigenous & colonial trade
+          nowDuration: Conservation & regulated trade
+          thenMiningProcess: Capture for trade
+          nowMiningProcess: Breeding programs & protection
+    materialPageBottomLine: Select material to uncover trade routes
+    detailPageBottomLine: Now Showing Trade Routes
