@@ -160,7 +160,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      buttton frame_0: -7508597940137930798
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

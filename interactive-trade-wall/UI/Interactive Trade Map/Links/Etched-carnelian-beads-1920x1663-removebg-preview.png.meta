@@ -260,7 +260,12 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Etched-carnelian-beads-1920x1663-removebg-preview_0: 9011542377469440028
+      Etched-carnelian-beads-1920x1663-removebg-preview_1: -1703252487752820967
+      Etched-carnelian-beads-1920x1663-removebg-preview_2: -5228484701204780832
+      Etched-carnelian-beads-1920x1663-removebg-preview_3: -6581745432131974500
+      Etched-carnelian-beads-1920x1663-removebg-preview_4: 6257852430758751960
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

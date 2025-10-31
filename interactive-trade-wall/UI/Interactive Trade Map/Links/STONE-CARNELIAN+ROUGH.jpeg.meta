@@ -160,7 +160,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      STONE-CARNELIAN+ROUGH_0: -2337896843432881213
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
