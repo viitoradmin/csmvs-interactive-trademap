@@ -69,12 +69,16 @@ public class BookController : MonoBehaviour
     public TMP_Text miningProcess_Then_Text;
     public TMP_Text miningProcess_Now_Text;
 
+    public int currentSelectedBookMarkId=-1;
+    public int currentSelectedItemId=-1;
+
     [Header("UI Effects Related Data")]
     public UIEffectsController uIEffectsController;
 
     [Header("Sample Bookmark Data")]
     //public Data dataSO;
     public InteractiveTradeWallDataSO dataSO;
+    
 
     private void Awake()
     {
@@ -159,6 +163,7 @@ public class BookController : MonoBehaviour
 
             Toggle _toggle = toggleObj.GetComponent<Toggle>();
             BookmarkElement _bookmarkElement = toggleObj.GetComponent<BookmarkElement>();
+            _bookmarkElement._id = i;
             int _index = i;
             if (_bookmarkElement != null)
             {
@@ -199,8 +204,12 @@ public class BookController : MonoBehaviour
         StartCoroutine(GotoPage(swipeController.returnPageNumber, () =>
         {
             OpenMatrialPanel();
+            
             bookmarkItemsPagination.ShowBookmarkItems(_lastClickedBookMark);
         }));
+
+        // TODO : Code in connection manager for moving back.
+        ConnectionManager.Instance.RaiseEventForBackButtonClick();
     }
 
     public void OpenMatrialPanel()

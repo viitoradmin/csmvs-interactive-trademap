@@ -26,6 +26,7 @@ public class ToggleModifier : MonoBehaviour {
     public UnityEvent<bool> _onToggleValueChange;
     public UnityEvent _onToggleValueTrue;
 
+    public int _id; //1 = Import ; 2 = Export
     private void Awake() {
         _toggle = GetComponent<Toggle>();
         _toggle.onValueChanged.AddListener(OnToggleValueChange);
@@ -36,6 +37,7 @@ public class ToggleModifier : MonoBehaviour {
         if (value) {
             Debug.Log("Toggle true " + gameObject.name);
             _onToggleValueTrue.Invoke();
+            
         }
     }
 
@@ -48,6 +50,7 @@ public class ToggleModifier : MonoBehaviour {
             _text.font = value ? _activeTextFonts : _inactiveTextFonts;
         }
         toogleGraphicImage.sprite = value ? _activeToggleImage : _inactiveToggleSprite;
+        ConnectionManager.Instance.RaiseEventForRouteClick(_id, value?true:false);
     }
 
     public void SetupTextureToggle(Texture displayImage, UnityAction onClickButtonAction) {
