@@ -16,7 +16,7 @@ MonoBehaviour:
   root:
     bookmarks:
     - title: Semi-Precious Stones & Beads
-      pageNumber: 5
+      pageNumber: 1
       items:
       - title: Carnelian
         thumbnailPath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
@@ -278,7 +278,7 @@ MonoBehaviour:
           thenMiningProcess: River panning and manual collection
           nowMiningProcess: Industrial mining
     - title: Shells & Ivory
-      pageNumber: 10
+      pageNumber: 2
       items:
       - title: Cowrie Shell
         thumbnailPath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
@@ -538,7 +538,7 @@ MonoBehaviour:
           thenMiningProcess: Diving and collection
           nowMiningProcess: Archaeological recovery
     - title: Textile & Agriculture
-      pageNumber: 15
+      pageNumber: 3
       items:
       - title: Silk
         thumbnailPath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
@@ -828,7 +828,7 @@ MonoBehaviour:
           thenMiningProcess: Manual harvesting & winnowing
           nowMiningProcess: Mechanized harvesting & processing
     - title: Timber & Exotic Animals
-      pageNumber: 20
+      pageNumber: 4
       items:
       - title: Teak
         thumbnailPath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png

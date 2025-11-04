@@ -20,7 +20,7 @@ public class BookController : MonoBehaviour
 
     public int initialPageIndex = -1;
     public int materialStartPageIndex = 11;
-    public int detailsStartPageIndex = 31;
+    public int detailsStartPageIndex = 5;
 
     [SerializeField] private float cutoff_delta = 0.1f;
 
