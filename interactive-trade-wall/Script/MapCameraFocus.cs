@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using System;
 
 /// <summary>
 /// Smoothly pans & zooms an orthographic camera to frame a target region on a 2D map.
@@ -64,7 +65,7 @@ public class MapCameraFocus : MonoBehaviour
 
     // ---------------- internal ----------------
 
-    void StartFocus(Vector2 targetCenter, Vector2 targetSize)
+    void StartFocus(Vector2 targetCenter, Vector2 targetSize, Action onComplete = null)
     {
         if (anim != null) StopCoroutine(anim);
 
@@ -89,13 +90,13 @@ public class MapCameraFocus : MonoBehaviour
             targetCenter = new Vector2(cx, cy);
         }
 
-        anim = StartCoroutine(AnimateTo(targetCenter, targetOrtho));
+        anim = StartCoroutine(AnimateTo(targetCenter, targetOrtho,onComplete));
     }
 
-    IEnumerator AnimateTo(Vector2 targetPos, float targetOrtho)
+    IEnumerator AnimateTo(Vector2 targetPos, float targetOrtho, Action OnComplete) 
     {
         Vector3 startPos = transform.position;
-        float   startOr  = cam.orthographicSize;
+        float startOr = cam.orthographicSize;
 
         // Keep camera’s Z
         Vector3 endPos = new Vector3(targetPos.x, targetPos.y, startPos.z);
@@ -106,14 +107,21 @@ public class MapCameraFocus : MonoBehaviour
             t += Time.deltaTime / Mathf.Max(0.0001f, duration);
             float k = ease.Evaluate(Mathf.Clamp01(t));
 
-            transform.position     = Vector3.Lerp(startPos, endPos, k);
-            cam.orthographicSize   = Mathf.Lerp(startOr, targetOrtho, k);
+            transform.position = Vector3.Lerp(startPos, endPos, k);
+            cam.orthographicSize = Mathf.Lerp(startOr, targetOrtho, k);
 
             yield return null;
         }
 
-        transform.position   = endPos;
+        transform.position = endPos;
         cam.orthographicSize = targetOrtho;
         anim = null;
+
+        OnComplete?.Invoke();
+    }
+
+    public void MovetoActual(Vector2 pos,float orthoSize, Action onComplete = null)
+    {
+        StartCoroutine(AnimateTo(pos, orthoSize, onComplete));
     }
 }

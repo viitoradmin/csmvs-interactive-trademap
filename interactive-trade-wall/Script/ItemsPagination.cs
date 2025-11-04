@@ -114,6 +114,7 @@ public class ItemsPagination : MonoBehaviour
             GameObject mineral = Instantiate(itemPrefab, parent);
             mineral.name = currentSelectedBookmark.items[_index].title;
             ItemElement _item = mineral.GetComponent<ItemElement>();
+            _item._id = i;
             if (lastSelectedItemIndex == _index)
             {
                 _item.SetupData(currentSelectedBookmark.items[_index],true);

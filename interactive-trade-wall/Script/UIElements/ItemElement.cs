@@ -5,7 +5,7 @@ using static InteractiveTradeWallDataSO;
 
 public class ItemElement : MonoBehaviour
 {
-
+    public int _id;
     [SerializeField] private BookmarkItem m_ItemData;
     [SerializeField] private TMP_Text title_text;
     [SerializeField] private RawImage material_rawimage;
@@ -44,7 +44,10 @@ public class ItemElement : MonoBehaviour
     public void ViewDetails()
     {
         // Call for the TV Screen.
-        ConnectionManager.Instance.MaterialClickedinBook();   
+        Debug.Log("<color=green>Current Selected bookmark id is: </color>" + BookController.instance.currentSelectedBookMarkId);
+        BookController.instance.currentSelectedItemId = _id;
+        Debug.Log("<color=yellow>Current selected material id:</color>" + BookController.instance.currentSelectedItemId);
+        ConnectionManager.Instance.MaterialClickedinBook(BookController.instance.currentSelectedBookMarkId,BookController.instance.currentSelectedItemId);   
 
         BookController.instance.ShowDetails(m_ItemData, material_rawimage.texture);
     }

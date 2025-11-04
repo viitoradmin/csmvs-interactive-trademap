@@ -7,6 +7,7 @@ using static InteractiveTradeWallDataSO;
 public class BookmarkElement : MonoBehaviour
 {
     private BookController controller;
+    public int _id;
     MegaBookBuilder book;
     [SerializeField] private Bookmark bookmark;
     [SerializeField] private Toggle bookmarkToggle;
@@ -32,13 +33,13 @@ public class BookmarkElement : MonoBehaviour
         if (_ison)
         {
             controller._lastClickedBookMark = bookmark;
+            controller.currentSelectedBookMarkId = _id;
             StartCoroutine(BookMarkClickCoroutine());
         }
     }
 
     private IEnumerator BookMarkClickCoroutine()
     {
-       
         Debug.Log($"Opening Material List");
         yield return StartCoroutine(controller.GotoPage(bookmark.pageNumber, () =>
         {
