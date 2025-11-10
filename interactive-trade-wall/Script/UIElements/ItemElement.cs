@@ -82,8 +82,9 @@ public class ItemElement : MonoBehaviour
         Debug.Log("<color=green>Current Selected bookmark id is: </color>" + BookController.instance.currentSelectedBookMarkId);
         BookController.instance.currentSelectedItemId = _id;
         Debug.Log("<color=yellow>Current selected material id:</color>" + BookController.instance.currentSelectedItemId);
-        ConnectionManager.Instance.MaterialClickedinBook(BookController.instance.currentSelectedBookMarkId,BookController.instance.currentSelectedItemId);   
-
+        //ConnectionManager.Instance.MaterialClickedinBook(BookController.instance.currentSelectedBookMarkId,BookController.instance.currentSelectedItemId);
+        //ToDo: Pass the clicked material item id from here to TV Screen.   
+        TVScreenManager.Instance.ShowDetailedScreen();
         BookController.instance.ShowDetails(m_ItemData, material_rawimage.texture);
     }
     

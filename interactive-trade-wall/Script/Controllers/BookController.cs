@@ -242,7 +242,8 @@ public class BookController : MonoBehaviour
         }));
 
         // TODO : Code in connection manager for moving back.
-        ConnectionManager.Instance.RaiseEventForBackButtonClick();
+        //ConnectionManager.Instance.RaiseEventForBackButtonClick();
+        TVScreenManager.Instance.ShowMainScreen();
     }
 
     public void OpenMatrialPanel()
@@ -278,7 +279,8 @@ public class BookController : MonoBehaviour
 
     public void SetDetailPageUI(BookmarkItem itemData)
     {
-        backButtonPath.text = bookmarkItemsPagination.currentSelectedBookmark.title + " > " + itemData.title;
+        //backButtonPath.text = bookmarkItemsPagination.currentSelectedBookmark.title + " > " + itemData.title;
+        backButtonPath.text =  itemData.title;
         materialTitleText.text = itemData.bookmarkMetadata.title;
         materialDetailsText.text = language == Language.English ? itemData.bookmarkMetadata.description : marathiParser.GetMarathiText(itemData.bookmarkMetadata.description);
 

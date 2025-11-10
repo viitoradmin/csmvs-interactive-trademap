@@ -69,7 +69,8 @@ public class TVScreenManager : MonoBehaviour
         ToggleExportRouteDisplay(true);
         ToggleImportRouteDisplay(true);
         
-        mapCam.MovetoActual(new Vector2(0f, -59.4f), 5.4f,
+        // Below value is as per the its parent position in world.
+        mapCam.MovetoActual(new Vector2(91.3f, -59.4f), 5.4f,
                    () =>
                    {
                        Debug.Log("Camera Animation Completed");

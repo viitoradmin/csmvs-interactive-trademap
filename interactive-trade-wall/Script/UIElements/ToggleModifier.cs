@@ -50,7 +50,7 @@ public class ToggleModifier : MonoBehaviour {
         //     _text.font = value ? _activeTextFonts : _inactiveTextFonts;
         // }
         toogleGraphicImage.sprite = value ? _activeToggleImage : _inactiveToggleSprite;
-        ConnectionManager.Instance.RaiseEventForRouteClick(_id, value?true:false);
+       // ConnectionManager.Instance.RaiseEventForRouteClick(_id, value?true:false);
     }
 
     public void SetupTextureToggle(Texture displayImage, UnityAction onClickButtonAction) {
