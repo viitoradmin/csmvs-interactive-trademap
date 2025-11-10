@@ -1,3 +1,4 @@
+using System;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -7,6 +8,7 @@ public class ItemElement : MonoBehaviour
 {
     public int _id;
     [SerializeField] private BookmarkItem m_ItemData;
+    
     [SerializeField] private TMP_Text title_text;
     [SerializeField] private RawImage material_rawimage;
 
@@ -18,13 +20,46 @@ public class ItemElement : MonoBehaviour
     [SerializeField] private Color _selectedTextColor;
     [SerializeField] private Color _normalTextColor;
 
-    public void SetupData(BookmarkItem _bookmarkItem,bool _isSelected)
+    void OnEnable()
+    {
+        BookController.instance.onToggleLangugae += RefreshLanguage;
+    }
+
+    void OnDisable()
+    {
+        BookController.instance.onToggleLangugae -= RefreshLanguage;
+    }
+
+    public void SetupData(BookmarkItem _bookmarkItem, bool _isSelected)
     {
         m_ItemData = _bookmarkItem;
-        title_text.text = m_ItemData.title;
+        if (BookController.instance.language == Language.English)
+        {
+            title_text.text = m_ItemData.title;
+        }
+        else if (BookController.instance.language == Language.Marathi)
+        {
+            title_text.text = BookController.instance.marathiParser.GetMarathiText(m_ItemData.title_marathi);
+        }
+        //--add marathi field Here--
         BookController.instance.LoadImageFromURL(m_ItemData.thumbnailPath, material_rawimage);
         itemButton.onClick.AddListener(ViewDetails);
         MarkThisItemAsSelected(_isSelected);
+    }
+
+    void RefreshLanguage()
+    {
+        Debug.Log("refresh Called");
+        if (BookController.instance.language == Language.English)
+        {
+            title_text.font = BookController.instance.englishTmpFont;
+            title_text.text = m_ItemData.title;
+        }
+        else if (BookController.instance.language == Language.Marathi)
+        {
+            title_text.font = BookController.instance.marathiTmpFont;
+            title_text.text = BookController.instance.marathiParser.GetMarathiText(m_ItemData.title_marathi);
+        }
     }
 
     public void MarkThisItemAsSelected(bool _isSelected)

@@ -48,6 +48,7 @@ public class InteractiveTradeWallDataSO : ScriptableObject
     public class Bookmark
     {
         public string title;
+        public string title_marathi;
         public int pageNumber;
         public List<BookmarkItem> items = new List<BookmarkItem>();
     }
@@ -56,6 +57,7 @@ public class InteractiveTradeWallDataSO : ScriptableObject
     public class BookmarkItem
     {
         public string title;
+        public string title_marathi;
         public string thumbnailPath;
         public BookmarkMetadata bookmarkMetadata;
     }
@@ -65,7 +67,9 @@ public class InteractiveTradeWallDataSO : ScriptableObject
     {
         public List<BookmarkImage> images = new List<BookmarkImage>();
         public string title;
+        public string title_marathi;
         public string description;
+        public string description_marathi;
         public List<Route> importRoutes = new List<Route>();
         public List<Route> exportRoutes = new List<Route>();
         public string distance;

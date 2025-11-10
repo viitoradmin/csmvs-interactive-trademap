@@ -45,10 +45,10 @@ public class ToggleModifier : MonoBehaviour {
         if (_changeTextColorOnActive) {
             _text.color = value ? _activeTextColor : _inactiveTextColor;
         }
-        if (_changeFontsOnActive)
-        {
-            _text.font = value ? _activeTextFonts : _inactiveTextFonts;
-        }
+        // if (_changeFontsOnActive)
+        // {
+        //     _text.font = value ? _activeTextFonts : _inactiveTextFonts;
+        // }
         toogleGraphicImage.sprite = value ? _activeToggleImage : _inactiveToggleSprite;
         ConnectionManager.Instance.RaiseEventForRouteClick(_id, value?true:false);
     }

@@ -13,6 +13,7 @@ using static InteractiveTradeWallDataSO;
 
 public class BookController : MonoBehaviour
 {
+    public MegaBookBuilder book;
     public static BookController instance;
     public Language language;
     public MegaBookSwipeControl swipeController;
@@ -47,6 +48,7 @@ public class BookController : MonoBehaviour
     public TMP_Text backButtonPath;
     public TMP_Text materialTitleText;
     public TMP_Text materialDetailsText;
+    public Text materialDetailsTxt;
     [Space]
     public TMP_Text importRoutes_Button_Text;
     public TMP_Text exportRoutes_Button_Text;
@@ -70,7 +72,10 @@ public class BookController : MonoBehaviour
     public TMP_Text miningProcess_Now_Text;
 
     public int currentSelectedBookMarkId=-1;
-    public int currentSelectedItemId=-1;
+    public int currentSelectedItemId = -1;
+
+    public Font englisthFont, marathiFont;
+    public TMPro.TMP_FontAsset englishTmpFont, marathiTmpFont;
 
     [Header("UI Effects Related Data")]
     public UIEffectsController uIEffectsController;
@@ -78,8 +83,9 @@ public class BookController : MonoBehaviour
     [Header("Sample Bookmark Data")]
     //public Data dataSO;
     public InteractiveTradeWallDataSO dataSO;
-    
+    public InteractiveTradeWallDataSO marathiDataSO;
 
+    public UnityAction onToggleLangugae; 
     private void Awake()
     {
         instance = this;
@@ -96,6 +102,30 @@ public class BookController : MonoBehaviour
           }));
         SetupBookmarks();
         //ShowMaterials();
+    }
+
+    public void ToogleLanguge()
+    {
+        if (language == Language.English)
+        {
+            language = Language.Marathi;
+
+        }
+        else if (language == Language.Marathi)
+        {
+            language = Language.English;
+
+        }
+        Debug.Log("Current Page:" + book.GetCurrentPage());
+        if (book.GetCurrentPage() == 6)
+        {
+            Debug.Log("This is detailed page section");
+            SetDetailPageUI(_LastSelectedItem);
+        }
+        else
+        {
+            onToggleLangugae?.Invoke();
+        }
     }
 
     [ContextMenu("Close book")]
@@ -155,22 +185,25 @@ public class BookController : MonoBehaviour
         bookmarkToggles.Clear();
 
         // Distribute bookmarks equally
-        int mid = Mathf.CeilToInt(dataSO.root.bookmarks.Count / 2);
-        for (int i = 0; i < dataSO.root.bookmarks.Count; i++)
-        {
-            Transform targetParent = (i < mid) ? parentA : parentB; // alternate distribution
-            GameObject toggleObj = Instantiate(bookmarkButtonPrefab, targetParent);
-
-            Toggle _toggle = toggleObj.GetComponent<Toggle>();
-            BookmarkElement _bookmarkElement = toggleObj.GetComponent<BookmarkElement>();
-            _bookmarkElement._id = i;
-            int _index = i;
-            if (_bookmarkElement != null)
+        
+        
+            int mid = Mathf.CeilToInt(dataSO.root.bookmarks.Count / 2);
+            for (int i = 0; i < dataSO.root.bookmarks.Count; i++)
             {
-                _bookmarkElement.setupData(dataSO.root.bookmarks[_index]);
+                Transform targetParent = (i < mid) ? parentA : parentB; // alternate distribution
+                GameObject toggleObj = Instantiate(bookmarkButtonPrefab, targetParent);
+
+                Toggle _toggle = toggleObj.GetComponent<Toggle>();
+                BookmarkElement _bookmarkElement = toggleObj.GetComponent<BookmarkElement>();
+                _bookmarkElement._id = i;
+                int _index = i;
+                if (_bookmarkElement != null)
+                {
+                    _bookmarkElement.setupData(dataSO.root.bookmarks[_index]);
+                }
+                bookmarkToggles.Add(_toggle);
             }
-            bookmarkToggles.Add(_toggle);
-        }
+        
 
         bookmarkToggles[0].isOn = true;
     }
@@ -240,12 +273,25 @@ public class BookController : MonoBehaviour
             bookmarkItemsPagination.NextPage();
         }));
     }
+    public MarathiTextParser marathiParser;
+   
 
     public void SetDetailPageUI(BookmarkItem itemData)
     {
         backButtonPath.text = bookmarkItemsPagination.currentSelectedBookmark.title + " > " + itemData.title;
         materialTitleText.text = itemData.bookmarkMetadata.title;
-        materialDetailsText.text = itemData.bookmarkMetadata.description;
+        materialDetailsText.text = language == Language.English ? itemData.bookmarkMetadata.description : marathiParser.GetMarathiText(itemData.bookmarkMetadata.description);
+
+        if(language == Language.English)
+        {
+            materialDetailsTxt.font = englisthFont;
+            materialDetailsTxt.text = itemData.bookmarkMetadata.description;
+        }else if(language == Language.Marathi)
+        {
+            materialDetailsTxt.font = marathiFont;
+            materialDetailsTxt.text = marathiParser.GetMarathiText(itemData.bookmarkMetadata.description_marathi);
+        }
+        
 
         importRoutes_Button_Text.text = language == Language.English ? "Import Routes" : "Āyāta mārga";
         exportRoutes_Button_Text.text = language == Language.English ? "Export Routes" : "Niryāta mārga";
