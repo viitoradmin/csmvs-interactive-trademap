@@ -67,12 +67,12 @@ public class ItemsPagination : MonoBehaviour
         if (remaining <= 0) return;
         // Fill parent1
         int fill1 = Mathf.Min(4, remaining);
-        SpawnMinerals(itemParent1, fill1, startIndex);
+        SpawnMinerals(itemParent1, fill1, startIndex,true);
         remaining -= fill1;
 
         // Fill parent2
         int fill2 = Mathf.Min(4, remaining);
-        SpawnMinerals(itemParent2, fill2, startIndex + fill1);
+        SpawnMinerals(itemParent2, fill2, startIndex + fill1,false);
         remaining -= fill2;
 
         // Update navigation buttons
@@ -84,7 +84,7 @@ public class ItemsPagination : MonoBehaviour
         Debug.Log($"Page {pageIndex + 1}: showing {fill1 + fill2} minerals");
     }
 
-    private void SpawnMinerals(Transform parent, int count, int startIndex)
+    private void SpawnMinerals(Transform parent, int count, int startIndex, bool isLeft)
     {
         // This is to higlight the current selected element.
         if (BookController.instance != null)
@@ -114,7 +114,8 @@ public class ItemsPagination : MonoBehaviour
             GameObject mineral = Instantiate(itemPrefab, parent);
             mineral.name = currentSelectedBookmark.items[_index].title;
             ItemElement _item = mineral.GetComponent<ItemElement>();
-            _item._id = i;
+            
+             _item._id = isLeft? i:i+4;
             if (lastSelectedItemIndex == _index)
             {
                 _item.SetupData(currentSelectedBookmark.items[_index],true);

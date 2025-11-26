@@ -39,6 +39,7 @@ public class HorizontalSlideshow : MonoBehaviour, IBeginDragHandler, IDragHandle
 
     public void SetupSlides(List<BookmarkImage> _slides)
     {
+        Debug.Log("SetupSlides"+_slides.Count+">"+slides[0].title);
         slides = _slides;
         PopulateSlides();
         PopulateDots();
@@ -55,7 +56,8 @@ public class HorizontalSlideshow : MonoBehaviour, IBeginDragHandler, IDragHandle
         foreach (var _slide in slides)
         {
             GameObject slide = Instantiate(slidePrefab, container);
-            BookController.instance.LoadImageFromURL(_slide.imagePath, slide.GetComponent<RawImage>());
+           // BookController.instance.LoadImageFromURL(_slide.imagePath, slide.GetComponent<RawImage>());
+            BookController.instance.LoadTextureFromResources(_slide.imagePath, slide.GetComponent<RawImage>());
         }
     }
 
@@ -148,6 +150,9 @@ public class HorizontalSlideshow : MonoBehaviour, IBeginDragHandler, IDragHandle
         // Clear old slides
         foreach (var t in SliderDots)
             Destroy(t.gameObject);
+        
+        SliderDots.Clear();
+        
         ToggleGroup tg = SliderDotsParent.GetComponent<ToggleGroup>();
         // Create new slides
         foreach (var pic_data in slides)

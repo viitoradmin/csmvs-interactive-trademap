@@ -322,6 +322,11 @@ public class BookController : MonoBehaviour
         bottomline_text.text = isMaterialPage ? dataSO.root.materialPageBottomLine : dataSO.root.detailPageBottomLine;
     }
 
+    public void LoadTextureFromResources(string url, RawImage rawImage)
+    {
+        rawImage.texture = Resources.Load<Texture2D>(url);
+    }
+    
     public void LoadImageFromURL(string url, RawImage rawImage)
     {
         StartCoroutine(DownloadImage(url, rawImage));

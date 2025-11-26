@@ -1,0 +1,923 @@
+fileFormatVersion: 2
+guid: 7c62be6b031a84512a96999f4b10115b
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 8743227896801534225
+    second: 2025-07-15_ROUTUNDA_Interactive Trade Map_0
+  - first:
+      213: -8918664381702535682
+    second: 2025-07-15_ROUTUNDA_Interactive Trade Map_1
+  - first:
+      213: 1954440065545609241
+    second: 2025-07-15_ROUTUNDA_Interactive Trade Map_2
+  - first:
+      213: 3622447645750637006
+    second: 2025-07-15_ROUTUNDA_Interactive Trade Map_3
+  - first:
+      213: 1655029916934905220
+    second: 2025-07-15_ROUTUNDA_Interactive Trade Map_4
+  - first:
+      213: -6886768362643435114
+    second: 2025-07-15_ROUTUNDA_Interactive Trade Map_5
+  - first:
+      213: 1980445473878106797
+    second: 2025-07-15_ROUTUNDA_Interactive Trade Map_6
+  - first:
+      213: 7262451333339018410
+    second: 2025-07-15_ROUTUNDA_Interactive Trade Map_7
+  - first:
+      213: 5034049288099418968
+    second: 2025-07-15_ROUTUNDA_Interactive Trade Map_8
+  - first:
+      213: -5040250246377326433
+    second: 2025-07-15_ROUTUNDA_Interactive Trade Map_9
+  - first:
+      213: 8687265035207442541
+    second: 2025-07-15_ROUTUNDA_Interactive Trade Map_10
+  - first:
+      213: 6039741452901793155
+    second: 2025-07-15_ROUTUNDA_Interactive Trade Map_11
+  - first:
+      213: 1042582994041169133
+    second: 2025-07-15_ROUTUNDA_Interactive Trade Map_12
+  - first:
+      213: -1193546938258936376
+    second: 2025-07-15_ROUTUNDA_Interactive Trade Map_13
+  - first:
+      213: 183801254143556584
+    second: 2025-07-15_ROUTUNDA_Interactive Trade Map_14
+  - first:
+      213: 8061093608393754809
+    second: 2025-07-15_ROUTUNDA_Interactive Trade Map_15
+  - first:
+      213: 3113107775539858606
+    second: 2025-07-15_ROUTUNDA_Interactive Trade Map_16
+  - first:
+      213: 1978672344109398603
+    second: 2025-07-15_ROUTUNDA_Interactive Trade Map_17
+  - first:
+      213: -5068288869387226371
+    second: 2025-07-15_ROUTUNDA_Interactive Trade Map_18
+  - first:
+      213: 7932826072790002009
+    second: 2025-07-15_ROUTUNDA_Interactive Trade Map_19
+  - first:
+      213: 6157976394587024226
+    second: 2025-07-15_ROUTUNDA_Interactive Trade Map_20
+  - first:
+      213: -1424640740566355459
+    second: 2025-07-15_ROUTUNDA_Interactive Trade Map_21
+  - first:
+      213: -3804596271166872020
+    second: 2025-07-15_ROUTUNDA_Interactive Trade Map_22
+  - first:
+      213: -6372659548360436178
+    second: 2025-07-15_ROUTUNDA_Interactive Trade Map_23
+  - first:
+      213: -4864959913512689644
+    second: 2025-07-15_ROUTUNDA_Interactive Trade Map_24
+  - first:
+      213: 8341335719765179629
+    second: 2025-07-15_ROUTUNDA_Interactive Trade Map_25
+  - first:
+      213: 6115155639856352347
+    second: 2025-07-15_ROUTUNDA_Interactive Trade Map_26
+  - first:
+      213: 1561660425965402479
+    second: 2025-07-15_ROUTUNDA_Interactive Trade Map_27
+  - first:
+      213: 600130931173749956
+    second: 2025-07-15_ROUTUNDA_Interactive Trade Map_28
+  - first:
+      213: -159206026473872659
+    second: 2025-07-15_ROUTUNDA_Interactive Trade Map_29
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: 2025-07-15_ROUTUNDA_Interactive Trade Map_0
+      rect:
+        serializedVersion: 2
+        x: 2720
+        y: 1228
+        width: 112
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1112423d27f265970800000000000000
+      internalID: 8743227896801534225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2025-07-15_ROUTUNDA_Interactive Trade Map_1
+      rect:
+        serializedVersion: 2
+        x: 397
+        y: 841
+        width: 327
+        height: 374
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ef501b97ff98a3480800000000000000
+      internalID: -8918664381702535682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2025-07-15_ROUTUNDA_Interactive Trade Map_2
+      rect:
+        serializedVersion: 2
+        x: 2341
+        y: 970
+        width: 578
+        height: 253
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 91023a172e09f1b10800000000000000
+      internalID: 1954440065545609241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2025-07-15_ROUTUNDA_Interactive Trade Map_3
+      rect:
+        serializedVersion: 2
+        x: 2836
+        y: 1063
+        width: 112
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec1ba66f0f4854230800000000000000
+      internalID: 3622447645750637006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2025-07-15_ROUTUNDA_Interactive Trade Map_4
+      rect:
+        serializedVersion: 2
+        x: 1356
+        y: 622
+        width: 298
+        height: 391
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 48d9c83d0f8d7f610800000000000000
+      internalID: 1655029916934905220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2025-07-15_ROUTUNDA_Interactive Trade Map_5
+      rect:
+        serializedVersion: 2
+        x: 1518
+        y: 1012
+        width: 112
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6915d3e69a84d60a0800000000000000
+      internalID: -6886768362643435114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2025-07-15_ROUTUNDA_Interactive Trade Map_6
+      rect:
+        serializedVersion: 2
+        x: 2914
+        y: 1013
+        width: 23
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da2e8876aa4fb7b10800000000000000
+      internalID: 1980445473878106797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2025-07-15_ROUTUNDA_Interactive Trade Map_7
+      rect:
+        serializedVersion: 2
+        x: 2888
+        y: 993
+        width: 55
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa4fb32720969c460800000000000000
+      internalID: 7262451333339018410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2025-07-15_ROUTUNDA_Interactive Trade Map_8
+      rect:
+        serializedVersion: 2
+        x: 1622
+        y: 928
+        width: 62
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 85359fee7298cd540800000000000000
+      internalID: 5034049288099418968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2025-07-15_ROUTUNDA_Interactive Trade Map_9
+      rect:
+        serializedVersion: 2
+        x: 2657
+        y: 961
+        width: 91
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f98ba95fa1f6d0ab0800000000000000
+      internalID: -5040250246377326433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2025-07-15_ROUTUNDA_Interactive Trade Map_10
+      rect:
+        serializedVersion: 2
+        x: 2826
+        y: 932
+        width: 23
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d60063db58d5f8870800000000000000
+      internalID: 8687265035207442541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2025-07-15_ROUTUNDA_Interactive Trade Map_11
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 0
+        width: 155
+        height: 903
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 38db96bf9d871d350800000000000000
+      internalID: 6039741452901793155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2025-07-15_ROUTUNDA_Interactive Trade Map_12
+      rect:
+        serializedVersion: 2
+        x: 1653
+        y: 869
+        width: 23
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de4efa095bff77e00800000000000000
+      internalID: 1042582994041169133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2025-07-15_ROUTUNDA_Interactive Trade Map_13
+      rect:
+        serializedVersion: 2
+        x: 2378
+        y: 699
+        width: 617
+        height: 248
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8cd2252226baf6fe0800000000000000
+      internalID: -1193546938258936376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2025-07-15_ROUTUNDA_Interactive Trade Map_14
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 823
+        width: 22
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8eb7f7e444efc8200800000000000000
+      internalID: 183801254143556584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2025-07-15_ROUTUNDA_Interactive Trade Map_15
+      rect:
+        serializedVersion: 2
+        x: 1355
+        y: 850
+        width: 56
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b84b756de1cedf60800000000000000
+      internalID: 8061093608393754809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2025-07-15_ROUTUNDA_Interactive Trade Map_16
+      rect:
+        serializedVersion: 2
+        x: 1646
+        y: 814
+        width: 84
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eac4f84270bf33b20800000000000000
+      internalID: 3113107775539858606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2025-07-15_ROUTUNDA_Interactive Trade Map_17
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 810
+        width: 23
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b4ab7857308a57b10800000000000000
+      internalID: 1978672344109398603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2025-07-15_ROUTUNDA_Interactive Trade Map_18
+      rect:
+        serializedVersion: 2
+        x: 1246
+        y: 788
+        width: 80
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: df2bb115022d9a9b0800000000000000
+      internalID: -5068288869387226371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2025-07-15_ROUTUNDA_Interactive Trade Map_19
+      rect:
+        serializedVersion: 2
+        x: 1316
+        y: 814
+        width: 57
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 959ea95884f071e60800000000000000
+      internalID: 7932826072790002009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2025-07-15_ROUTUNDA_Interactive Trade Map_20
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 724
+        width: 22
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 26ba99e87e6857550800000000000000
+      internalID: 6157976394587024226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2025-07-15_ROUTUNDA_Interactive Trade Map_21
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 749
+        width: 23
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: df13ef56bc8aa3ce0800000000000000
+      internalID: -1424640740566355459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2025-07-15_ROUTUNDA_Interactive Trade Map_22
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 727
+        width: 81
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c26a25759db533bc0800000000000000
+      internalID: -3804596271166872020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2025-07-15_ROUTUNDA_Interactive Trade Map_23
+      rect:
+        serializedVersion: 2
+        x: 1258
+        y: 741
+        width: 91
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e26997197e3cf87a0800000000000000
+      internalID: -6372659548360436178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2025-07-15_ROUTUNDA_Interactive Trade Map_24
+      rect:
+        serializedVersion: 2
+        x: 1608
+        y: 763
+        width: 113
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 410af8cfbb03c7cb0800000000000000
+      internalID: -4864959913512689644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2025-07-15_ROUTUNDA_Interactive Trade Map_25
+      rect:
+        serializedVersion: 2
+        x: 1703
+        y: 730
+        width: 62
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dec71e094a062c370800000000000000
+      internalID: 8341335719765179629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2025-07-15_ROUTUNDA_Interactive Trade Map_26
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 724
+        width: 56
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b5c4ddba7a56dd450800000000000000
+      internalID: 6115155639856352347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2025-07-15_ROUTUNDA_Interactive Trade Map_27
+      rect:
+        serializedVersion: 2
+        x: 1732
+        y: 693
+        width: 91
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f69f37522e12ca510800000000000000
+      internalID: 1561660425965402479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2025-07-15_ROUTUNDA_Interactive Trade Map_28
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 680
+        width: 90
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c4f55bf6e7145800800000000000000
+      internalID: 600130931173749956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2025-07-15_ROUTUNDA_Interactive Trade Map_29
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 668
+        width: 55
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de26ce166f26acdf0800000000000000
+      internalID: -159206026473872659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      2025-07-15_ROUTUNDA_Interactive Trade Map_0: 8743227896801534225
+      2025-07-15_ROUTUNDA_Interactive Trade Map_1: -8918664381702535682
+      2025-07-15_ROUTUNDA_Interactive Trade Map_10: 8687265035207442541
+      2025-07-15_ROUTUNDA_Interactive Trade Map_11: 6039741452901793155
+      2025-07-15_ROUTUNDA_Interactive Trade Map_12: 1042582994041169133
+      2025-07-15_ROUTUNDA_Interactive Trade Map_13: -1193546938258936376
+      2025-07-15_ROUTUNDA_Interactive Trade Map_14: 183801254143556584
+      2025-07-15_ROUTUNDA_Interactive Trade Map_15: 8061093608393754809
+      2025-07-15_ROUTUNDA_Interactive Trade Map_16: 3113107775539858606
+      2025-07-15_ROUTUNDA_Interactive Trade Map_17: 1978672344109398603
+      2025-07-15_ROUTUNDA_Interactive Trade Map_18: -5068288869387226371
+      2025-07-15_ROUTUNDA_Interactive Trade Map_19: 7932826072790002009
+      2025-07-15_ROUTUNDA_Interactive Trade Map_2: 1954440065545609241
+      2025-07-15_ROUTUNDA_Interactive Trade Map_20: 6157976394587024226
+      2025-07-15_ROUTUNDA_Interactive Trade Map_21: -1424640740566355459
+      2025-07-15_ROUTUNDA_Interactive Trade Map_22: -3804596271166872020
+      2025-07-15_ROUTUNDA_Interactive Trade Map_23: -6372659548360436178
+      2025-07-15_ROUTUNDA_Interactive Trade Map_24: -4864959913512689644
+      2025-07-15_ROUTUNDA_Interactive Trade Map_25: 8341335719765179629
+      2025-07-15_ROUTUNDA_Interactive Trade Map_26: 6115155639856352347
+      2025-07-15_ROUTUNDA_Interactive Trade Map_27: 1561660425965402479
+      2025-07-15_ROUTUNDA_Interactive Trade Map_28: 600130931173749956
+      2025-07-15_ROUTUNDA_Interactive Trade Map_29: -159206026473872659
+      2025-07-15_ROUTUNDA_Interactive Trade Map_3: 3622447645750637006
+      2025-07-15_ROUTUNDA_Interactive Trade Map_4: 1655029916934905220
+      2025-07-15_ROUTUNDA_Interactive Trade Map_5: -6886768362643435114
+      2025-07-15_ROUTUNDA_Interactive Trade Map_6: 1980445473878106797
+      2025-07-15_ROUTUNDA_Interactive Trade Map_7: 7262451333339018410
+      2025-07-15_ROUTUNDA_Interactive Trade Map_8: 5034049288099418968
+      2025-07-15_ROUTUNDA_Interactive Trade Map_9: -5040250246377326433
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

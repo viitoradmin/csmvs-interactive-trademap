@@ -26,19 +26,19 @@ public class HandleNetworkEvents : MonoBehaviour , IOnEventCallback
             int bookmarkId = (int)data[0];
             int itemId = (int)data[1];
             Debug.Log("bookmark" + bookmarkId + "item id" + itemId);
-            TVScreenManager.Instance.ShowDetailedScreen();
+           // TVScreenManager.Instance.ShowDetailedScreen();
         }
 
         if (photonEvent.Code == 2)
         {
             Debug.Log((bool)photonEvent.CustomData);
-            TVScreenManager.Instance.ToggleImportRouteDisplay((bool)photonEvent.CustomData);
+          //  TVScreenManager.Instance.ToggleImportRouteDisplay((bool)photonEvent.CustomData);
         }
 
         if (photonEvent.Code == 3)
         {
             Debug.Log((bool)photonEvent.CustomData);
-            TVScreenManager.Instance.ToggleExportRouteDisplay((bool)photonEvent.CustomData);
+            //TVScreenManager.Instance.ToggleExportRouteDisplay((bool)photonEvent.CustomData);
         }
 
         if (photonEvent.Code == 4)

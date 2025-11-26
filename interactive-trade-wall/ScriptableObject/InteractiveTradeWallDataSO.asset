@@ -21,18 +21,18 @@ MonoBehaviour:
       items:
       - title: Carnelian
         title_marathi: "\u092E\u0930\u093E\u0920\u0940 \u092D\u093E\u0937\u0947\u091A\u093E"
-        thumbnailPath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
+        thumbnailPath: Carnelian
         bookmarkMetadata:
           images:
-          - imagePath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
+          - imagePath: Carnelian
             title: Carnelian 1
-            subtitle: Popular in Indus Valley ornaments 1
-          - imagePath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
-            title: Carnelian 2
-            subtitle: Popular in Indus Valley ornaments 2
-          - imagePath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
-            title: Carnelian 3
-            subtitle: Popular in Indus Valley ornaments 3
+            subtitle: A carleinan text
+          - imagePath: Carnelian
+            title: Carnelian 1
+            subtitle: A carleinan text
+          - imagePath: Carnelian
+            title: Carnelian 1
+            subtitle: A carleinan text
           title: Carnelian
           title_marathi: 
           description: A red-orange chalcedony widely traded in antiquity.
@@ -83,16 +83,16 @@ MonoBehaviour:
           nowMiningProcess: Modern quarrying
       - title: Agate
         title_marathi: 
-        thumbnailPath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
+        thumbnailPath: Agate
         bookmarkMetadata:
           images:
-          - imagePath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
+          - imagePath: 4130416
             title: Agate 1
             subtitle: Used for beads & seals 1
-          - imagePath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
+          - imagePath: harappan-dockyard-at-lothal-1 copy
             title: Agate 2
             subtitle: Used for beads & seals 2
-          - imagePath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
+          - imagePath: Dholavira12
             title: Agate 3
             subtitle: Used for beads & seals 3
           title: Agate
@@ -111,13 +111,13 @@ MonoBehaviour:
           nowMiningProcess: Industrial mining
       - title: Jasper
         title_marathi: 
-        thumbnailPath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
+        thumbnailPath: JasperStone
         bookmarkMetadata:
           images:
-          - imagePath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
+          - imagePath: 4130416
             title: Jasper 1
             subtitle: Decorative stone 1
-          - imagePath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
+          - imagePath: harappan-dockyard-at-lothal-1 copy
             title: Jasper 2
             subtitle: Decorative stone 2
           title: Jasper
@@ -136,16 +136,16 @@ MonoBehaviour:
           nowMiningProcess: Mined in quarries
       - title: Lapis Lazuli
         title_marathi: 
-        thumbnailPath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
+        thumbnailPath: FlluxFull
         bookmarkMetadata:
           images:
-          - imagePath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
+          - imagePath: 4130416
             title: Lapis Lazuli 1
             subtitle: Valued blue stone 1
-          - imagePath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
+          - imagePath: harappan-dockyard-at-lothal-1 copy
             title: Lapis Lazuli 2
             subtitle: Valued blue stone 2
-          - imagePath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
+          - imagePath: Dholavira12
             title: Lapis Lazuli 3
             subtitle: Valued blue stone 3
           title: Lapis Lazuli
@@ -164,21 +164,18 @@ MonoBehaviour:
           nowMiningProcess: Modern quarrying
       - title: Etched Carnelian Beads
         title_marathi: 
-        thumbnailPath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
+        thumbnailPath: Carnelian
         bookmarkMetadata:
           images:
-          - imagePath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
+          - imagePath: 4130416
             title: Etched Carnelian 1
             subtitle: Indus Valley craft 1
-          - imagePath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
+          - imagePath: harappan-dockyard-at-lothal-1 copy
             title: Etched Carnelian 2
             subtitle: Indus Valley craft 2
-          - imagePath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
+          - imagePath: Dholavira12
             title: Etched Carnelian 3
             subtitle: Indus Valley craft 3
-          - imagePath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
-            title: Etched Carnelian 4
-            subtitle: Indus Valley craft 4
           title: Etched Carnelian Beads
           title_marathi: 
           description: Specialty beads of the Indus Valley Civilization, often etched
@@ -196,13 +193,13 @@ MonoBehaviour:
           nowMiningProcess: Replicas produced for sale
       - title: Amethyst
         title_marathi: 
-        thumbnailPath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
+        thumbnailPath: Agate
         bookmarkMetadata:
           images:
-          - imagePath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
+          - imagePath: 4130416
             title: Amethyst 1
             subtitle: Purple quartz 1
-          - imagePath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
+          - imagePath: harappan-dockyard-at-lothal-1 copy
             title: Amethyst 2
             subtitle: Purple quartz 2
           title: Amethyst
@@ -221,16 +218,16 @@ MonoBehaviour:
           nowMiningProcess: Modern mining
       - title: Chalcedony
         title_marathi: 
-        thumbnailPath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
+        thumbnailPath: JasperStone
         bookmarkMetadata:
           images:
-          - imagePath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
+          - imagePath: 4130416
             title: Chalcedony 1
             subtitle: Beads and seals 1
-          - imagePath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
+          - imagePath: harappan-dockyard-at-lothal-1 copy
             title: Chalcedony 2
             subtitle: Beads and seals 2
-          - imagePath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
+          - imagePath: Dholavira12
             title: Chalcedony 3
             subtitle: Beads and seals 3
           title: Chalcedony
@@ -249,21 +246,18 @@ MonoBehaviour:
           nowMiningProcess: Industrial mining
       - title: Turquoise
         title_marathi: 
-        thumbnailPath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
+        thumbnailPath: FlluxFull
         bookmarkMetadata:
           images:
-          - imagePath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
+          - imagePath: 4130416
             title: Turquoise 1
             subtitle: Traded from Persia 1
-          - imagePath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
+          - imagePath: harappan-dockyard-at-lothal-1 copy
             title: Turquoise 2
             subtitle: Traded from Persia 2
-          - imagePath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
+          - imagePath: Dholavira12
             title: Turquoise 3
             subtitle: Traded from Persia 3
-          - imagePath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
-            title: Turquoise 4
-            subtitle: Traded from Persia 4
           title: Turquoise
           title_marathi: 
           description: Ancient Egyptians, Persians and Native Americans prized turquoise

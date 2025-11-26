@@ -42,9 +42,10 @@ public class ItemElement : MonoBehaviour
             title_text.text = BookController.instance.marathiParser.GetMarathiText(m_ItemData.title_marathi);
         }
         //--add marathi field Here--
-        BookController.instance.LoadImageFromURL(m_ItemData.thumbnailPath, material_rawimage);
+        //BookController.instance.LoadImageFromURL(m_ItemData.thumbnailPath, material_rawimage);
+        BookController.instance.LoadTextureFromResources(m_ItemData.thumbnailPath, material_rawimage);
         itemButton.onClick.AddListener(ViewDetails);
-        MarkThisItemAsSelected(_isSelected);
+       // MarkThisItemAsSelected(_isSelected);
     }
 
     void RefreshLanguage()
@@ -83,8 +84,9 @@ public class ItemElement : MonoBehaviour
         BookController.instance.currentSelectedItemId = _id;
         Debug.Log("<color=yellow>Current selected material id:</color>" + BookController.instance.currentSelectedItemId);
         //ConnectionManager.Instance.MaterialClickedinBook(BookController.instance.currentSelectedBookMarkId,BookController.instance.currentSelectedItemId);
-        //ToDo: Pass the clicked material item id from here to TV Screen.   
-        TVScreenManager.Instance.ShowDetailedScreen();
+        //ToDo: Pass the clicked material item id from here to TV Screen.
+        //Debug.Log("Selected Material id:"+BookController.instance.currentSelectedItemId);
+        TVScreenManager.Instance.ShowDetailedScreen(BookController.instance.currentSelectedItemId);
         BookController.instance.ShowDetails(m_ItemData, material_rawimage.texture);
     }
     

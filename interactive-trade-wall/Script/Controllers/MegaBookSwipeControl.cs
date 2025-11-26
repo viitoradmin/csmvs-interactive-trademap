@@ -54,14 +54,14 @@ public class MegaBookSwipeControl : MonoBehaviour
 
     void HandleInput()
     {
-        if (Input.GetMouseButtonDown(0))
-            StartSwipe();
+       // if (Input.GetMouseButtonDown(0))
+           // StartSwipe();
 
-        if (isDragging && Input.GetMouseButton(0))
-            UpdateSwipe();
+        //if (isDragging && Input.GetMouseButton(0))
+            //UpdateSwipe();
 
-        if (isDragging && Input.GetMouseButtonUp(0))
-            EndSwipe();
+        //if (isDragging && Input.GetMouseButtonUp(0))
+            //EndSwipe();
     }
 
     void StartSwipe()
