@@ -88,6 +88,7 @@ public class ItemElement : MonoBehaviour
         //Debug.Log("Selected Material id:"+BookController.instance.currentSelectedItemId);
         TVScreenManager.Instance.ShowDetailedScreen(BookController.instance.currentSelectedItemId);
         BookController.instance.ShowDetails(m_ItemData, material_rawimage.texture);
+        BookController.instance._isScreensaverActive = false;
     }
     
 

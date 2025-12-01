@@ -86,6 +86,10 @@ public class BookController : MonoBehaviour
     public InteractiveTradeWallDataSO marathiDataSO;
 
     public UnityAction onToggleLangugae; 
+    
+    public float idleTimeThreshold = 15f; // Seconds before screensaver activates
+    private float _idleTimer;
+    public bool _isScreensaverActive;
     private void Awake()
     {
         instance = this;
@@ -104,6 +108,43 @@ public class BookController : MonoBehaviour
         //ShowMaterials();
     }
 
+    void Update()
+    {
+        if (!IsAnyInputDetected()) 
+        {
+
+            if (!_isScreensaverActive)
+            {
+                _idleTimer += Time.deltaTime;
+                
+                if (!_isScreensaverActive && _idleTimer >= idleTimeThreshold) {
+                    // Activate screensaver
+                    //ShowScreenSaver();
+                    OnClickBackButton();
+                }
+            }
+        }
+        else if (IsAnyInputDetected())
+        {
+            _idleTimer = 0f;
+        }
+    }
+    
+    private bool IsAnyInputDetected() {
+        // Keyboard input
+        if (Input.anyKeyDown) {
+            return true;
+        }
+
+        if (Input.GetMouseButtonDown(0) || Input.GetMouseButtonDown(1) || Input.GetMouseButtonDown(2)) {
+            return true;
+        }
+
+        // Touch input
+        return Input.touchCount > 0;
+    }
+    
+    
     public void ToogleLanguge()
     {
         if (language == Language.English)
@@ -244,6 +285,7 @@ public class BookController : MonoBehaviour
         // TODO : Code in connection manager for moving back.
         //ConnectionManager.Instance.RaiseEventForBackButtonClick();
         TVScreenManager.Instance.ShowMainScreen();
+        _isScreensaverActive = true;
     }
 
     public void OpenMatrialPanel()
