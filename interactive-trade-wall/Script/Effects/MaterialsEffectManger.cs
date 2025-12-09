@@ -115,8 +115,8 @@ public class MaterialsEffectManger : MonoBehaviour
             bool isTarget = label.gameObject.name == cityObjectName;
             if (isTarget)
                 label.PlayReveal();
-            else
-                label.SetIdle();
+            // else
+            //     label.SetIdle();
         }
     }
 

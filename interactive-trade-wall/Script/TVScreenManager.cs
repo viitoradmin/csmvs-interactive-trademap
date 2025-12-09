@@ -1,5 +1,7 @@
 using System;
+using System.Collections.Generic;
 using UnityEngine;
+using System.Collections;
 
 public class TVScreenManager : MonoBehaviour
 {
@@ -12,6 +14,17 @@ public class TVScreenManager : MonoBehaviour
     [SerializeField] private GameObject itemRouteDetailsParent;
     [SerializeField] private GameObject[] itemRoutes = new GameObject[8];
     [SerializeField] CameraBreathingMotion cameraBreathingMotion;
+
+    [SerializeField] private List<RouteCityLists> SourceCityLists;
+    [SerializeField] private List<RouteCityLists> DestinationCityLists;
+    [SerializeField] private List<RouteCityLists> middleCityLists;
+    [Serializable]
+    public class RouteCityLists
+    {
+        public string materialName;  
+       public List<string> cityName = new List<string>();
+    }
+    
     public static TVScreenManager Instance { get; private set; }
     void Awake()
     {
@@ -64,8 +77,32 @@ public class TVScreenManager : MonoBehaviour
             itemRoutes[i].SetActive(false);
         }
         itemRoutes[selectedItemIndex].SetActive(true);
-        StartCoroutine( itemRoutes[selectedItemIndex].GetComponent<MaterialsEffectManger>().RevealCityOnebyOne());
+       // StartCoroutine( itemRoutes[selectedItemIndex].GetComponent<MaterialsEffectManger>().RevealCityOnebyOne());
+
+        StartCoroutine(ManageCityReveal(selectedItemIndex));
     }
+
+    IEnumerator ManageCityReveal(int selectedItemIndex)
+    {
+        for (int i = 0; i < SourceCityLists[selectedItemIndex].cityName.Count; i++)
+        {
+            itemRoutes[selectedItemIndex].GetComponent<MaterialsEffectManger>().FocusCityByName(SourceCityLists[selectedItemIndex].cityName[i]);
+        }
+
+        yield return new WaitForSeconds(1f);
+        
+        for (int i = 0; i < middleCityLists[selectedItemIndex].cityName.Count; i++)
+        {
+            itemRoutes[selectedItemIndex].GetComponent<MaterialsEffectManger>().FocusCityByName(middleCityLists[selectedItemIndex].cityName[i]);
+        }
+        yield return new WaitForSeconds(1f);
+        
+        for (int i = 0; i < DestinationCityLists[selectedItemIndex].cityName.Count; i++)
+        {
+            itemRoutes[selectedItemIndex].GetComponent<MaterialsEffectManger>().FocusCityByName(DestinationCityLists[selectedItemIndex].cityName[i]);
+        }
+    }
+    
     [SerializeField] CityLabelEffect cityLabelEffect;
     public void ShowDetailedScreen(int selectedItemIndex)
     {

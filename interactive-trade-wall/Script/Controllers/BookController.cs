@@ -324,7 +324,7 @@ public class BookController : MonoBehaviour
         //backButtonPath.text = bookmarkItemsPagination.currentSelectedBookmark.title + " > " + itemData.title;
         backButtonPath.text =  itemData.title;
         materialTitleText.text = itemData.bookmarkMetadata.title;
-        materialDetailsText.text = language == Language.English ? itemData.bookmarkMetadata.description : marathiParser.GetMarathiText(itemData.bookmarkMetadata.description);
+//        materialDetailsText.text = language == Language.English ? itemData.bookmarkMetadata.description : marathiParser.GetMarathiText(itemData.bookmarkMetadata.description);
 
         if(language == Language.English)
         {
@@ -339,7 +339,7 @@ public class BookController : MonoBehaviour
 
         importRoutes_Button_Text.text = language == Language.English ? "Import Routes" : "Āyāta mārga";
         exportRoutes_Button_Text.text = language == Language.English ? "Export Routes" : "Niryāta mārga";
-        routeFacts_Title_Text.text = language == Language.English ? "Route Facts" : "Mārga tathyē";
+        routeFacts_Title_Text.text = language == Language.English ? "Route Indicators" : "Mārga tathyē";
         thenVSnow_Title_Text.text = language == Language.English ? "Then vs Now" : "Maga ātā vi";
         distance_Title_Text.text = language == Language.English ? "Distance" : "Antara";
         distance_Value_Text.text = itemData.bookmarkMetadata.distance;

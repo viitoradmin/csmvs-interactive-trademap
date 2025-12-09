@@ -15,27 +15,42 @@ MonoBehaviour:
   textAsset: {fileID: 4900000, guid: cdc2be8b0b11b7e48b6c4aec500afa11, type: 3}
   root:
     bookmarks:
-    - title: Semi-Precious Stones & Beads
+    - title: Materials
       title_marathi: "\u092E\u0930\u093E\u0920\u0940 \u092D\u093E\u0937\u0947\u091A\u093E"
       pageNumber: 1
       items:
       - title: Carnelian
         title_marathi: "\u092E\u0930\u093E\u0920\u0940 \u092D\u093E\u0937\u0947\u091A\u093E"
-        thumbnailPath: Carnelian
+        thumbnailPath: Carnelian/Thumbnail
         bookmarkMetadata:
           images:
-          - imagePath: Carnelian
-            title: Carnelian 1
-            subtitle: A carleinan text
-          - imagePath: Carnelian
-            title: Carnelian 1
-            subtitle: A carleinan text
-          - imagePath: Carnelian
-            title: Carnelian 1
-            subtitle: A carleinan text
+          - imagePath: Carnelian/Carnelian1
+            title: Beads; Carnelian;
+            subtitle: 'Findspot: Ur, Iraq; 3rd millenium BCE; The British Museum
+              (1929,1017.237)'
+          - imagePath: Carnelian/Carnelian2
+            title: Necklace of Queen Puabi; Gold, carnelian and lapiz lazuli; Early
+              Dynastic III,
+            subtitle: "Beads; Carnelian; Findspot: Mohenjo-daro, Pakistan; 2600\xAC1900
+              BCE; CSMVS "
           title: Carnelian
           title_marathi: 
-          description: A red-orange chalcedony widely traded in antiquity.
+          description: "Carnelian, a red-orange chalcedony, was one of the most distinctive
+            luxury materials of the Indus civilization and was produced in large
+            quantities by specialized lapidaries in Gujarat. Major sources in Kutch,
+            Saurashtra, and the Rajpipla region supplied raw nodules that Harappan
+            craftsmen fashioned into long barrel beads and \u201Cetched\u201D or
+            bleached designs, hallmark features of Harappan bead technology. Carnelian
+            travelled widely across West Asia, appearing in Mesopotamian centres
+            such as Kish, Ur, Nippur, Eshnunna, and Assur. Mesopotamian records list
+            carnelian as a valued import from Meluhha and Dilmun, indicating its
+            long-standing commercial significance. The stone circulated along maritime
+            routes connecting Gujarat\u2013Makran\u2013Dilmun and via overland corridors
+            across the Iranian plateau. Harappan merchants maintained trading enclaves
+            in Mesopotamia where both finished beads and raw nodules were exchanged,
+            and some carnelian beads were later inscribed by Sumerian craftsmen.
+            Carnelian was used for jewelry, ritual offerings, and elite objects,
+            revealing Harappan integration into extensive interregional exchange."
           description_marathi: "\u092E\u0930\u093E\u0920\u0940 \u092D\u093E\u0937\u0947\u091A\u093E
             \u0935\u093F\u0915\u093E\u0938 \u0939\u093E \u0938\u093E\u092E\u093E\u091C\u093F\u0915,
             \u0938\u093E\u0902\u0938\u094D\u0915\u0943\u0924\u093F\u0915 \u0906\u0923\u093F
@@ -83,21 +98,30 @@ MonoBehaviour:
           nowMiningProcess: Modern quarrying
       - title: Agate
         title_marathi: 
-        thumbnailPath: Agate
+        thumbnailPath: Agate/Thumbnail
         bookmarkMetadata:
           images:
-          - imagePath: 4130416
-            title: Agate 1
-            subtitle: Used for beads & seals 1
-          - imagePath: harappan-dockyard-at-lothal-1 copy
-            title: Agate 2
-            subtitle: Used for beads & seals 2
-          - imagePath: Dholavira12
-            title: Agate 3
-            subtitle: Used for beads & seals 3
+          - imagePath: Agate/IMG-0830
+            title: "Beads \u2014 Carnelian, Granite, Lapiz lazuli, Agate"
+            subtitle: "Findspot: Mohenjo-daro, Pakistan; 2600\u20131900 BCE; CSMVS
+              (IV 1513, 628, 629, 651, 656, 654, 1490, 1486, 1489)"
           title: Agate
           title_marathi: 
-          description: A multicolored banded chalcedony used since ancient Mesopotamia.
+          description: "Agate, another important chalcedony, was sourced from river
+            gravels in Kutch, Saurashtra, and southern Gujarat and formed a core
+            component of the Harappan bead industry. Workshops at Lothal, Gola Dhoro,
+            and Chanhudaro produced banded and heat-treated agate beads using advanced
+            drilling and polishing techniques. Agate beads circulated widely within
+            the subcontinent, appearing across urban and rural settlements of the
+            Indus realm. They also reached the Iranian plateau and Central Asia,
+            with examples documented at Tepe Hissar, Shah Tepe, and Susa, often alongside
+            carnelian in mixed assemblages that reflect interconnected trade systems.
+            Earlier overland routes through Baluchistan and Helmand carried agate
+            beads beyond South Asia, while later maritime routes connected Gujarat
+            with Dilmun and Mesopotamia. The stone\u2019s durability and distinctive
+            banding made it ideal for personal ornamentation, ritual objects, and
+            status displays. Agate bead manufacture exemplifies the standardization,
+            specialisation, and export-oriented scale of Harappan craft industries."
           description_marathi: 
           importRoutes: []
           exportRoutes: []
@@ -109,20 +133,36 @@ MonoBehaviour:
           nowDuration: Jewelry industry
           thenMiningProcess: Hand collection
           nowMiningProcess: Industrial mining
-      - title: Jasper
+      - title: Shell
         title_marathi: 
-        thumbnailPath: JasperStone
+        thumbnailPath: Shell/Thumbnail
         bookmarkMetadata:
           images:
-          - imagePath: 4130416
-            title: Jasper 1
-            subtitle: Decorative stone 1
-          - imagePath: harappan-dockyard-at-lothal-1 copy
-            title: Jasper 2
-            subtitle: Decorative stone 2
-          title: Jasper
+          - imagePath: Shell/IMG-0700
+            title: Inlay pieces in different shapes; Shell
+            subtitle: "Mohenjo-daro, Pakistan; 2600\u20131900 BCE; CSMVS (IV 321-334,
+              IV 350-352, IV 379)"
+          - imagePath: Shell/IMG-0727
+            title: Ladles; Shell
+            subtitle: "Findspot: Mohenjo-daro, Pakistan; 2600\xAC1900 BCE; CSMVS
+              (IV 336 339)"
+          title: Shell
           title_marathi: 
-          description: Opaque quartz used in beads and seals.
+          description: "Shell was a major marine resource for the Harappans, used
+            to make bangles, ladles, decorative inlays, and ritual items. Coastal
+            communities along the Makran and Gujarat littoral collected large gastropods\u2014particularly
+            Turbinella pyrum\u2014and processed them before sending them inland.
+            Specialized workshops at Nageshwar, Lothal, Bagasra, and Gola Dhoro show
+            extensive evidence of cutting, sawing, drilling, and finishing, indicating
+            a highly organized shell-working industry. Shell products travelled through
+            well-developed trade corridors to major inland centres such as Mohenjo-daro
+            and Harappa, where the abundance of finished shell artifacts points to
+            coordinated distribution systems. Some varieties\u2014such as spiny murex\u2014were
+            likely sourced from Oman, suggesting active Harappan engagement with
+            maritime networks connecting Magan and Dilmun. Shell items were used
+            for ornamentation, ritual deposition, and utilitarian tools, and the
+            industry highlights the Harappans\u2019 mastery of coastal resource management
+            and their participation in trans-Arabian Sea trade."
           description_marathi: 
           importRoutes: []
           exportRoutes: []
@@ -134,23 +174,43 @@ MonoBehaviour:
           nowDuration: Gemstone trade
           thenMiningProcess: Surface collection
           nowMiningProcess: Mined in quarries
-      - title: Lapis Lazuli
+      - title: Bitumen
         title_marathi: 
-        thumbnailPath: FlluxFull
+        thumbnailPath: Bitumen/Thumbnail
         bookmarkMetadata:
           images:
-          - imagePath: 4130416
-            title: Lapis Lazuli 1
-            subtitle: Valued blue stone 1
-          - imagePath: harappan-dockyard-at-lothal-1 copy
-            title: Lapis Lazuli 2
-            subtitle: Valued blue stone 2
-          - imagePath: Dholavira12
-            title: Lapis Lazuli 3
-            subtitle: Valued blue stone 3
-          title: Lapis Lazuli
+          - imagePath: Bitumen/Great_bath_view_Mohenjodaro
+            title: The Great Bath, Mohenjo-daro, Pakistan
+            subtitle: ' located at the centre of the Citadel, is made of fine baked
+              waterproof mud bricks and a thick layer of bitumen, presumably to keep
+              water from seeping through the walls, which indicates that it was used
+              for holding water. Image: CC BY-SA 3.0'
+          - imagePath: Bitumen/Standard of Ur 1
+            title: "Peace side \u2014 \u2018Standard of Ur\u2019 (replica);Wood,
+              shell, limestone, lapis lazuli, bitumen, inlaid"
+            subtitle: 'Findspot: Royal Cemetery at Ur, Iraq; 2500 BCE; The British
+              Museum (replica of 121201)'
+          - imagePath: Bitumen/Standard of Ur 2
+            title: "War side \u2014 \u2018Standard of Ur\u2019 (replica); Wood, shell,
+              limestone, lapis lazuli, bitumen, inlaid"
+            subtitle: 'Findspot: Royal Cemetery at Ur, Iraq; 2500 BCE; The British
+              Museum (replica of 121201)'
+          title: Bitumen
           title_marathi: 
-          description: Traded from Afghanistan to Egypt and Mesopotamia.
+          description: "Bitumen played critical roles in waterproofing, construction,
+            and seafaring across the ancient world. In the Indus region, bitumen
+            from deposits near Sibi in the Kachi plain and Mianwali was used extensively,
+            most notably in the waterproof brickwork of the Great Bath at Mohenjo-daro.
+            Its use at Mehrgarh for basket waterproofing reflects long familiarity
+            with the material. Bitumen was central to maritime technology in the
+            Gulf. Excavations at Ra\u2019s al-Junayz in Oman have revealed imported
+            Mesopotamian bitumen blocks from the Euphrates source at Hit, brought
+            specifically for ship caulking. This bitumen was mixed with tallow, gypsum,
+            and plant fibres to seal reed or wooden boats used in Gulf navigation.
+            Impressions of woven mats and barnacles preserved on reused slabs indicate
+            regular maintenance of seafaring craft. Bitumen thus moved along maritime
+            corridors linking Mesopotamia, Oman, and the Indus, highlighting the
+            Harappans\u2019 deep integration into Gulf maritime exchange."
           description_marathi: 
           importRoutes: []
           exportRoutes: []
@@ -162,24 +222,42 @@ MonoBehaviour:
           nowDuration: Still valued
           thenMiningProcess: Ancient quarrying
           nowMiningProcess: Modern quarrying
-      - title: Etched Carnelian Beads
+      - title: Lapiz Lazuli
         title_marathi: 
-        thumbnailPath: Carnelian
+        thumbnailPath: Lapiz Lazuli/Thumbnail
         bookmarkMetadata:
           images:
-          - imagePath: 4130416
-            title: Etched Carnelian 1
-            subtitle: Indus Valley craft 1
-          - imagePath: harappan-dockyard-at-lothal-1 copy
-            title: Etched Carnelian 2
-            subtitle: Indus Valley craft 2
-          - imagePath: Dholavira12
-            title: Etched Carnelian 3
-            subtitle: Indus Valley craft 3
-          title: Etched Carnelian Beads
+          - imagePath: Lapiz Lazuli/03-09-2024 16.16.10
+            title: Necklace of Queen Puabi; Gold, carnelian and lapiz lazuli; Early
+              Dynastic III
+            subtitle: 'Findspot: Ur, Iraq; 3rd millenium BCE; The British Museum
+              (1929,1017.237)'
+          - imagePath: Lapiz Lazuli/Standard of Ur 1
+            title: "Peace side \u2014 \u2018Standard of Ur\u2019 (replica); Wood,
+              shell, limestone, lapis lazuli, bitumen, inlaid"
+            subtitle: 'Findspot: Royal Cemetery at Ur, Iraq; 2500 BCE; The British
+              Museum (replica of 121201)'
+          - imagePath: Lapiz Lazuli/Standard of Ur 2
+            title: "War side \u2014 \u2018Standard of Ur\u2019 (replica); Wood, shell,
+              limestone, lapis lazuli, bitumen, inlaid"
+            subtitle: 'Findspot: Royal Cemetery at Ur, Iraq; 2500 BCE; The British
+              Museum (replica of 121201)'
+          title: Lapiz Lazuli
           title_marathi: 
-          description: Specialty beads of the Indus Valley Civilization, often etched
-            with designs.
+          description: "Lapis lazuli, one of the most valued stones of the Bronze
+            Age, was sourced primarily from the Sar-i Sang mines of Badakshan and
+            possibly from the Chagai Hills. Although the Harappans used lapis sparingly
+            themselves, they became major intermediaries in its trade. Early access
+            flowed through Baluchistan and the Indo-Iranian borderlands, but by the
+            Mature Harappan period, Shortugai\u2014an Indus trading settlement in
+            northern Afghanistan\u2014provided direct control over lapis distribution.
+            From Shortugai, Harappan merchants funneled lapis toward Mesopotamia,
+            where it adorned elite regalia and ritual objects, including those from
+            the Royal Cemetery of Ur. Shifts in political alignments after 2000 BCE
+            reduced lapis availability in some Harappan regions, but its earlier
+            circulation demonstrates the civilization\u2019s extensive participation
+            in long-distance exchange systems across the Iranian plateau and West
+            Asia."
           description_marathi: 
           importRoutes: []
           exportRoutes: []
@@ -191,20 +269,40 @@ MonoBehaviour:
           nowDuration: Museum artifacts / replicas
           thenMiningProcess: Bead cutting & etching
           nowMiningProcess: Replicas produced for sale
-      - title: Amethyst
+      - title: Cotton
         title_marathi: 
-        thumbnailPath: Agate
+        thumbnailPath: Cotton/Thumbnail
         bookmarkMetadata:
           images:
-          - imagePath: 4130416
-            title: Amethyst 1
-            subtitle: Purple quartz 1
-          - imagePath: harappan-dockyard-at-lothal-1 copy
-            title: Amethyst 2
-            subtitle: Purple quartz 2
-          title: Amethyst
+          - imagePath: Cotton/56_0_0
+            title: The earliest evidence for normal weave textiles at Harappa is
+              found in this impression on a bead from Harappa, dating to around 3300
+              BCE. This fragment is only 1 cm long. Normal weave denotes interlacing
+              single threads (one thread over/under the next). Such weaving may have
+              been done on a simple loom with bone tools such as those seen in.
+            subtitle: 'Image: Harappa Archaeological Research Project; Harappa.com'
+          - imagePath: Cotton/IMG-0035
+            title: "\u2018Priest king\u2019 (replica): The textile over his shoulder
+              suggests an advanced weaving industry in the Harappan civilization.
+              Original: white, low fired steatite"
+            subtitle: "Findspot: Mohenjo-daro, Pakistan; circa 2000\xAC1900 BCE;
+              National Museum, Karachi, Pakistan (50.852)"
+          title: Cotton
           title_marathi: 
-          description: Traded by Greeks and Romans as a gemstone and amulet material.
+          description: "Cotton was among the most important agricultural products
+            of the Indus Valley, with the Harappans recognized as early cultivators
+            and textile producers. Archaeological impressions and textile remains
+            indicate a mature industry involving spinning, weaving, and possibly
+            dyeing. While references to cotton trade are brief, cotton cloth is considered
+            a likely Harappan export, particularly to Oman and other Gulf regions
+            where Harappan ceramics, beads, and tools appear in contexts that imply
+            associated perishable goods. Cotton textiles likely travelled via Gujarat\u2019s
+            maritime routes to Makran, Dilmun, and Magan on vessels caulked with
+            imported Mesopotamian bitumen. Within the Indus world, cotton served
+            everyday domestic needs, but in external trade it may have been exchanged
+            for copper and other resources. Cotton thus reflects agricultural specialization,
+            organized textile craft production, and Harappan participation in long-distance
+            maritime commerce."
           description_marathi: 
           importRoutes: []
           exportRoutes: []
@@ -216,23 +314,40 @@ MonoBehaviour:
           nowDuration: Jewelry market
           thenMiningProcess: Mining by hand
           nowMiningProcess: Modern mining
-      - title: Chalcedony
+      - title: Gold and Silver
         title_marathi: 
-        thumbnailPath: JasperStone
+        thumbnailPath: Gold & Silver/Thumbnail
         bookmarkMetadata:
           images:
-          - imagePath: 4130416
-            title: Chalcedony 1
-            subtitle: Beads and seals 1
-          - imagePath: harappan-dockyard-at-lothal-1 copy
-            title: Chalcedony 2
-            subtitle: Beads and seals 2
-          - imagePath: Dholavira12
-            title: Chalcedony 3
-            subtitle: Beads and seals 3
-          title: Chalcedony
+          - imagePath: Gold & Silver/1F3A4905 copy
+            title: Wristlet; Gold; Late Harappan Period
+            subtitle: 'Findspot: Mandi, Uttar Pradesh, India; Archaeological Survey
+              of India (10/MDN/01)'
+          - imagePath: Gold & Silver/1F3A4916 copy
+            title: Microbeads; Gold
+            subtitle: 'Findspot: Lothal, Gujarat, India; Archaeological Survey of
+              India (2992)'
+          - imagePath: Gold & Silver/03-09-2024 16.16.10
+            title: Necklace of Queen Puabi; Gold, carnelian and lapiz lazuli; Early
+              Dynastic III
+            subtitle: 'Findspot: Ur, Iraq; 3rd millenium BCE; The British Museum
+              (1929,1017.237)'
+          title: Gold and Silver
           title_marathi: 
-          description: Widely used for carving seals, beads and small ornaments.
+          description: Gold and silver functioned as prestige metals in the Indus
+            civilization, used largely for ornaments, ritual items, and elite objects.
+            Gold was available in small quantities from riverine deposits in the
+            upper Indus and Jhelum regions and from the Alech Hills of Saurashtra.
+            Additional gold may have reached the Harappans through exchange with
+            regions such as Karnataka, known for electrum-rich deposits. Silver was
+            rarer, with probable sources in Rajasthan, the Panjshir Valley, and trading
+            intermediaries along the Iranian plateau. Harappans likely accessed silver
+            through overland routes linked to Shortugai or via interactions with
+            Dilmun and Mesopotamia. Silver beads, bangles, and vessels occur mainly
+            at Mohenjo-daro and Harappa, emphasizing their elite association. Both
+            metals moved along the same exchange routes that circulated copper, stones,
+            and crafted goods, underscoring their symbolic and economic value within
+            Harappan society.
           description_marathi: 
           importRoutes: []
           exportRoutes: []
@@ -243,98 +358,6 @@ MonoBehaviour:
           thenDuration: Mesopotamian era
           nowDuration: Carvings & beads
           thenMiningProcess: Manual gathering
-          nowMiningProcess: Industrial mining
-      - title: Turquoise
-        title_marathi: 
-        thumbnailPath: FlluxFull
-        bookmarkMetadata:
-          images:
-          - imagePath: 4130416
-            title: Turquoise 1
-            subtitle: Traded from Persia 1
-          - imagePath: harappan-dockyard-at-lothal-1 copy
-            title: Turquoise 2
-            subtitle: Traded from Persia 2
-          - imagePath: Dholavira12
-            title: Turquoise 3
-            subtitle: Traded from Persia 3
-          title: Turquoise
-          title_marathi: 
-          description: Ancient Egyptians, Persians and Native Americans prized turquoise
-            for jewelry.
-          description_marathi: 
-          importRoutes: []
-          exportRoutes: []
-          distance: 2850km
-          meritimeRoute: Lothal to Kish
-          overlandRoute: Lothal to Susa
-          challenges: Sandstorms
-          thenDuration: Bronze Age to Classical
-          nowDuration: Global gem trade
-          thenMiningProcess: Hand quarrying
-          nowMiningProcess: Large-scale mining
-      - title: Onyx
-        title_marathi: 
-        thumbnailPath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
-        bookmarkMetadata:
-          images:
-          - imagePath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
-            title: Onyx 1
-            subtitle: Decorative stone 1
-          - imagePath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
-            title: Onyx 2
-            subtitle: Decorative stone 2
-          - imagePath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
-            title: Onyx 3
-            subtitle: Decorative stone 3
-          - imagePath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
-            title: Onyx 4
-            subtitle: Decorative stone 4
-          title: Onyx
-          title_marathi: 
-          description: Used in ancient Rome for seals, intaglios and cameos.
-          description_marathi: 
-          importRoutes: []
-          exportRoutes: []
-          distance: 2800km
-          meritimeRoute: Lothal to Kish
-          overlandRoute: Lothal to Susa
-          challenges: Sandstorms
-          thenDuration: Roman era
-          nowDuration: Gem carvings
-          thenMiningProcess: Hand quarrying
-          nowMiningProcess: Modern quarrying
-      - title: Garnet
-        title_marathi: 
-        thumbnailPath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
-        bookmarkMetadata:
-          images:
-          - imagePath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
-            title: Garnet 1
-            subtitle: Blood-red gem 1
-          - imagePath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
-            title: Garnet 2
-            subtitle: Blood-red gem 2
-          - imagePath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
-            title: Garnet 3
-            subtitle: Blood-red gem 3
-          - imagePath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
-            title: Garnet 4
-            subtitle: Blood-red gem 4
-          title: Garnet
-          title_marathi: 
-          description: Traded as a gemstone since antiquity, used in jewelry and
-            beads.
-          description_marathi: 
-          importRoutes: []
-          exportRoutes: []
-          distance: 1750km
-          meritimeRoute: Lothal to Kish
-          overlandRoute: Lothal to Susa
-          challenges: Sandstorms
-          thenDuration: Ancient trade
-          nowDuration: Jewelry
-          thenMiningProcess: River panning and manual collection
           nowMiningProcess: Industrial mining
     - title: Shells & Ivory
       title_marathi: 

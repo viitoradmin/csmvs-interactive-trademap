@@ -54,12 +54,12 @@ public class CityLabelEffect : MonoBehaviour
     void Update()
     {
         // subtle breathing on halo only when active
-        if (_isActive && haloBreathPeriod > 0.01f && haloBreathAmplitude > 0f)
-        {
-            float t = Time.time / haloBreathPeriod * Mathf.PI * 2f;
-            float s = 2f + Mathf.Sin(t) * haloBreathAmplitude;
-            haloRenderer.transform.localScale = new Vector3(s, s, 1f);
-        }
+        // if (_isActive && haloBreathPeriod > 0.01f && haloBreathAmplitude > 0f)
+        // {
+        //     float t = Time.time / haloBreathPeriod * Mathf.PI * 2f;
+        //     float s = 2f + Mathf.Sin(t) * haloBreathAmplitude;
+        //     haloRenderer.transform.localScale = new Vector3(s, s, 1f);
+        // }
     }
 
     void SetAlpha(float textA, float haloA)

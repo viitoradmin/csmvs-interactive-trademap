@@ -23,6 +23,8 @@ public class HorizontalSlideshow : MonoBehaviour, IBeginDragHandler, IDragHandle
 
     [Header("Dots")]
     public TMP_Text picInfoText;
+
+    public Text picInfoTxt;
     public Transform SliderDotsParent;
     public GameObject SliderDotsPrefab;
     public List<Toggle> SliderDots;
@@ -142,6 +144,7 @@ public class HorizontalSlideshow : MonoBehaviour, IBeginDragHandler, IDragHandle
     public void UpdateMetaData()
     {
         picInfoText.text = slides[currentIndex].title + "\n" + slides[currentIndex].subtitle;
+        picInfoTxt.text = slides[currentIndex].title + "\n" + slides[currentIndex].subtitle;
         SliderDots[currentIndex].isOn = true;
     }
 
