@@ -36,8 +36,8 @@ MonoBehaviour:
           title: Carnelian
           title_marathi: 
           description: "Carnelian, a red-orange chalcedony, was one of the most distinctive
-            luxury materials of the Indus civilization and was produced in large
-            quantities by specialized lapidaries in Gujarat. Major sources in Kutch,
+            luxury materials of the Indus civilisation and was produced in large
+            quantities by specialised lapidaries in Gujarat. Major sources in Kutch,
             Saurashtra, and the Rajpipla region supplied raw nodules that Harappan
             craftsmen fashioned into long barrel beads and \u201Cetched\u201D or
             bleached designs, hallmark features of Harappan bead technology. Carnelian
@@ -49,7 +49,7 @@ MonoBehaviour:
             across the Iranian plateau. Harappan merchants maintained trading enclaves
             in Mesopotamia where both finished beads and raw nodules were exchanged,
             and some carnelian beads were later inscribed by Sumerian craftsmen.
-            Carnelian was used for jewelry, ritual offerings, and elite objects,
+            Carnelian was used for jewellery, ritual offerings, and elite objects,
             revealing Harappan integration into extensive interregional exchange."
           description_marathi: "\u092E\u0930\u093E\u0920\u0940 \u092D\u093E\u0937\u0947\u091A\u093E
             \u0935\u093F\u0915\u093E\u0938 \u0939\u093E \u0938\u093E\u092E\u093E\u091C\u093F\u0915,
@@ -120,7 +120,7 @@ MonoBehaviour:
             beads beyond South Asia, while later maritime routes connected Gujarat
             with Dilmun and Mesopotamia. The stone\u2019s durability and distinctive
             banding made it ideal for personal ornamentation, ritual objects, and
-            status displays. Agate bead manufacture exemplifies the standardization,
+            status displays. Agate bead manufacture exemplifies the standardisation,
             specialisation, and export-oriented scale of Harappan craft industries."
           description_marathi: 
           importRoutes: []
@@ -152,9 +152,9 @@ MonoBehaviour:
             to make bangles, ladles, decorative inlays, and ritual items. Coastal
             communities along the Makran and Gujarat littoral collected large gastropods\u2014particularly
             Turbinella pyrum\u2014and processed them before sending them inland.
-            Specialized workshops at Nageshwar, Lothal, Bagasra, and Gola Dhoro show
+            specialised workshops at Nageshwar, Lothal, Bagasra, and Gola Dhoro show
             extensive evidence of cutting, sawing, drilling, and finishing, indicating
-            a highly organized shell-working industry. Shell products travelled through
+            a highly organised shell-working industry. Shell products travelled through
             well-developed trade corridors to major inland centres such as Mohenjo-daro
             and Harappa, where the abundance of finished shell artifacts points to
             coordinated distribution systems. Some varieties\u2014such as spiny murex\u2014were
@@ -222,27 +222,27 @@ MonoBehaviour:
           nowDuration: Still valued
           thenMiningProcess: Ancient quarrying
           nowMiningProcess: Modern quarrying
-      - title: Lapiz Lazuli
+      - title: lapis Lazuli
         title_marathi: 
         thumbnailPath: Lapiz Lazuli/Thumbnail
         bookmarkMetadata:
           images:
           - imagePath: Lapiz Lazuli/03-09-2024 16.16.10
-            title: Necklace of Queen Puabi; Gold, carnelian and lapiz lazuli; Early
+            title: Necklace of Queen Puabi; Gold, carnelian and lapis Lazuli; Early
               Dynastic III
             subtitle: 'Findspot: Ur, Iraq; 3rd millenium BCE; The British Museum
               (1929,1017.237)'
           - imagePath: Lapiz Lazuli/Standard of Ur 1
             title: "Peace side \u2014 \u2018Standard of Ur\u2019 (replica); Wood,
-              shell, limestone, lapis lazuli, bitumen, inlaid"
+              shell, limestone, lapis Lazuli, bitumen, inlaid"
             subtitle: 'Findspot: Royal Cemetery at Ur, Iraq; 2500 BCE; The British
               Museum (replica of 121201)'
           - imagePath: Lapiz Lazuli/Standard of Ur 2
             title: "War side \u2014 \u2018Standard of Ur\u2019 (replica); Wood, shell,
-              limestone, lapis lazuli, bitumen, inlaid"
+              limestone, lapis Lazuli, bitumen, inlaid"
             subtitle: 'Findspot: Royal Cemetery at Ur, Iraq; 2500 BCE; The British
               Museum (replica of 121201)'
-          title: Lapiz Lazuli
+          title: lapis Lazuli
           title_marathi: 
           description: "Lapis lazuli, one of the most valued stones of the Bronze
             Age, was sourced primarily from the Sar-i Sang mines of Badakshan and
@@ -255,7 +255,7 @@ MonoBehaviour:
             where it adorned elite regalia and ritual objects, including those from
             the Royal Cemetery of Ur. Shifts in political alignments after 2000 BCE
             reduced lapis availability in some Harappan regions, but its earlier
-            circulation demonstrates the civilization\u2019s extensive participation
+            circulation demonstrates the civilisation\u2019s extensive participation
             in long-distance exchange systems across the Iranian plateau and West
             Asia."
           description_marathi: 
@@ -301,7 +301,7 @@ MonoBehaviour:
             imported Mesopotamian bitumen. Within the Indus world, cotton served
             everyday domestic needs, but in external trade it may have been exchanged
             for copper and other resources. Cotton thus reflects agricultural specialization,
-            organized textile craft production, and Harappan participation in long-distance
+            organised textile craft production, and Harappan participation in long-distance
             maritime commerce."
           description_marathi: 
           importRoutes: []
@@ -335,7 +335,7 @@ MonoBehaviour:
           title: Gold and Silver
           title_marathi: 
           description: Gold and silver functioned as prestige metals in the Indus
-            civilization, used largely for ornaments, ritual items, and elite objects.
+            civilisation, used largely for ornaments, ritual items, and elite objects.
             Gold was available in small quantities from riverine deposits in the
             upper Indus and Jhelum regions and from the Alech Hills of Saurashtra.
             Additional gold may have reached the Harappans through exchange with
