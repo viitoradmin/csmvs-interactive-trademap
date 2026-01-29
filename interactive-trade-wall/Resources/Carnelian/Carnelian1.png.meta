@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: cbaf5e53cffd743d3880434892c57d42
+guid: d1b49d5ea6b68d34e99386166c2e6fb8
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5478083491304854947
-    second: 03-09-2024 16.16.10_0
+      213: 239333706292665438
+    second: Carnelian1_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -109,24 +109,11 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: iOS
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: 03-09-2024 16.16.10_0
+      name: Carnelian1_0
       rect:
         serializedVersion: 2
         x: 0
@@ -141,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d5aa7dab610f9f3b0800000000000000
-      internalID: -5478083491304854947
+      spriteID: e5c1a52ecb8425300800000000000000
+      internalID: 239333706292665438
       vertices: []
       indices: 
       edges: []
@@ -161,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      03-09-2024 16.16.10_0: -5478083491304854947
+      Carnelian1_0: 239333706292665438
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
