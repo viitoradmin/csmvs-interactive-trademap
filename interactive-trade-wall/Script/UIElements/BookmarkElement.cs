@@ -40,11 +40,11 @@ public class BookmarkElement : MonoBehaviour
                 bookmarkTitleUI.font = controller.englishTmpFont;
                 bookmarkTitleUI.text = bookmark.title;
             }
-            else if (controller.language == Language.Marathi)
-            {
-                bookmarkTitleUI.font = controller.marathiTmpFont;
-                bookmarkTitleUI.text = bookmark.title_marathi;
-            }
+            //else if (controller.language == Language.Marathi)
+            //{
+            //    bookmarkTitleUI.font = controller.marathiTmpFont;
+            //    bookmarkTitleUI.text = bookmark.title_marathi;
+            //}
         }
 
 
@@ -59,11 +59,11 @@ public class BookmarkElement : MonoBehaviour
                 bookmarkTitleUI.font = controller.englishTmpFont;
                 bookmarkTitleUI.text = bookmark.title;
             }
-            else if (controller.language == Language.Marathi)
-            {
-                bookmarkTitleUI.font = controller.marathiTmpFont;
-                bookmarkTitleUI.text = bookmark.title_marathi;
-            }
+            //else if (controller.language == Language.Marathi)
+            //{
+            //    bookmarkTitleUI.font = controller.marathiTmpFont;
+            //    bookmarkTitleUI.text = bookmark.title_marathi;
+            //}
     }
 
 

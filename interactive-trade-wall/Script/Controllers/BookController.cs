@@ -83,7 +83,6 @@ public class BookController : MonoBehaviour
     [Header("Sample Bookmark Data")]
     //public Data dataSO;
     public InteractiveTradeWallDataSO dataSO;
-    public InteractiveTradeWallDataSO marathiDataSO;
 
     public UnityAction onToggleLangugae; 
     
@@ -147,16 +146,16 @@ public class BookController : MonoBehaviour
     
     public void ToogleLanguge()
     {
-        if (language == Language.English)
-        {
-            language = Language.Marathi;
+        //if (language == Language.English)
+        //{
+        //    language = Language.Marathi;
 
-        }
-        else if (language == Language.Marathi)
-        {
-            language = Language.English;
+        //}
+        //else if (language == Language.Marathi)
+        //{
+        //    language = Language.English;
 
-        }
+        //}
         Debug.Log("Current Page:" + book.GetCurrentPage());
         if (book.GetCurrentPage() == 6)
         {
@@ -330,11 +329,12 @@ public class BookController : MonoBehaviour
         {
             materialDetailsTxt.font = englisthFont;
             materialDetailsTxt.text = itemData.bookmarkMetadata.description;
-        }else if(language == Language.Marathi)
-        {
-            materialDetailsTxt.font = marathiFont;
-            materialDetailsTxt.text = marathiParser.GetMarathiText(itemData.bookmarkMetadata.description_marathi);
         }
+        //else if(language == Language.Marathi)
+        //{
+        //    materialDetailsTxt.font = marathiFont;
+        //    materialDetailsTxt.text = marathiParser.GetMarathiText(itemData.bookmarkMetadata.description_marathi);
+        //}
         
 
         importRoutes_Button_Text.text = language == Language.English ? "Import Routes" : "Āyāta mārga";
@@ -424,9 +424,4 @@ public class BookController : MonoBehaviour
         return rawImage;
     }
 
-}
-
-public enum Language
-{
-    English, Marathi
 }

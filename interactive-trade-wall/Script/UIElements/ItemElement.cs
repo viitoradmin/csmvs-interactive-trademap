@@ -37,10 +37,10 @@ public class ItemElement : MonoBehaviour
         {
             title_text.text = m_ItemData.title;
         }
-        else if (BookController.instance.language == Language.Marathi)
-        {
-            title_text.text = BookController.instance.marathiParser.GetMarathiText(m_ItemData.title_marathi);
-        }
+        //else if (BookController.instance.language == Language.Marathi)
+        //{
+        //    title_text.text = BookController.instance.marathiParser.GetMarathiText(m_ItemData.title_marathi);
+        //}
         //--add marathi field Here--
         //BookController.instance.LoadImageFromURL(m_ItemData.thumbnailPath, material_rawimage);
         BookController.instance.LoadTextureFromResources(m_ItemData.thumbnailPath, material_rawimage);
@@ -56,11 +56,11 @@ public class ItemElement : MonoBehaviour
             title_text.font = BookController.instance.englishTmpFont;
             title_text.text = m_ItemData.title;
         }
-        else if (BookController.instance.language == Language.Marathi)
-        {
-            title_text.font = BookController.instance.marathiTmpFont;
-            title_text.text = BookController.instance.marathiParser.GetMarathiText(m_ItemData.title_marathi);
-        }
+        //else if (BookController.instance.language == Language.Marathi)
+        //{
+        //    title_text.font = BookController.instance.marathiTmpFont;
+        //    title_text.text = BookController.instance.marathiParser.GetMarathiText(m_ItemData.title_marathi);
+        //}
     }
 
     public void MarkThisItemAsSelected(bool _isSelected)
