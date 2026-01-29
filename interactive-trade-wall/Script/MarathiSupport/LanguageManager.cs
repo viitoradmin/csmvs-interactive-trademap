@@ -20,6 +20,8 @@ public class LanguageFontPair {
 public class LanguageManager: MonoBehaviour {
     //[SerializeField] private APIHandler apiHandler;
     [SerializeField] private InteractiveTradeWallDataSO data;
+    [SerializeField] private TextAsset InteractiveTradeWallDataSO_En;
+    [SerializeField] private TextAsset InteractiveTradeWallDataSO_Mr;
 
     private Language _currentLanguage = Language.English;
     public Language CurrentLanguage {
@@ -29,9 +31,11 @@ public class LanguageManager: MonoBehaviour {
             switch (_currentLanguage) {
                 case Language.English:
                     //apiHandler.GetDataForEnglish();
+                    EnglishSelected();
                 break;
                 case Language.Marathi:
                     //apiHandler.GetDataForMarathi();
+                    MarathiSelected();
                 break;
             }
             OnLanguageChangedEvent?.Invoke(_currentLanguage);
@@ -49,7 +53,7 @@ public class LanguageManager: MonoBehaviour {
         } else {
             Destroy(gameObject);
         }
-    }    
+    }
     //private void OnEnable() {
     //    APIHandler.OnDataFetchedEvent += OnDataFetched;
     //}
@@ -59,14 +63,14 @@ public class LanguageManager: MonoBehaviour {
     //private void OnDataFetched(Root root) {        
     //    OnLanguageChangedEvent?.Invoke(_currentLanguage);
     //}   
-    //[ContextMenu("SetEnglishLanguage")]
-    //public void SetEnglishLanguage() {
-    //    CurrentLanguage = Language.English;
-    //}
-    //[ContextMenu("SetMarathiLanguage")]
-    //public void SetMarathiLanguage() {
-    //    CurrentLanguage = Language.Marathi;
-    //}
+    [ContextMenu("SetEnglishLanguage")]
+    public void SetEnglishLanguage() {
+        CurrentLanguage = Language.English;
+    }
+    [ContextMenu("SetMarathiLanguage")]
+    public void SetMarathiLanguage() {
+        CurrentLanguage = Language.Marathi;
+    }
     internal TMP_FontAsset GetFontForCurrentLanguage(Language language) {
         return Array.Find(fonts, pair => pair.language == language).fontAsset;
     }
@@ -77,5 +81,13 @@ public class LanguageManager: MonoBehaviour {
         string jsonData =  JsonUtility.ToJson(data.root);
         File.WriteAllText(Application.persistentDataPath + "/StoredData.json", jsonData);
         Debug.Log("Data Stored at: " + Application.persistentDataPath + "/StoredData.json");
+    }
+    private void EnglishSelected() {
+        string jsonData = InteractiveTradeWallDataSO_En.text;
+        data.root = JsonUtility.FromJson<InteractiveTradeWallDataSO.Root>(jsonData);
+    }
+    private void MarathiSelected() {
+        string jsonData = InteractiveTradeWallDataSO_Mr.text;
+        data.root = JsonUtility.FromJson<InteractiveTradeWallDataSO.Root>(jsonData);
     }
 }//LanguageManager class end.
