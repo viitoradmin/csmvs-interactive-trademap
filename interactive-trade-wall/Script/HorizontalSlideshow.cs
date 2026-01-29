@@ -41,7 +41,7 @@ public class HorizontalSlideshow : MonoBehaviour, IBeginDragHandler, IDragHandle
     }
 
     public void SetupSlides(List<BookmarkImage> _slides) {
-        Debug.Log("SetupSlides" + _slides.Count + ">" + slides[0].title);
+        //Debug.Log("SetupSlides" + _slides.Count + ">" + slides[0].title);
         slides = _slides;
         currentIndex = 0;
         PopulateSlides();
@@ -131,7 +131,7 @@ public class HorizontalSlideshow : MonoBehaviour, IBeginDragHandler, IDragHandle
 
     public void UpdateMetaData() {
         picInfoText.text = slides[currentIndex].title + "\n" + slides[currentIndex].subtitle;
-        picInfoTxt.text = slides[currentIndex].title + "\n" + slides[currentIndex].subtitle;
+        //picInfoTxt.text = slides[currentIndex].title + "\n" + slides[currentIndex].subtitle;
         SliderDots[currentIndex].isOn = true;
     }
 

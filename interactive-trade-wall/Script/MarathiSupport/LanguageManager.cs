@@ -63,14 +63,14 @@ public class LanguageManager: MonoBehaviour {
     //private void OnDataFetched(Root root) {        
     //    OnLanguageChangedEvent?.Invoke(_currentLanguage);
     //}   
-    [ContextMenu("SetEnglishLanguage")]
-    public void SetEnglishLanguage() {
-        CurrentLanguage = Language.English;
-    }
-    [ContextMenu("SetMarathiLanguage")]
-    public void SetMarathiLanguage() {
-        CurrentLanguage = Language.Marathi;
-    }
+    //[ContextMenu("SetEnglishLanguage")]
+    //public void SetEnglishLanguage() {
+    //    CurrentLanguage = Language.English;
+    //}
+    //[ContextMenu("SetMarathiLanguage")]
+    //public void SetMarathiLanguage() {
+    //    CurrentLanguage = Language.Marathi;
+    //}
     internal TMP_FontAsset GetFontForCurrentLanguage(Language language) {
         return Array.Find(fonts, pair => pair.language == language).fontAsset;
     }

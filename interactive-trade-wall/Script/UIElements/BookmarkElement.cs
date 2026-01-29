@@ -14,15 +14,15 @@ public class BookmarkElement : MonoBehaviour
 
     [SerializeField] private TMP_Text bookmarkTitleUI;
 
-    void OnEnable()
-    {
-        BookController.instance.onToggleLangugae += RefreshLanguage;
-    }
+    //void OnEnable()
+    //{
+    //    BookController.instance.onToggleLangugae += RefreshLanguage;
+    //}
 
-    void OnDisable()
-    {
-        BookController.instance.onToggleLangugae -= RefreshLanguage;
-    }
+    //void OnDisable()
+    //{
+    //    BookController.instance.onToggleLangugae -= RefreshLanguage;
+    //}
 
     public void setupData(Bookmark _bm)
     {
@@ -35,11 +35,7 @@ public class BookmarkElement : MonoBehaviour
 
         if (bookmarkTitleUI != null)
         {
-            if (controller.language == Language.English)
-            {
-                bookmarkTitleUI.font = controller.englishTmpFont;
-                bookmarkTitleUI.text = bookmark.title;
-            }
+            bookmarkTitleUI.text = bookmark.title;            
             //else if (controller.language == Language.Marathi)
             //{
             //    bookmarkTitleUI.font = controller.marathiTmpFont;
@@ -51,20 +47,15 @@ public class BookmarkElement : MonoBehaviour
         gameObject.name = bookmark.title;
     }
 
-    void RefreshLanguage()
-    {
-        Debug.Log("refresh Called");
-       if (controller.language == Language.English)
-            {
-                bookmarkTitleUI.font = controller.englishTmpFont;
-                bookmarkTitleUI.text = bookmark.title;
-            }
-            //else if (controller.language == Language.Marathi)
-            //{
-            //    bookmarkTitleUI.font = controller.marathiTmpFont;
-            //    bookmarkTitleUI.text = bookmark.title_marathi;
-            //}
-    }
+    //void RefreshLanguage() {
+    //    Debug.Log("refresh Called");
+    //    bookmarkTitleUI.text = bookmark.title;
+    //    //else if (controller.language == Language.Marathi)
+    //    //{
+    //    //    bookmarkTitleUI.font = controller.marathiTmpFont;
+    //    //    bookmarkTitleUI.text = bookmark.title_marathi;
+    //    //}
+    //}
 
 
     public void OnClickBookmark(bool _ison)

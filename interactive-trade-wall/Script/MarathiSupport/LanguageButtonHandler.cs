@@ -30,6 +30,7 @@ public class LanguageButtonHandler:MonoBehaviour {
         marathiButton.onClick.AddListener(() => {
             OnLanguageToggleTo(Language.English);
         });
+        RefreshSelectedButtonUI();
     }
     private void OnLanguageToggleTo(Language selectedLanguage) {
         LanguageManager.Instance.CurrentLanguage = selectedLanguage;

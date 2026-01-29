@@ -15,7 +15,6 @@ public class BookController : MonoBehaviour
 {
     public MegaBookBuilder book;
     public static BookController instance;
-    public Language language;
     public MegaBookSwipeControl swipeController;
     public ItemsPagination bookmarkItemsPagination;
 
@@ -48,7 +47,7 @@ public class BookController : MonoBehaviour
     public TMP_Text backButtonPath;
     public TMP_Text materialTitleText;
     public TMP_Text materialDetailsText;
-    public Text materialDetailsTxt;
+    //public Text materialDetailsTxt;
     [Space]
     public TMP_Text importRoutes_Button_Text;
     public TMP_Text exportRoutes_Button_Text;
@@ -75,7 +74,6 @@ public class BookController : MonoBehaviour
     public int currentSelectedItemId = -1;
 
     public Font englisthFont, marathiFont;
-    public TMPro.TMP_FontAsset englishTmpFont, marathiTmpFont;
 
     [Header("UI Effects Related Data")]
     public UIEffectsController uIEffectsController;
@@ -84,8 +82,6 @@ public class BookController : MonoBehaviour
     //public Data dataSO;
     public InteractiveTradeWallDataSO dataSO;
 
-    public UnityAction onToggleLangugae; 
-    
     public float idleTimeThreshold = 15f; // Seconds before screensaver activates
     private float _idleTimer;
     public bool _isScreensaverActive;
@@ -162,10 +158,10 @@ public class BookController : MonoBehaviour
             Debug.Log("This is detailed page section");
             SetDetailPageUI(_LastSelectedItem);
         }
-        else
-        {
-            onToggleLangugae?.Invoke();
-        }
+        //else
+        //{
+        //    onToggleLangugae?.Invoke();
+        //}
     }
 
     [ContextMenu("Close book")]
@@ -178,7 +174,7 @@ public class BookController : MonoBehaviour
     public void ShowDetails(BookmarkItem _data, Texture _materialImage)
     {
         // disable all Buttons and UI
-        Debug.Log($"open data called {_data.title}");
+        //Debug.Log($"open data called {_data.title}");
         _LastSelectedItem = _data;
         SetReturnPage();
         pinned_rawimage.texture = _materialImage;
@@ -323,13 +319,12 @@ public class BookController : MonoBehaviour
         //backButtonPath.text = bookmarkItemsPagination.currentSelectedBookmark.title + " > " + itemData.title;
         backButtonPath.text =  itemData.title;
         materialTitleText.text = itemData.bookmarkMetadata.title;
-//        materialDetailsText.text = language == Language.English ? itemData.bookmarkMetadata.description : marathiParser.GetMarathiText(itemData.bookmarkMetadata.description);
+        materialDetailsText.text = itemData.bookmarkMetadata.description;
 
-        if(language == Language.English)
-        {
-            materialDetailsTxt.font = englisthFont;
-            materialDetailsTxt.text = itemData.bookmarkMetadata.description;
-        }
+        //materialDetailsText.text = language == Language.English ? itemData.bookmarkMetadata.description : marathiParser.GetMarathiText(itemData.bookmarkMetadata.description);
+
+        //materialDetailsTxt.text = itemData.bookmarkMetadata.description;
+        
         //else if(language == Language.Marathi)
         //{
         //    materialDetailsTxt.font = marathiFont;
@@ -337,22 +332,22 @@ public class BookController : MonoBehaviour
         //}
         
 
-        importRoutes_Button_Text.text = language == Language.English ? "Import Routes" : "Āyāta mārga";
-        exportRoutes_Button_Text.text = language == Language.English ? "Export Routes" : "Niryāta mārga";
-        routeFacts_Title_Text.text = language == Language.English ? "Route Indicators" : "Mārga tathyē";
-        thenVSnow_Title_Text.text = language == Language.English ? "Then vs Now" : "Maga ātā vi";
-        distance_Title_Text.text = language == Language.English ? "Distance" : "Antara";
-        distance_Value_Text.text = itemData.bookmarkMetadata.distance;
-        meritimeRoute_Title_Text.text = language == Language.English ? "Meritime Route" : "Sāgarī mārga";
-        meritimeRoute_Value_Text.text = itemData.bookmarkMetadata.meritimeRoute;
-        overlandRoute_Title_Text.text = language == Language.English ? "Overland Route" : "Jaminīvaracā mārga\r\n";
-        overlandRoute_Value_Text.text = itemData.bookmarkMetadata.overlandRoute;
-        challenges_Title_Text.text = language == Language.English ? "Challenges" : "Āvhānē";
-        challenges_Value_Text.text = itemData.bookmarkMetadata.challenges;
-        journeyDuration_Then_Text.text = itemData.bookmarkMetadata.thenDuration;
-        journeyDuration_Now_Text.text = itemData.bookmarkMetadata.nowDuration;
-        miningProcess_Then_Text.text = itemData.bookmarkMetadata.thenMiningProcess;
-        miningProcess_Now_Text.text = itemData.bookmarkMetadata.nowMiningProcess;
+        //importRoutes_Button_Text.text = language == Language.English ? "Import Routes" : "Āyāta mārga";
+        //exportRoutes_Button_Text.text = language == Language.English ? "Export Routes" : "Niryāta mārga";
+        //routeFacts_Title_Text.text = language == Language.English ? "Route Indicators" : "Mārga tathyē";
+        //thenVSnow_Title_Text.text = language == Language.English ? "Then vs Now" : "Maga ātā vi";
+        //distance_Title_Text.text = language == Language.English ? "Distance" : "Antara";
+        //distance_Value_Text.text = itemData.bookmarkMetadata.distance;
+        //meritimeRoute_Title_Text.text = language == Language.English ? "Meritime Route" : "Sāgarī mārga";
+        //meritimeRoute_Value_Text.text = itemData.bookmarkMetadata.meritimeRoute;
+        //overlandRoute_Title_Text.text = language == Language.English ? "Overland Route" : "Jaminīvaracā mārga\r\n";
+        //overlandRoute_Value_Text.text = itemData.bookmarkMetadata.overlandRoute;
+        //challenges_Title_Text.text = language == Language.English ? "Challenges" : "Āvhānē";
+        //challenges_Value_Text.text = itemData.bookmarkMetadata.challenges;
+        //journeyDuration_Then_Text.text = itemData.bookmarkMetadata.thenDuration;
+        //journeyDuration_Now_Text.text = itemData.bookmarkMetadata.nowDuration;
+        //miningProcess_Then_Text.text = itemData.bookmarkMetadata.thenMiningProcess;
+        //miningProcess_Now_Text.text = itemData.bookmarkMetadata.nowMiningProcess;
 
         //set slideshow
         slideShowManager.SetupSlides(itemData.bookmarkMetadata.images);
