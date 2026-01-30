@@ -34,11 +34,6 @@ public class ItemsPagination:MonoBehaviour {
         //LoadPage(0);
     }
 
-    public void OnEnable() {
-
-
-    }
-
     public void ShowBookmarkItems(Bookmark _bookmark) {
         currentSelectedBookmark = _bookmark;
         ResetPagination();

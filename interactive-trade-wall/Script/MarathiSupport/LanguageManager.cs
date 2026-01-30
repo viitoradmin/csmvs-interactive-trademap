@@ -2,6 +2,7 @@ using System;
 using System.IO;
 using TMPro;
 using UnityEngine;
+using static InteractiveTradeWallDataSO;
 
 public enum Language {
     English,
@@ -18,10 +19,10 @@ public class LanguageFontPair {
     }
 }
 public class LanguageManager: MonoBehaviour {
-    //[SerializeField] private APIHandler apiHandler;
-    [SerializeField] private InteractiveTradeWallDataSO data;
-    [SerializeField] private TextAsset InteractiveTradeWallDataSO_En;
-    [SerializeField] private TextAsset InteractiveTradeWallDataSO_Mr;
+    [SerializeField] private APIHandler apiHandler;
+    //[SerializeField] private InteractiveTradeWallDataSO data;
+    //[SerializeField] private TextAsset InteractiveTradeWallDataSO_En;
+    //[SerializeField] private TextAsset InteractiveTradeWallDataSO_Mr;
 
     private Language _currentLanguage = Language.English;
     public Language CurrentLanguage {
@@ -30,12 +31,12 @@ public class LanguageManager: MonoBehaviour {
             _currentLanguage = value;
             switch (_currentLanguage) {
                 case Language.English:
-                    //apiHandler.GetDataForEnglish();
-                    EnglishSelected();
+                    apiHandler.GetDataForEnglish();
+                    //EnglishSelected();
                 break;
                 case Language.Marathi:
-                    //apiHandler.GetDataForMarathi();
-                    MarathiSelected();
+                    apiHandler.GetDataForMarathi();
+                    //MarathiSelected();
                 break;
             }
             OnLanguageChangedEvent?.Invoke(_currentLanguage);
@@ -54,15 +55,15 @@ public class LanguageManager: MonoBehaviour {
             Destroy(gameObject);
         }
     }
-    //private void OnEnable() {
-    //    APIHandler.OnDataFetchedEvent += OnDataFetched;
-    //}
-    //private void OnDisable() {
-    //    APIHandler.OnDataFetchedEvent -= OnDataFetched;
-    //}
-    //private void OnDataFetched(Root root) {        
-    //    OnLanguageChangedEvent?.Invoke(_currentLanguage);
-    //}   
+    private void OnEnable() {
+        APIHandler.OnDataFetchedEvent += OnDataFetched;
+    }
+    private void OnDisable() {
+        APIHandler.OnDataFetchedEvent -= OnDataFetched;
+    }
+    private void OnDataFetched(Root root) {
+        OnLanguageChangedEvent?.Invoke(_currentLanguage);
+    }
     //[ContextMenu("SetEnglishLanguage")]
     //public void SetEnglishLanguage() {
     //    CurrentLanguage = Language.English;
@@ -76,18 +77,20 @@ public class LanguageManager: MonoBehaviour {
     }
     internal MarathiTextParser GetMarathiTextParser() => _marathiTextParser;
 
-    [ContextMenu("StoreData")]
-    public void StoreData() {
-        string jsonData =  JsonUtility.ToJson(data.root);
-        File.WriteAllText(Application.persistentDataPath + "/StoredData.json", jsonData);
-        Debug.Log("Data Stored at: " + Application.persistentDataPath + "/StoredData.json");
-    }
-    private void EnglishSelected() {
-        string jsonData = InteractiveTradeWallDataSO_En.text;
-        data.root = JsonUtility.FromJson<InteractiveTradeWallDataSO.Root>(jsonData);
-    }
-    private void MarathiSelected() {
-        string jsonData = InteractiveTradeWallDataSO_Mr.text;
-        data.root = JsonUtility.FromJson<InteractiveTradeWallDataSO.Root>(jsonData);
-    }
+    //[ContextMenu("StoreData")]
+    //public void StoreData() {
+    //    string jsonData =  JsonUtility.ToJson(data.root);
+    //    File.WriteAllText(Application.persistentDataPath + "/StoredData.json", jsonData);
+    //    Debug.Log("Data Stored at: " + Application.persistentDataPath + "/StoredData.json");
+    //}
+    //private void EnglishSelected() {
+    //    string jsonData = InteractiveTradeWallDataSO_En.text;
+    //    data.root = JsonUtility.FromJson<InteractiveTradeWallDataSO.Root>(jsonData);
+    //}
+    //private void MarathiSelected() {
+    //    string jsonData = InteractiveTradeWallDataSO_Mr.text;
+    //    InteractiveTradeWallDataSO.Root root = JsonUtility.FromJson<InteractiveTradeWallDataSO.Root>(jsonData);
+    //    root.Convert(this);
+    //    data.root = root;
+    //}
 }//LanguageManager class end.

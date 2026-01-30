@@ -70,13 +70,13 @@ public class BookmarkElement : MonoBehaviour
 
     private IEnumerator BookMarkClickCoroutine()
     {
-        Debug.Log($"Opening Material List");
+        //Debug.Log($"Opening Material List");
         yield return StartCoroutine(controller.GotoPage(bookmark.pageNumber, () =>
         {
             controller.OpenMatrialPanel();
             controller.bookmarkItemsPagination.ShowBookmarkItems(bookmark);//fill data
         }));
 
-        Debug.Log("Bookmark clicked: " + bookmark.title);
+        //Debug.Log("Bookmark clicked: " + bookmark.title);
     }
 }
