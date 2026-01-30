@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using static InteractiveTradeWallDataSO;
 
 public class LanguageButtonHandler:MonoBehaviour {
     [SerializeField] private Button englishButton;
@@ -8,14 +9,14 @@ public class LanguageButtonHandler:MonoBehaviour {
     private List<Button> buttons = new List<Button>();
     //[SerializeField] private AppController appController;
     private void OnEnable() {
-        //APIHandler.OnDataFetchedEvent += OnDataFetched;
+        APIHandler.OnDataFetchedEvent += OnDataFetched;
     }
     private void OnDestroy() {
-        //APIHandler.OnDataFetchedEvent -= OnDataFetched;
+        APIHandler.OnDataFetchedEvent -= OnDataFetched;
     }
-    //private void OnDataFetched(Root root) {
-    //    RefreshSelectedButtonUI();
-    //}
+    private void OnDataFetched(Root root) {
+        RefreshSelectedButtonUI();
+    }
     private void Start() {
         buttons.Clear();
         buttons.Add(englishButton);
@@ -30,7 +31,6 @@ public class LanguageButtonHandler:MonoBehaviour {
         marathiButton.onClick.AddListener(() => {
             OnLanguageToggleTo(Language.English);
         });
-        RefreshSelectedButtonUI();
     }
     private void OnLanguageToggleTo(Language selectedLanguage) {
         LanguageManager.Instance.CurrentLanguage = selectedLanguage;
