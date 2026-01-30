@@ -12,10 +12,15 @@ public enum Language {
 public class LanguageFontPair {
     public Language language;
     public TMP_FontAsset fontAsset;
-
+    public Font lagacyFontAsset;
+    public LanguageFontPair() { }
     public LanguageFontPair(Language language,TMP_FontAsset fontAsset) {
         this.language = language;
         this.fontAsset = fontAsset;
+    }
+    public LanguageFontPair(Language language,Font lagacyFontAsset) {
+        this.language = language;
+        this.lagacyFontAsset = lagacyFontAsset;
     }
 }
 public class LanguageManager: MonoBehaviour {
@@ -45,6 +50,7 @@ public class LanguageManager: MonoBehaviour {
     public static Action<Language> OnLanguageChangedEvent = delegate { };
 
     [SerializeField] private LanguageFontPair[] fonts;
+
     [SerializeField] private MarathiTextParser _marathiTextParser;
     public static LanguageManager Instance;
     private void Awake() {
@@ -74,6 +80,9 @@ public class LanguageManager: MonoBehaviour {
     //}
     internal TMP_FontAsset GetFontForCurrentLanguage(Language language) {
         return Array.Find(fonts, pair => pair.language == language).fontAsset;
+    }
+    internal Font GetFontForCurrentLanguageLagacy(Language language) {
+        return Array.Find(fonts, pair => pair.language == language).lagacyFontAsset;
     }
     internal MarathiTextParser GetMarathiTextParser() => _marathiTextParser;
 

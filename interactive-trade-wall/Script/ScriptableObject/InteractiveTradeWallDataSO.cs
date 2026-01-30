@@ -275,7 +275,4 @@ public class InteractiveTradeWallDataSO:ScriptableObject {
             }
         }
     }
-
-
-
 }
