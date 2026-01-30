@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -77,6 +78,9 @@ public class BookController:MonoBehaviour {
     public float idleTimeThreshold = 15f; // Seconds before screensaver activates
     private float _idleTimer;
     public bool _isScreensaverActive;
+    [SerializeField] private APIHandler APIHandler;
+    [SerializeField] private MediaManager mediaManager;
+
     private void Awake() {
         instance = this;
     }
@@ -336,7 +340,14 @@ public class BookController:MonoBehaviour {
     public void LoadTextureFromResources(string url,RawImage rawImage) {
         rawImage.texture = Resources.Load<Texture2D>(url);
     }
-
+    public void LoadTextureFromResources(string url,Action<Sprite> onLoaded) {
+        //rawImage.texture = Resources.Load<Texture2D>(url);
+        if (APIHandler.useOfflineFile) {
+            mediaManager.GetSpriteFromResource(url,onLoaded);
+        } else {
+            mediaManager.DownloadSingleMediaFileAsync(url,onLoaded);
+        }
+    }
     public void LoadImageFromURL(string url,RawImage rawImage) {
         StartCoroutine(DownloadImage(url,rawImage));
     }

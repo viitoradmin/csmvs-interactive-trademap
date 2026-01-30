@@ -38,7 +38,15 @@ public class ItemElement:MonoBehaviour {
         //}
         //--add marathi field Here--
         //BookController.instance.LoadImageFromURL(m_ItemData.thumbnailPath, material_rawimage);
-        BookController.instance.LoadTextureFromResources(m_ItemData.thumbnailPath,material_rawimage);
+
+        //[OLD]
+        //BookController.instance.LoadTextureFromResources(m_ItemData.thumbnailPath,material_rawimage);
+
+        //[NEW]
+        BookController.instance.LoadTextureFromResources(m_ItemData.thumbnailPath,(sprite) => {
+            material_rawimage.texture = sprite.texture;
+        });
+
         itemButton.onClick.AddListener(ViewDetails);
         // MarkThisItemAsSelected(_isSelected);
     }

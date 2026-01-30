@@ -59,7 +59,13 @@ public class HorizontalSlideshow : MonoBehaviour, IBeginDragHandler, IDragHandle
         foreach (var _slide in slides) {
             GameObject slide = Instantiate(slidePrefab, container);
             // BookController.instance.LoadImageFromURL(_slide.imagePath, slide.GetComponent<RawImage>());
-            BookController.instance.LoadTextureFromResources(_slide.imagePath, slide.GetComponent<RawImage>());
+
+            //[OLD]
+            //BookController.instance.LoadTextureFromResources(_slide.imagePath, slide.GetComponent<RawImage>());
+            //[NEW]
+            BookController.instance.LoadTextureFromResources(_slide.imagePath,(sprite) => { 
+                slide.GetComponent<RawImage>().texture = sprite.texture;
+            });
         }
     }
 
@@ -113,7 +119,6 @@ public class HorizontalSlideshow : MonoBehaviour, IBeginDragHandler, IDragHandle
 
     // 🔹 Go to Next Slide
     public void NextSlide() {
-        Debug.Log("next");
         if (currentIndex < slides.Count - 1) {
             currentIndex++;
             SnapToSlide(true);
@@ -122,7 +127,6 @@ public class HorizontalSlideshow : MonoBehaviour, IBeginDragHandler, IDragHandle
 
     // 🔹 Go to Previous Slide
     public void PrevSlide() {
-        Debug.Log("previous");
         if (currentIndex > 0) {
             currentIndex--;
             SnapToSlide(true);
