@@ -79,11 +79,11 @@ public class ItemsPagination:MonoBehaviour {
         // This is to higlight the current selected element.
         if (BookController.instance != null) {
             //Debug.Log(">>" + BookController.instance._LastSelectedItem.title);
-            Debug.Log(currentSelectedBookmark.items.Count);
+            //Debug.Log(currentSelectedBookmark.items.Count);
 
             for (int i = 0;i < currentSelectedBookmark.items.Count;i++) {
                 if (BookController.instance._LastSelectedItem.title == currentSelectedBookmark.items[i].title) {
-                    Debug.Log("this is the item last selected" + i);
+                    //Debug.Log("this is the item last selected" + i);
                     lastSelectedItemIndex = i;
                     break;
                 } else {
