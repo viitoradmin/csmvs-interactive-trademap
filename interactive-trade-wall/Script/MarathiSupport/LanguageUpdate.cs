@@ -1,13 +1,13 @@
 using System;
 using System.Collections.Generic;
-using TMPro;
+using TMPro; // Covers both TextMeshPro and TextMeshProUGUI
 using UnityEngine;
-using UnityEngine.UI; // Required for UnityEngine.UI.Text
+using UnityEngine.UI; // Covers Legacy Text
 
 [Serializable]
 public class LanguageTextPair {
     public Language language;
-    public string message;
+    [TextArea] public string message; // Added TextArea for easier editing
     public LanguageTextPair(Language language,string message) {
         this.language = language;
         this.message = message;
@@ -18,7 +18,6 @@ public class LanguageTextPair {
     }
 }
 
-// New class to handle standard Fonts for Legacy Text
 [Serializable]
 public class LegacyLanguageFontPair {
     public Language language;
@@ -30,71 +29,77 @@ public class LegacyLanguageFontPair {
 }
 
 public class LanguageUpdate:MonoBehaviour {
-    private LanguageManager _languageManager;
-    private LanguageManager LanguageManager {
+
+    // --- Manager Reference ---
+    private LanguageManager _managerInstance;
+    private LanguageManager ManagerInstance {
         get {
-            if (_languageManager == null) {
-                _languageManager = FindAnyObjectByType<LanguageManager>();
+            if (this == null)
+                return null;
+            if (_managerInstance == null) {
+                _managerInstance = FindAnyObjectByType<LanguageManager>();
             }
-            return _languageManager;
+            return _managerInstance;
         }
     }
 
-    // TMP Reference
-    private TextMeshProUGUI _languageTextTMP;
-    private TextMeshProUGUI LanguageTextTMP {
+    // --- Component References ---
+
+    // Changed from 'TextMeshProUGUI' to 'TMP_Text' to support BOTH 3D and UI TMP
+    private TMP_Text _tmpComponent;
+    private TMP_Text TmpComponent {
         get {
-            if (_languageTextTMP == null) {
-                _languageTextTMP = GetComponent<TextMeshProUGUI>();
-            }
-            return _languageTextTMP;
+            if (_tmpComponent == null)
+                _tmpComponent = GetComponent<TMP_Text>();
+            return _tmpComponent;
         }
     }
 
-    // Legacy Text Reference
-    private Text _languageTextLegacy;
-    private Text LanguageTextLegacy {
+    private Text _legacyTextComponent;
+    private Text LegacyTextComponent {
         get {
-            if (_languageTextLegacy == null) {
-                _languageTextLegacy = GetComponent<Text>();
-            }
-            return _languageTextLegacy;
+            if (_legacyTextComponent == null)
+                _legacyTextComponent = GetComponent<Text>();
+            return _legacyTextComponent;
         }
     }
 
-    // Flag to determine which component is active
-    private bool _isTMP;
+    private bool _isTMP; // True = TextMeshPro (UI or 3D), False = Legacy Text
 
-    // Font Lists
-    private List<LanguageFontPair> _localFontAssetList = new List<LanguageFontPair>(); // For TMP
-    [SerializeField] private List<LegacyLanguageFontPair> _localLegacyFontList = new List<LegacyLanguageFontPair>(); // For Legacy Text
-
+    // --- Data Lists ---
+    private List<LanguageFontPair> _localFontAssetList = new List<LanguageFontPair>();
+    [SerializeField] private List<LegacyLanguageFontPair> _localLegacyFontList = new List<LegacyLanguageFontPair>();
     [SerializeField] private List<LanguageTextPair> _localTextList = new List<LanguageTextPair>();
 
     private void Awake() {
-        // Detect which component is present
-        if (GetComponent<TextMeshProUGUI>() != null) {
+        // Check for TMP_Text (covers both TextMeshPro and TextMeshProUGUI)
+        if (GetComponent<TMP_Text>() != null) {
             _isTMP = true;
             _localFontAssetList.Clear();
-            if (LanguageTextTMP.font != null) {
-                _localFontAssetList.Add(new LanguageFontPair(Language.English,LanguageTextTMP.font));
+            if (TmpComponent.font != null) {
+                _localFontAssetList.Add(new LanguageFontPair(Language.English,TmpComponent.font));
             }
-        } else if (GetComponent<Text>() != null) {
+        }
+        // Check for Legacy Text
+        else if (GetComponent<Text>() != null) {
             _isTMP = false;
-            // Optional: Auto-add current font to legacy list if not present
-            if (LanguageTextLegacy.font != null && !_localLegacyFontList.Exists(x => x.language == Language.English)) {
-                _localLegacyFontList.Add(new LegacyLanguageFontPair(Language.English,LanguageTextLegacy.font));
+            if (LegacyTextComponent.font != null && !_localLegacyFontList.Exists(x => x.language == Language.English)) {
+                _localLegacyFontList.Add(new LegacyLanguageFontPair(Language.English,LegacyTextComponent.font));
             }
         }
     }
+
     private void OnEnable() {
+        // Subscribe to static event
         LanguageManager.OnLanguageChangedEvent += UpdateFontAsset;
         LanguageManager.OnLanguageChangedEvent += UpdateFontText;
 
-
-        UpdateFontAsset(LanguageManager.CurrentLanguage);
-        UpdateFontText(LanguageManager.CurrentLanguage);
+        if (ManagerInstance != null) {
+            UpdateFontAsset(ManagerInstance.CurrentLanguage);
+            UpdateFontText(ManagerInstance.CurrentLanguage);
+        }
     }
+
     private void OnDestroy() {
         LanguageManager.OnLanguageChangedEvent -= UpdateFontAsset;
         LanguageManager.OnLanguageChangedEvent -= UpdateFontText;
@@ -110,78 +115,94 @@ public class LanguageUpdate:MonoBehaviour {
     }
 
     private void UpdateFontAsset(Language language) {
+        if (this == null)
+            return;
+
         if (_isTMP) {
-            // TMP Logic
+            // --- Unified TMP Logic (Works for 3D & UI) ---
             TMP_FontAsset fontAsset = GetFontForCurrentLanguage(language);
             if (fontAsset == null) {
                 fontAsset = InitializeMarathiFont(language);
             }
             if (fontAsset != null) {
-                LanguageTextTMP.font = fontAsset;
-                LanguageTextTMP.fontStyle = FontStyles.Normal;
+                TmpComponent.font = fontAsset;
+                TmpComponent.fontStyle = FontStyles.Normal;
             }
         } else {
-            // Legacy Text Logic
-            // Note: Since LanguageManager likely returns TMP_FontAsset, we rely on _localLegacyFontList 
-            // to be populated in the Inspector for Legacy Fonts.
+            // --- Legacy Text Logic ---
             Font font = GetLegacyFontForCurrentLanguage(language);
-            if (font == null) {
-                font = InitializeMarathiFontLagacy(language);
-            }
             if (font != null) {
-                LanguageTextLegacy.font = font;
-                LanguageTextLegacy.fontStyle = FontStyle.Normal;
+                LegacyTextComponent.font = font;
+                LegacyTextComponent.fontStyle = FontStyle.Normal;
             }
         }
     }
+
     private TMP_FontAsset InitializeMarathiFont(Language language) {
-        // This method assumes LanguageManager returns a TMP_FontAsset
-        TMP_FontAsset fontAsset = LanguageManager.GetFontForCurrentLanguage(language);
+        if (ManagerInstance == null)
+            return null;
+
+        TMP_FontAsset fontAsset = ManagerInstance.GetFontForCurrentLanguage(language);
         _localFontAssetList.Add(new LanguageFontPair(language,fontAsset));
-        return fontAsset;
-    }
-    private Font InitializeMarathiFontLagacy(Language language) {
-        // This method assumes LanguageManager returns a TMP_FontAsset
-        Font fontAsset = LanguageManager.GetFontForCurrentLanguageLagacy(language);
-        _localLegacyFontList.Add(new LegacyLanguageFontPair(language,fontAsset));
         return fontAsset;
     }
     #endregion
 
     #region Update_FontText   
     private void UpdateFontText(Language language) {
+        if (this == null)
+            return;
+
         if (IsLocalTextAvailable(language)) {
             LanguageTextPair foundPair = GetTextPair(language);
             if (foundPair != null) {
                 string finalMessage = foundPair.message;
 
-                // Handle Marathi Parsing
-                if (language == Language.Marathi) {
-                    finalMessage = LanguageManager.GetMarathiTextParser().GetMarathiText(foundPair.message);
+                if (language == Language.Marathi && ManagerInstance != null) {
+                    finalMessage = ManagerInstance.GetMarathiTextParser().GetMarathiText(foundPair.message);
                 }
 
-                // Apply to active component
                 if (_isTMP) {
-                    LanguageTextTMP.text = finalMessage;
+                    TmpComponent.text = finalMessage;
                 } else {
-                    LanguageTextLegacy.text = finalMessage;
+                    LegacyTextComponent.text = finalMessage;
                 }
             }
         }
     }
+
     private bool IsLocalTextAvailable(Language language) {
         return _localTextList.Exists(x => x.language.Equals(language));
     }
+
     private LanguageTextPair GetTextPair(Language language) {
         return _localTextList.Find(x => x.language.Equals(language));
     }
+
     internal void ManualUpdate(string message) {
-        UpdateFontAsset(LanguageManager.CurrentLanguage);
+        if (this == null)
+            return;
+
+        if (ManagerInstance != null) {
+            UpdateFontAsset(ManagerInstance.CurrentLanguage);
+        }
+
         if (_isTMP) {
-            LanguageTextTMP.text = message;
+            TmpComponent.text = message;
         } else {
-            LanguageTextLegacy.text = message;
+            LegacyTextComponent.text = message;
         }
     }
+
+    //[ContextMenu("EnterEnglishData")]
+    //private void EnterEnglishData() {
+    //    _localTextList[0].message = TmpComponent.text;
+    //}
+    //internal string GetName() {
+    //    return _localTextList[0].message;
+    //}
+    //public void AssignMrName(string marathiName) {
+    //    _localTextList[1].message = marathiName;
+    //}
     #endregion
-}//LanguageUpdate class end.
+}

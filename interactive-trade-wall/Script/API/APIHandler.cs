@@ -218,9 +218,31 @@ public class APIHandler:MonoBehaviour {
 
     // Helper method to handle assignment logic
     private void ProcessFinalData(Root rootData) {
+        //if (!useOfflineFile) { 
+            //Patch(rootData);
+        //}
         data = rootData;
         dataSO.root = rootData;
         OnDataFetchedEvent?.Invoke(rootData);
+    }
+    private void Patch(Root root) {
+        int totalCount = root.bookmarks.Count; // Currently 4
+        int itemsToClear = 3;
+
+        // Start from index 1 (because 4 - 3 = 1)
+        for (int i = totalCount - itemsToClear;i < totalCount;i++) {
+            // Re-initialize with a new empty object.
+            // This wipes 'title', 'pageNumber', and creates a fresh empty 'items' list.
+            root.bookmarks[i] = GetBookmark(i);
+        }
+
+        Debug.Log("Patched bookmarks, new count: " + root.bookmarks.Count);
+    }
+    private Bookmark GetBookmark(int index) {
+        string fileName = LanguageManager.Instance.CurrentLanguage == Language.Marathi ? "TradeMapData_Marathi" : "TradeMapData";
+        TextAsset jsonData = Resources.Load<TextAsset>($"OfflineData/{fileName}");
+        Root offlineData = JsonUtility.FromJson<Root>(jsonData.text);
+        return offlineData.bookmarks[index];
     }
 
     // Helper method to save JSON to file
