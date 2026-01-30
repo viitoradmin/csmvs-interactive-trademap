@@ -42,6 +42,14 @@ public class InteractiveTradeWallDataSO:ScriptableObject {
             if (bookmarks != null) {
                 bookmarks.ForEach(b => b.Convert(languageManager));
             }
+            Language language = languageManager.CurrentLanguage;
+            MarathiTextParser parser = languageManager.GetMarathiTextParser();
+
+            // Translate Bookmark Title
+            if (language.Equals(Language.Marathi)) {
+                materialPageBottomLine = parser.GetMarathiText(materialPageBottomLine);
+                detailPageBottomLine = parser.GetMarathiText(detailPageBottomLine);
+            }
         }
 
         public void CollectAllImagePaths(List<string> paths) {

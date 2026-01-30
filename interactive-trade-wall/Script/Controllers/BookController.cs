@@ -41,8 +41,7 @@ public class BookController:MonoBehaviour {
     [Space]
     public TMP_Text backButtonPath;
     public TMP_Text materialTitleText;
-    public TMP_Text materialDetailsText;
-    //public Text materialDetailsTxt;
+    public Text materialDetailsTxt;
     [Space]
     public TMP_Text importRoutes_Button_Text;
     public TMP_Text exportRoutes_Button_Text;
@@ -68,8 +67,6 @@ public class BookController:MonoBehaviour {
     public int currentSelectedBookMarkId = -1;
     public int currentSelectedItemId = -1;
 
-    public Font englisthFont, marathiFont;
-
     [Header("UI Effects Related Data")]
     public UIEffectsController uIEffectsController;
 
@@ -87,10 +84,10 @@ public class BookController:MonoBehaviour {
     void Start() {
         graphicRaycaster = canvasGroup.GetComponent<GraphicRaycaster>();
         //StartCoroutine(OpenBook());
-        canvasGroup.alpha = 0.0f;
-        StartCoroutine(uIEffectsController.PlayUIEffectsCoroutine(false,() => {
-            canvasGroup.alpha = 1.0f;
-        }));
+        //canvasGroup.alpha = 0.0f;
+        //StartCoroutine(uIEffectsController.PlayUIEffectsCoroutine(false,() => {
+        //    canvasGroup.alpha = 1.0f;
+        //}));
         //SetupBookmarks();
         //ShowMaterials();
     }
@@ -298,8 +295,7 @@ public class BookController:MonoBehaviour {
         //backButtonPath.text = bookmarkItemsPagination.currentSelectedBookmark.title + " > " + itemData.title;
         backButtonPath.text = itemData.title;
         materialTitleText.text = itemData.bookmarkMetadata.title;
-        materialDetailsText.text = itemData.bookmarkMetadata.description;
-
+        materialDetailsTxt.text = itemData.bookmarkMetadata.description;
         //materialDetailsText.text = language == Language.English ? itemData.bookmarkMetadata.description : marathiParser.GetMarathiText(itemData.bookmarkMetadata.description);
 
         //materialDetailsTxt.text = itemData.bookmarkMetadata.description;

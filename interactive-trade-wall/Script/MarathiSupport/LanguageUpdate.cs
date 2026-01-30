@@ -16,7 +16,7 @@ public class LanguageTextPair {
         return string.Equals(message,compareMessage);
     }
 }
-[RequireComponent(typeof(TextMeshProUGUI))]
+
 public class LanguageUpdate:MonoBehaviour {
     private LanguageManager _languageManager;
     private LanguageManager LanguageManager {
@@ -38,7 +38,6 @@ public class LanguageUpdate:MonoBehaviour {
     }
     private List<LanguageFontPair> _localFontAssetList = new List<LanguageFontPair>();
     [SerializeField] private List<LanguageTextPair> _localTextList = new List<LanguageTextPair>();
-    private MarathiTextParser _marathiTextParser;
    
     private void Awake() {
         _localFontAssetList.Clear();

@@ -130,8 +130,8 @@ public class HorizontalSlideshow : MonoBehaviour, IBeginDragHandler, IDragHandle
     }
 
     public void UpdateMetaData() {
-        picInfoText.text = slides[currentIndex].title + "\n" + slides[currentIndex].subtitle;
-        //picInfoTxt.text = slides[currentIndex].title + "\n" + slides[currentIndex].subtitle;
+        //picInfoText.text = slides[currentIndex].title + "\n" + slides[currentIndex].subtitle;
+        picInfoTxt.text = slides[currentIndex].title + "\n" + slides[currentIndex].subtitle;
         SliderDots[currentIndex].isOn = true;
     }
 
