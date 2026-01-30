@@ -17,7 +17,7 @@ public class LanguageButtonHandler:MonoBehaviour {
     private void OnDataFetched(Root root) {
         RefreshSelectedButtonUI();
     }
-    private void Start() {
+    private void Awake() {
         buttons.Clear();
         buttons.Add(englishButton);
         buttons.Add(marathiButton);

@@ -36,7 +36,6 @@ public class APIHandler:MonoBehaviour {
     };
     public bool useOfflineFile = false;
     [SerializeField] private MediaManager mediaManager;
-    private List<string> customOrder = new List<string>();
 
     private void Start() {
         // Only call Login first. The other calls will happen AFTER login succeeds.
@@ -235,13 +234,10 @@ public class APIHandler:MonoBehaviour {
         }
     }
     private void DownloadAllMediaAndProceed(Root root,Action OnDonwnloadCompleted) {
-        OnDonwnloadCompleted?.Invoke();
-        /*
         List<string> allDownloadUrl = new List<string>();
         root.CollectAllImagePaths(allDownloadUrl);
         mediaManager.AssignDownloadableUrl(allDownloadUrl);
         mediaManager.DownloadMediaFilesAsync(OnDonwnloadCompleted);
-        */
     }
     internal void ClearLocalStoredData() {
         string filePathEn = Path.Combine(Application.persistentDataPath,FILE_NAME_ENGLISH);

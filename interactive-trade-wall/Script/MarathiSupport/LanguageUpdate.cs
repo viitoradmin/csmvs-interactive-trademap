@@ -87,11 +87,7 @@ public class LanguageUpdate:MonoBehaviour {
             }
         }
     }
-
     private void OnEnable() {
-        if (LanguageManager == null)
-            return;
-
         LanguageManager.OnLanguageChangedEvent += UpdateFontAsset;
         LanguageManager.OnLanguageChangedEvent += UpdateFontText;
 
@@ -99,11 +95,7 @@ public class LanguageUpdate:MonoBehaviour {
         UpdateFontAsset(LanguageManager.CurrentLanguage);
         UpdateFontText(LanguageManager.CurrentLanguage);
     }
-
     private void OnDestroy() {
-        if (LanguageManager == null)
-            return;
-
         LanguageManager.OnLanguageChangedEvent -= UpdateFontAsset;
         LanguageManager.OnLanguageChangedEvent -= UpdateFontText;
     }
@@ -142,7 +134,6 @@ public class LanguageUpdate:MonoBehaviour {
             }
         }
     }
-
     private TMP_FontAsset InitializeMarathiFont(Language language) {
         // This method assumes LanguageManager returns a TMP_FontAsset
         TMP_FontAsset fontAsset = LanguageManager.GetFontForCurrentLanguage(language);
@@ -178,15 +169,12 @@ public class LanguageUpdate:MonoBehaviour {
             }
         }
     }
-
     private bool IsLocalTextAvailable(Language language) {
         return _localTextList.Exists(x => x.language.Equals(language));
     }
-
     private LanguageTextPair GetTextPair(Language language) {
         return _localTextList.Find(x => x.language.Equals(language));
     }
-
     internal void ManualUpdate(string message) {
         UpdateFontAsset(LanguageManager.CurrentLanguage);
         if (_isTMP) {
