@@ -47,6 +47,9 @@ public class LanguageUpdate:MonoBehaviour {
     private void OnEnable() {
         LanguageManager.OnLanguageChangedEvent += UpdateFontAsset;
         LanguageManager.OnLanguageChangedEvent += UpdateFontText;
+
+        UpdateFontAsset(LanguageManager.CurrentLanguage);
+        UpdateFontText(LanguageManager.CurrentLanguage);
     }
     private void OnDestroy() {
         LanguageManager.OnLanguageChangedEvent -= UpdateFontAsset;
@@ -59,10 +62,16 @@ public class LanguageUpdate:MonoBehaviour {
     private void UpdateFontAsset(Language language) {        
         TMP_FontAsset fontAsset = GetFontForCurrentLanguage(language);
         if (fontAsset == null) {
-            fontAsset = LanguageManager.GetFontForCurrentLanguage(language);
-            _localFontAssetList.Add(new LanguageFontPair(language,fontAsset));
+            fontAsset = InitializeMarathiFont(language);
         }
         LanguageText.font = fontAsset;
+        LanguageText.fontStyle = FontStyles.Normal;
+    }
+
+    private TMP_FontAsset InitializeMarathiFont(Language language) {
+        TMP_FontAsset fontAsset = LanguageManager.GetFontForCurrentLanguage(language);
+        _localFontAssetList.Add(new LanguageFontPair(language,fontAsset));
+        return fontAsset;
     }
     #endregion
 

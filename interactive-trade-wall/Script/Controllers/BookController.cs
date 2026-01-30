@@ -100,11 +100,15 @@ public class BookController:MonoBehaviour {
     private void OnDisable() {
         APIHandler.OnDataFetchedEvent -= StartPoint;
     }
+    private bool once = true;
     private void StartPoint(Root root) {
-        canvasGroup.alpha = 0.0f;
-        StartCoroutine(uIEffectsController.PlayUIEffectsCoroutine(false,() => {
-            canvasGroup.alpha = 1.0f;
-        }));
+        if (once) {
+            once = false;
+            canvasGroup.alpha = 0.0f;
+            StartCoroutine(uIEffectsController.PlayUIEffectsCoroutine(false,() => {
+                canvasGroup.alpha = 1.0f;
+            }));
+        }
         SetupBookmarks();
     }
     void Update() {
