@@ -92,6 +92,7 @@ public class InteractiveTradeWallDataSO:ScriptableObject {
     public class BookmarkItem {
         public string title;
         public string thumbnailPath;
+        public string pinnedImagePath;
         public BookmarkMetadata bookmarkMetadata;
 
         public void Convert(LanguageManager languageManager) {
@@ -114,7 +115,9 @@ public class InteractiveTradeWallDataSO:ScriptableObject {
             if (!string.IsNullOrEmpty(thumbnailPath)) {
                 paths.Add(thumbnailPath);
             }
-
+            if (!string.IsNullOrEmpty(pinnedImagePath)) {
+                paths.Add(pinnedImagePath);
+            }
             // 2. Collect Metadata images
             if (bookmarkMetadata != null) {
                 bookmarkMetadata.CollectAllImagePaths(paths);

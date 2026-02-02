@@ -1,4 +1,3 @@
-using System;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -10,7 +9,7 @@ public class ItemElement:MonoBehaviour {
 
     [SerializeField] private TMP_Text title_text;
     [SerializeField] private RawImage material_rawimage;
-
+    private Texture pinnedImageTexture;
     [SerializeField] private Button itemButton;
 
     [SerializeField] private Image _ItemBGImage;
@@ -46,6 +45,9 @@ public class ItemElement:MonoBehaviour {
         BookController.instance.LoadTextureFromResources(m_ItemData.thumbnailPath,(sprite) => {
             material_rawimage.texture = sprite.texture;
         });
+        BookController.instance.LoadTextureFromResources(m_ItemData.pinnedImagePath,(sprite) => {
+            pinnedImageTexture = sprite.texture;
+        });
 
         itemButton.onClick.AddListener(ViewDetails);
         // MarkThisItemAsSelected(_isSelected);
@@ -80,7 +82,12 @@ public class ItemElement:MonoBehaviour {
         //ToDo: Pass the clicked material item id from here to TV Screen.
         //Debug.Log("Selected Material id:"+BookController.instance.currentSelectedItemId);
         TVScreenManager.Instance.ShowDetailedScreen(BookController.instance.currentSelectedItemId);
-        BookController.instance.ShowDetails(m_ItemData,material_rawimage.texture);
+        //BookController.instance.ShowDetails(m_ItemData,material_rawimage.texture);
+        if (pinnedImageTexture == null) {
+            BookController.instance.ShowDetails(m_ItemData,material_rawimage.texture);
+        } else {
+            BookController.instance.ShowDetails(m_ItemData,pinnedImageTexture);
+        }
         BookController.instance._isScreensaverActive = false;
     }
 }
