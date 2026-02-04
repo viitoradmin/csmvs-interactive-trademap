@@ -45,7 +45,7 @@ public class LanguageUpdate:MonoBehaviour {
     private TMP_Text LanguageTextTMP {
         get {
             if (_languageTextTMP == null) {
-                _languageTextTMP = GetComponent<TMP_Text>();
+                TryGetComponent<TMP_Text>(out _languageTextTMP);
             }
             return _languageTextTMP;
         }
@@ -56,7 +56,7 @@ public class LanguageUpdate:MonoBehaviour {
     private Text LanguageTextLegacy {
         get {
             if (_languageTextLegacy == null) {
-                _languageTextLegacy = GetComponent<Text>();
+                TryGetComponent<Text>(out _languageTextLegacy);
             }
             return _languageTextLegacy;
         }
