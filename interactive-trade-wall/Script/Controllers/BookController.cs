@@ -80,7 +80,6 @@ public class BookController:MonoBehaviour {
     public bool _isScreensaverActive;
     [SerializeField] private APIHandler APIHandler;
     [SerializeField] private MediaManager mediaManager;
-
     private void Awake() {
         instance = this;
     }
@@ -127,8 +126,28 @@ public class BookController:MonoBehaviour {
         } else if (IsAnyInputDetected()) {
             _idleTimer = 0f;
         }
-    }
 
+        if ((Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift))
+            && Input.GetKeyDown(KeyCode.D)) {
+            if (APIHandler != null) {
+                APIHandler.ClearLocalStoredData();
+            }
+            if (mediaManager != null) {
+                mediaManager.ClearLocalStoredData();
+            }
+            QuitApp();
+        }
+        if (Input.GetKeyDown(KeyCode.Escape)) { 
+            QuitApp();
+        }
+    }
+    internal void QuitApp() {
+#if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false;
+#else
+        Application.Quit();
+#endif
+    }
     private bool IsAnyInputDetected() {
         // Keyboard input
         if (Input.anyKeyDown) {
