@@ -20,7 +20,7 @@ MonoBehaviour:
     repoPath: https://github.com/vinayak-vc/interactive-trade-wall.git
     scenes:
     - active: 1
-      scene: {fileID: 102900000, guid: d07f4fb20f910584ba03360af9bdac20, type: 3}
+      scene: {fileID: 102900000, guid: 53d078975d04b4270a7b2fb2fe92b86e, type: 3}
     photonID: 
     agoraID: 
     projectSettings:
@@ -69,8 +69,8 @@ MonoBehaviour:
       title: Interactive Trade Wall
       companyName: ViitorCloud
       bundleId: 
-      version: 1.0.0
-      versionCode: 0
+      version: 1.0.9
+      versionCode: 9
       icon: {fileID: 0}
       splashScreenLogo: {fileID: 0}
       splashScreenLogoBg: {fileID: 0}

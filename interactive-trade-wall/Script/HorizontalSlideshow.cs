@@ -41,7 +41,7 @@ public class HorizontalSlideshow : MonoBehaviour, IBeginDragHandler, IDragHandle
     }
 
     public void SetupSlides(List<BookmarkImage> _slides) {
-        Debug.Log("SetupSlides" + _slides.Count + ">" + slides[0].title);
+        //Debug.Log("SetupSlides" + _slides.Count + ">" + slides[0].title);
         slides = _slides;
         currentIndex = 0;
         PopulateSlides();
@@ -59,7 +59,13 @@ public class HorizontalSlideshow : MonoBehaviour, IBeginDragHandler, IDragHandle
         foreach (var _slide in slides) {
             GameObject slide = Instantiate(slidePrefab, container);
             // BookController.instance.LoadImageFromURL(_slide.imagePath, slide.GetComponent<RawImage>());
-            BookController.instance.LoadTextureFromResources(_slide.imagePath, slide.GetComponent<RawImage>());
+
+            //[OLD]
+            //BookController.instance.LoadTextureFromResources(_slide.imagePath, slide.GetComponent<RawImage>());
+            //[NEW]
+            BookController.instance.LoadTextureFromResources(_slide.imagePath,(sprite) => { 
+                slide.GetComponent<RawImage>().texture = sprite.texture;
+            });
         }
     }
 
@@ -113,7 +119,6 @@ public class HorizontalSlideshow : MonoBehaviour, IBeginDragHandler, IDragHandle
 
     // 🔹 Go to Next Slide
     public void NextSlide() {
-        Debug.Log("next");
         if (currentIndex < slides.Count - 1) {
             currentIndex++;
             SnapToSlide(true);
@@ -122,7 +127,6 @@ public class HorizontalSlideshow : MonoBehaviour, IBeginDragHandler, IDragHandle
 
     // 🔹 Go to Previous Slide
     public void PrevSlide() {
-        Debug.Log("previous");
         if (currentIndex > 0) {
             currentIndex--;
             SnapToSlide(true);
@@ -130,7 +134,7 @@ public class HorizontalSlideshow : MonoBehaviour, IBeginDragHandler, IDragHandle
     }
 
     public void UpdateMetaData() {
-        picInfoText.text = slides[currentIndex].title + "\n" + slides[currentIndex].subtitle;
+        //picInfoText.text = slides[currentIndex].title + "\n" + slides[currentIndex].subtitle;
         picInfoTxt.text = slides[currentIndex].title + "\n" + slides[currentIndex].subtitle;
         SliderDots[currentIndex].isOn = true;
     }

@@ -12,15 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 206a79b34a41af4429daa5471a446533, type: 3}
   m_Name: InteractiveTradeWallDataSO
   m_EditorClassIdentifier: 
-  textAsset: {fileID: 4900000, guid: cdc2be8b0b11b7e48b6c4aec500afa11, type: 3}
+  textAsset: {fileID: 4900000, guid: 09547ddcdc5adde4da8ea954171307d6, type: 3}
   root:
     bookmarks:
     - title: Materials
-      title_marathi: "\u092E\u0930\u093E\u0920\u0940 \u092D\u093E\u0937\u0947\u091A\u093E"
       pageNumber: 1
       items:
       - title: Carnelian
-        title_marathi: "\u092E\u0930\u093E\u0920\u0940 \u092D\u093E\u0937\u0947\u091A\u093E"
         thumbnailPath: Carnelian/Thumbnail
         bookmarkMetadata:
           images:
@@ -34,7 +32,6 @@ MonoBehaviour:
             subtitle: "Beads; Carnelian; Findspot: Mohenjo-daro, Pakistan; 2600\xAC1900
               BCE; CSMVS "
           title: Carnelian
-          title_marathi: 
           description: "Carnelian, a red-orange chalcedony, was one of the most distinctive
             luxury materials of the Indus civilisation and was produced in large
             quantities by specialised lapidaries in Gujarat. Major sources in Kutch,
@@ -51,41 +48,6 @@ MonoBehaviour:
             and some carnelian beads were later inscribed by Sumerian craftsmen.
             Carnelian was used for jewellery, ritual offerings, and elite objects,
             revealing Harappan integration into extensive interregional exchange."
-          description_marathi: "\u092E\u0930\u093E\u0920\u0940 \u092D\u093E\u0937\u0947\u091A\u093E
-            \u0935\u093F\u0915\u093E\u0938 \u0939\u093E \u0938\u093E\u092E\u093E\u091C\u093F\u0915,
-            \u0938\u093E\u0902\u0938\u094D\u0915\u0943\u0924\u093F\u0915 \u0906\u0923\u093F
-            \u0927\u093E\u0930\u094D\u092E\u093F\u0915 \u0918\u091F\u0915\u093E\u0902\u0936\u0940
-            \u0918\u091F\u094D\u091F\u092A\u0923\u0947 \u0928\u093F\u0917\u0921\u093F\u0924
-            \u0906\u0939\u0947. \u092E\u0927\u094D\u092F\u092F\u0941\u0917\u0940\u0928
-            \u0915\u093E\u0933\u093E\u0924 \u0938\u0902\u0924 \u091C\u094D\u091E\u093E\u0928\u0947\u0936\u094D\u0935\u0930,
-            \u0928\u093E\u092E\u0926\u0947\u0935, \u0924\u0941\u0915\u093E\u0930\u093E\u092E
-            \u0906\u0923\u093F \u090F\u0915\u0928\u093E\u0925 \u092F\u093E\u0902\u091A\u094D\u092F\u093E
-            \u0905\u092D\u0902\u0917\u0930\u091A\u0928\u093E\u0902\u092E\u0941\u0933\u0947
-            \u092D\u093E\u0937\u0947\u0932\u093E \u090F\u0915 \u0905\u0926\u094D\u0935\u093F\u0924\u0940\u092F
-            \u0932\u094B\u0915\u093E\u092D\u093F\u092E\u0941\u0916 \u0938\u094D\u0935\u0930\u0942\u092A
-            \u092A\u094D\u0930\u093E\u092A\u094D\u0924 \u091D\u093E\u0932\u0947.
-            \u0926\u0947\u0935\u0917\u093F\u0930\u0940, \u092A\u0948\u0920\u0923,
-            \u0906\u0923\u093F \u092A\u0902\u0922\u0930\u092A\u0942\u0930 \u092F\u093E
-            \u0915\u0947\u0902\u0926\u094D\u0930\u093E\u0902\u092E\u0927\u0942\u0928
-            \u092A\u094D\u0930\u0938\u093E\u0930\u093F\u0924 \u091D\u093E\u0932\u0947\u0932\u094D\u092F\u093E
-            \u092D\u0915\u094D\u0924\u093F\u092A\u0930\u0902\u092A\u0930\u0947\u0924
-            \u0935\u093F\u0920\u094D\u0920\u0932\u092D\u0915\u094D\u0924\u0940\u091A\u093E
-            \u092A\u094D\u0930\u092D\u093E\u0935 \u0935\u093F\u0936\u0947\u0937\u0924\u094D\u0935\u093E\u0928\u0947
-            \u0926\u093F\u0938\u0942\u0928 \u092F\u0947\u0924\u094B. \u092A\u094D\u0930\u093E\u091A\u0940\u0928
-            \u0939\u0938\u094D\u0924\u0932\u093F\u0916\u093F\u0924\u093E\u0902\u092E\u0927\u094D\u092F\u0947
-            \u0906\u0922\u0933\u0923\u093E\u0931\u094D\u092F\u093E \u0932\u093F\u092A\u0940\u0902\u091A\u094D\u092F\u093E
-            \u0935\u093F\u0935\u093F\u0927\u0924\u0947\u092E\u0941\u0933\u0947 \u092D\u093E\u0937\u093E\u0936\u093E\u0938\u094D\u0924\u094D\u0930\u0940\u092F
-            \u0905\u092D\u094D\u092F\u093E\u0938\u093E\u0932\u093E \u0905\u0927\u093F\u0915
-            \u0938\u0916\u094B\u0932 \u092A\u0930\u093F\u092E\u093E\u0923 \u0932\u093E\u092D\u0924\u0947.
-            \u0936\u093F\u0932\u093E\u0932\u0947\u0916, \u0924\u093E\u092E\u094D\u0930\u092A\u0924\u094D\u0930\u0947
-            \u0906\u0923\u093F \u0917\u094D\u0930\u0902\u0925\u0938\u0902\u092A\u0926\u093E
-            \u092F\u093E\u0902\u092E\u0927\u0940\u0932 \u092D\u093E\u0937\u093F\u0915
-            \u0932\u0915\u094D\u0937\u0923\u093E\u0902\u091A\u093E \u0924\u0941\u0932\u0928\u093E\u0924\u094D\u092E\u0915
-            \u0905\u092D\u094D\u092F\u093E\u0938 \u0915\u0947\u0932\u094D\u092F\u093E\u0938
-            \u092E\u0930\u093E\u0920\u0940\u091A\u094D\u092F\u093E \u0927\u094D\u0935\u0928\u093F\u0936\u093E\u0938\u094D\u0924\u094D\u0930\u0940\u092F
-            \u0906\u0923\u093F \u0935\u094D\u092F\u093E\u0915\u0930\u0923\u093F\u0915
-            \u0930\u091A\u0928\u0947\u0924\u0940\u0932 \u0938\u093E\u0924\u0924\u094D\u092F
-            \u0938\u094D\u092A\u0937\u094D\u091F\u092A\u0923\u0947 \u091C\u093E\u0923\u0935\u0924\u0947."
           importRoutes: []
           exportRoutes: []
           distance: 4100km
@@ -97,7 +59,6 @@ MonoBehaviour:
           thenMiningProcess: Manual extraction
           nowMiningProcess: Modern quarrying
       - title: Agate
-        title_marathi: 
         thumbnailPath: Agate/Thumbnail
         bookmarkMetadata:
           images:
@@ -106,7 +67,6 @@ MonoBehaviour:
             subtitle: "Findspot: Mohenjo-daro, Pakistan; 2600\u20131900 BCE; CSMVS
               (IV 1513, 628, 629, 651, 656, 654, 1490, 1486, 1489)"
           title: Agate
-          title_marathi: 
           description: "Agate, another important chalcedony, was sourced from river
             gravels in Kutch, Saurashtra, and southern Gujarat and formed a core
             component of the Harappan bead industry. Workshops at Lothal, Gola Dhoro,
@@ -122,7 +82,6 @@ MonoBehaviour:
             banding made it ideal for personal ornamentation, ritual objects, and
             status displays. Agate bead manufacture exemplifies the standardisation,
             specialisation, and export-oriented scale of Harappan craft industries."
-          description_marathi: 
           importRoutes: []
           exportRoutes: []
           distance: 4000km
@@ -134,7 +93,6 @@ MonoBehaviour:
           thenMiningProcess: Hand collection
           nowMiningProcess: Industrial mining
       - title: Shell
-        title_marathi: 
         thumbnailPath: Shell/Thumbnail
         bookmarkMetadata:
           images:
@@ -147,7 +105,6 @@ MonoBehaviour:
             subtitle: "Findspot: Mohenjo-daro, Pakistan; 2600\xAC1900 BCE; CSMVS
               (IV 336 339)"
           title: Shell
-          title_marathi: 
           description: "Shell was a major marine resource for the Harappans, used
             to make bangles, ladles, decorative inlays, and ritual items. Coastal
             communities along the Makran and Gujarat littoral collected large gastropods\u2014particularly
@@ -163,7 +120,6 @@ MonoBehaviour:
             for ornamentation, ritual deposition, and utilitarian tools, and the
             industry highlights the Harappans\u2019 mastery of coastal resource management
             and their participation in trans-Arabian Sea trade."
-          description_marathi: 
           importRoutes: []
           exportRoutes: []
           distance: 1900km
@@ -175,7 +131,6 @@ MonoBehaviour:
           thenMiningProcess: Surface collection
           nowMiningProcess: Mined in quarries
       - title: Bitumen
-        title_marathi: 
         thumbnailPath: Bitumen/Thumbnail
         bookmarkMetadata:
           images:
@@ -196,7 +151,6 @@ MonoBehaviour:
             subtitle: 'Findspot: Royal Cemetery at Ur, Iraq; 2500 BCE; The British
               Museum (replica of 121201)'
           title: Bitumen
-          title_marathi: 
           description: "Bitumen played critical roles in waterproofing, construction,
             and seafaring across the ancient world. In the Indus region, bitumen
             from deposits near Sibi in the Kachi plain and Mianwali was used extensively,
@@ -211,7 +165,6 @@ MonoBehaviour:
             regular maintenance of seafaring craft. Bitumen thus moved along maritime
             corridors linking Mesopotamia, Oman, and the Indus, highlighting the
             Harappans\u2019 deep integration into Gulf maritime exchange."
-          description_marathi: 
           importRoutes: []
           exportRoutes: []
           distance: 700km
@@ -223,7 +176,6 @@ MonoBehaviour:
           thenMiningProcess: Ancient quarrying
           nowMiningProcess: Modern quarrying
       - title: lapis Lazuli
-        title_marathi: 
         thumbnailPath: Lapiz Lazuli/Thumbnail
         bookmarkMetadata:
           images:
@@ -243,7 +195,6 @@ MonoBehaviour:
             subtitle: 'Findspot: Royal Cemetery at Ur, Iraq; 2500 BCE; The British
               Museum (replica of 121201)'
           title: lapis Lazuli
-          title_marathi: 
           description: "Lapis lazuli, one of the most valued stones of the Bronze
             Age, was sourced primarily from the Sar-i Sang mines of Badakshan and
             possibly from the Chagai Hills. Although the Harappans used lapis sparingly
@@ -258,7 +209,6 @@ MonoBehaviour:
             circulation demonstrates the civilisation\u2019s extensive participation
             in long-distance exchange systems across the Iranian plateau and West
             Asia."
-          description_marathi: 
           importRoutes: []
           exportRoutes: []
           distance: 2000km
@@ -270,7 +220,6 @@ MonoBehaviour:
           thenMiningProcess: Bead cutting & etching
           nowMiningProcess: Replicas produced for sale
       - title: Cotton
-        title_marathi: 
         thumbnailPath: Cotton/Thumbnail
         bookmarkMetadata:
           images:
@@ -288,7 +237,6 @@ MonoBehaviour:
             subtitle: "Findspot: Mohenjo-daro, Pakistan; circa 2000\xAC1900 BCE;
               National Museum, Karachi, Pakistan (50.852)"
           title: Cotton
-          title_marathi: 
           description: "Cotton was among the most important agricultural products
             of the Indus Valley, with the Harappans recognized as early cultivators
             and textile producers. Archaeological impressions and textile remains
@@ -303,7 +251,6 @@ MonoBehaviour:
             for copper and other resources. Cotton thus reflects agricultural specialization,
             organised textile craft production, and Harappan participation in long-distance
             maritime commerce."
-          description_marathi: 
           importRoutes: []
           exportRoutes: []
           distance: 1350km
@@ -315,7 +262,6 @@ MonoBehaviour:
           thenMiningProcess: Mining by hand
           nowMiningProcess: Modern mining
       - title: Gold and Silver
-        title_marathi: 
         thumbnailPath: Gold & Silver/Thumbnail
         bookmarkMetadata:
           images:
@@ -333,7 +279,6 @@ MonoBehaviour:
             subtitle: 'Findspot: Ur, Iraq; 3rd millenium BCE; The British Museum
               (1929,1017.237)'
           title: Gold and Silver
-          title_marathi: 
           description: Gold and silver functioned as prestige metals in the Indus
             civilisation, used largely for ornaments, ritual items, and elite objects.
             Gold was available in small quantities from riverine deposits in the
@@ -348,7 +293,6 @@ MonoBehaviour:
             metals moved along the same exchange routes that circulated copper, stones,
             and crafted goods, underscoring their symbolic and economic value within
             Harappan society.
-          description_marathi: 
           importRoutes: []
           exportRoutes: []
           distance: 500km
@@ -360,11 +304,9 @@ MonoBehaviour:
           thenMiningProcess: Manual gathering
           nowMiningProcess: Industrial mining
     - title: Shells & Ivory
-      title_marathi: 
       pageNumber: 2
       items:
       - title: Cowrie Shell
-        title_marathi: 
         thumbnailPath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
         bookmarkMetadata:
           images:
@@ -378,9 +320,7 @@ MonoBehaviour:
             title: Cowrie Shell 3
             subtitle: Ancient currency 3
           title: Cowrie Shell
-          title_marathi: 
           description: Used as currency and ornament across Africa and Asia for centuries.
-          description_marathi: 
           importRoutes: []
           exportRoutes: []
           distance: 2950km
@@ -392,7 +332,6 @@ MonoBehaviour:
           thenMiningProcess: Collected from sea
           nowMiningProcess: Still collected
       - title: Textile Cone (Conus textile)
-        title_marathi: 
         thumbnailPath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
         bookmarkMetadata:
           images:
@@ -409,10 +348,8 @@ MonoBehaviour:
             title: Textile Cone 4
             subtitle: Valued shell 4
           title: Textile Cone
-          title_marathi: 
           description: A striking cone shell collected historically as an exotic
             object.
-          description_marathi: 
           importRoutes: []
           exportRoutes: []
           distance: 3900km
@@ -424,7 +361,6 @@ MonoBehaviour:
           thenMiningProcess: Hand collection
           nowMiningProcess: Limited trade
       - title: Pearl Oyster
-        title_marathi: 
         thumbnailPath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
         bookmarkMetadata:
           images:
@@ -438,10 +374,8 @@ MonoBehaviour:
             title: Pearl Oyster 3
             subtitle: Source of pearls 3
           title: Pearl Oyster
-          title_marathi: 
           description: "Harvested for natural and cultured pearls\u2014highly valuable
             historically."
-          description_marathi: 
           importRoutes: []
           exportRoutes: []
           distance: 3850km
@@ -453,7 +387,6 @@ MonoBehaviour:
           thenMiningProcess: Diving and collecting
           nowMiningProcess: Pearl farming (cultured pearls)
       - title: Hawksbill Turtle Shell
-        title_marathi: 
         thumbnailPath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
         bookmarkMetadata:
           images:
@@ -467,9 +400,7 @@ MonoBehaviour:
             title: Hawksbill Turtle Shell 3
             subtitle: Tortoiseshell material 3
           title: Hawksbill Turtle Shell
-          title_marathi: 
           description: Tortoiseshell used for luxury objects (now illegal/protected).
-          description_marathi: 
           importRoutes: []
           exportRoutes: []
           distance: 1900km
@@ -481,7 +412,6 @@ MonoBehaviour:
           thenMiningProcess: Hunting turtles
           nowMiningProcess: Trade banned / conservation
       - title: Elephant Ivory
-        title_marathi: 
         thumbnailPath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
         bookmarkMetadata:
           images:
@@ -495,10 +425,8 @@ MonoBehaviour:
             title: Elephant Ivory 3
             subtitle: Luxury carving material 3
           title: Elephant Ivory
-          title_marathi: 
           description: Ivory tusks were carved into combs, inlays and luxury goods
             across continents.
-          description_marathi: 
           importRoutes: []
           exportRoutes: []
           distance: 4750km
@@ -510,7 +438,6 @@ MonoBehaviour:
           thenMiningProcess: Hunting elephants
           nowMiningProcess: Trade heavily restricted
       - title: Mother of Pearl
-        title_marathi: 
         thumbnailPath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
         bookmarkMetadata:
           images:
@@ -521,10 +448,8 @@ MonoBehaviour:
             title: Mother of Pearl 2
             subtitle: Nacre inlay 2
           title: Mother of Pearl
-          title_marathi: 
           description: Nacre used in inlays, buttons and decorative arts from antiquity
             to present.
-          description_marathi: 
           importRoutes: []
           exportRoutes: []
           distance: 1550km
@@ -536,7 +461,6 @@ MonoBehaviour:
           thenMiningProcess: Harvested from oysters
           nowMiningProcess: Farming & sustainable collection
       - title: Giant Clam
-        title_marathi: 
         thumbnailPath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
         bookmarkMetadata:
           images:
@@ -547,10 +471,8 @@ MonoBehaviour:
             title: Giant Clam 2
             subtitle: Massive shell 2
           title: Giant Clam
-          title_marathi: 
           description: Large shells prized as curios and for nacre; many species
             now protected.
-          description_marathi: 
           importRoutes: []
           exportRoutes: []
           distance: 3050km
@@ -562,7 +484,6 @@ MonoBehaviour:
           thenMiningProcess: Diving & collecting
           nowMiningProcess: Protected / illegal collection
       - title: Dentalium
-        title_marathi: 
         thumbnailPath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
         bookmarkMetadata:
           images:
@@ -576,10 +497,8 @@ MonoBehaviour:
             title: Dentalium 3
             subtitle: Tusk shell currency 3
           title: Dentalium
-          title_marathi: 
           description: Used as currency, trade beads and ornament among Indigenous
             peoples.
-          description_marathi: 
           importRoutes: []
           exportRoutes: []
           distance: 2250km
@@ -591,7 +510,6 @@ MonoBehaviour:
           thenMiningProcess: Collected by hand/diving
           nowMiningProcess: Rare / archaeological
       - title: Helmet Shell
-        title_marathi: 
         thumbnailPath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
         bookmarkMetadata:
           images:
@@ -608,9 +526,7 @@ MonoBehaviour:
             title: Helmet Shell 4
             subtitle: Decorative shell 4
           title: Helmet Shell
-          title_marathi: 
           description: Large decorative shell traded in Indian Ocean markets.
-          description_marathi: 
           importRoutes: []
           exportRoutes: []
           distance: 3600km
@@ -622,7 +538,6 @@ MonoBehaviour:
           thenMiningProcess: Coastal collection
           nowMiningProcess: Limited & regulated
       - title: Spondylus Shell
-        title_marathi: 
         thumbnailPath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
         bookmarkMetadata:
           images:
@@ -636,10 +551,8 @@ MonoBehaviour:
             title: Spondylus Shell 3
             subtitle: Andean ritual shell 3
           title: Spondylus Shell
-          title_marathi: 
           description: Highly valued in Andean and pre-Columbian cultures for ritual
             and trade.
-          description_marathi: 
           importRoutes: []
           exportRoutes: []
           distance: 950km
@@ -651,11 +564,9 @@ MonoBehaviour:
           thenMiningProcess: Diving and collection
           nowMiningProcess: Archaeological recovery
     - title: Textile & Agriculture
-      title_marathi: 
       pageNumber: 3
       items:
       - title: Silk
-        title_marathi: 
         thumbnailPath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
         bookmarkMetadata:
           images:
@@ -672,10 +583,8 @@ MonoBehaviour:
             title: Silk 4
             subtitle: Silkworm cocoons 4
           title: Silk
-          title_marathi: 
           description: Produced in China and traded widely along the Silk Road as
             a luxury textile.
-          description_marathi: 
           importRoutes: []
           exportRoutes: []
           distance: 1200km
@@ -687,7 +596,6 @@ MonoBehaviour:
           thenMiningProcess: Hand-reeling from cocoons
           nowMiningProcess: Industrial sericulture & processing
       - title: Cotton
-        title_marathi: 
         thumbnailPath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
         bookmarkMetadata:
           images:
@@ -704,10 +612,8 @@ MonoBehaviour:
             title: Cotton 4
             subtitle: Cotton plant 4
           title: Cotton
-          title_marathi: 
           description: Cultivated historically in South Asia and Egypt; a major traded
             textile raw material.
-          description_marathi: 
           importRoutes: []
           exportRoutes: []
           distance: 4850km
@@ -719,7 +625,6 @@ MonoBehaviour:
           thenMiningProcess: Hand picking
           nowMiningProcess: Mechanical harvesting & processing
       - title: Flax / Linen
-        title_marathi: 
         thumbnailPath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
         bookmarkMetadata:
           images:
@@ -730,10 +635,8 @@ MonoBehaviour:
             title: Flax / Linen 2
             subtitle: Flax fibres 2
           title: Flax / Linen
-          title_marathi: 
           description: Fiber from flax used to make linen; important textile in ancient
             Mediterranean cultures.
-          description_marathi: 
           importRoutes: []
           exportRoutes: []
           distance: 1650km
@@ -745,7 +648,6 @@ MonoBehaviour:
           thenMiningProcess: Retting & hand-processing
           nowMiningProcess: Mechanized processing
       - title: Wool
-        title_marathi: 
         thumbnailPath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
         bookmarkMetadata:
           images:
@@ -765,10 +667,8 @@ MonoBehaviour:
             title: Wool 5
             subtitle: Sheep fleece 5
           title: Wool
-          title_marathi: 
           description: A primary textile fibre from pastoral societies, traded inland
             and across seas.
-          description_marathi: 
           importRoutes: []
           exportRoutes: []
           distance: 4400km
@@ -780,7 +680,6 @@ MonoBehaviour:
           thenMiningProcess: Shearing & hand-spinning
           nowMiningProcess: Industrial shearing & processing
       - title: Indigo
-        title_marathi: 
         thumbnailPath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
         bookmarkMetadata:
           images:
@@ -797,10 +696,8 @@ MonoBehaviour:
             title: Indigo 4
             subtitle: Dye cakes 4
           title: Indigo
-          title_marathi: 
           description: Natural indigo dye produced in South Asia and West Africa,
             highly traded for textiles.
-          description_marathi: 
           importRoutes: []
           exportRoutes: []
           distance: 4800km
@@ -812,7 +709,6 @@ MonoBehaviour:
           thenMiningProcess: Extraction from plants & processing
           nowMiningProcess: Synthetic dyes & natural cultivation
       - title: Black Pepper
-        title_marathi: 
         thumbnailPath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
         bookmarkMetadata:
           images:
@@ -823,10 +719,8 @@ MonoBehaviour:
             title: Black Pepper 2
             subtitle: Spice dried fruits 2
           title: Black Pepper
-          title_marathi: 
           description: Spice traded from South India across the Roman and later medieval
             trade networks.
-          description_marathi: 
           importRoutes: []
           exportRoutes: []
           distance: 4700km
@@ -838,7 +732,6 @@ MonoBehaviour:
           thenMiningProcess: Hand harvesting & drying
           nowMiningProcess: Cultivated plantations
       - title: Cinnamon
-        title_marathi: 
         thumbnailPath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
         bookmarkMetadata:
           images:
@@ -855,10 +748,8 @@ MonoBehaviour:
             title: Cinnamon 4
             subtitle: Quills 4
           title: Cinnamon
-          title_marathi: 
           description: Highly prized spice originating in South/Southeast Asia, traded
             in luxury markets.
-          description_marathi: 
           importRoutes: []
           exportRoutes: []
           distance: 1150km
@@ -870,7 +761,6 @@ MonoBehaviour:
           thenMiningProcess: Bark harvesting & drying
           nowMiningProcess: Cultivated plantations
       - title: Saffron
-        title_marathi: 
         thumbnailPath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
         bookmarkMetadata:
           images:
@@ -887,10 +777,8 @@ MonoBehaviour:
             title: Saffron 4
             subtitle: Stigmas (threads) 4
           title: Saffron
-          title_marathi: 
           description: Expensive spice and dye produced in small quantities and traded
             widely.
-          description_marathi: 
           importRoutes: []
           exportRoutes: []
           distance: 50km
@@ -902,7 +790,6 @@ MonoBehaviour:
           thenMiningProcess: Hand-picking stigmas
           nowMiningProcess: Labor-intensive cultivation
       - title: Tea
-        title_marathi: 
         thumbnailPath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
         bookmarkMetadata:
           images:
@@ -922,10 +809,8 @@ MonoBehaviour:
             title: Tea 5
             subtitle: Processed leaves 5
           title: Tea
-          title_marathi: 
           description: Originating in East Asia, tea became a major traded commodity
             by the 17th century.
-          description_marathi: 
           importRoutes: []
           exportRoutes: []
           distance: 1450km
@@ -937,7 +822,6 @@ MonoBehaviour:
           thenMiningProcess: Hand plucking & processing
           nowMiningProcess: Scale cultivation & industrial processing
       - title: Rice
-        title_marathi: 
         thumbnailPath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
         bookmarkMetadata:
           images:
@@ -957,10 +841,8 @@ MonoBehaviour:
             title: Rice 5
             subtitle: Staple grain 5
           title: Rice
-          title_marathi: 
           description: Staple food crop cultivated and traded across riverine and
             coastal networks.
-          description_marathi: 
           importRoutes: []
           exportRoutes: []
           distance: 100km
@@ -972,11 +854,9 @@ MonoBehaviour:
           thenMiningProcess: Manual harvesting & winnowing
           nowMiningProcess: Mechanized harvesting & processing
     - title: Timber & Exotic Animals
-      title_marathi: 
       pageNumber: 4
       items:
       - title: Teak
-        title_marathi: 
         thumbnailPath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
         bookmarkMetadata:
           images:
@@ -996,10 +876,8 @@ MonoBehaviour:
             title: Teak 5
             subtitle: Tectona grandis 5
           title: Teak
-          title_marathi: 
           description: Durable hardwood from South & Southeast Asia prized for shipbuilding
             and furniture.
-          description_marathi: 
           importRoutes: []
           exportRoutes: []
           distance: 4300km
@@ -1011,7 +889,6 @@ MonoBehaviour:
           thenMiningProcess: Selective felling
           nowMiningProcess: Commercial logging & regulation
       - title: Sandalwood
-        title_marathi: 
         thumbnailPath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
         bookmarkMetadata:
           images:
@@ -1025,10 +902,8 @@ MonoBehaviour:
             title: Sandalwood 3
             subtitle: Santalum album 3
           title: Sandalwood
-          title_marathi: 
           description: Fragrant wood used for incense, carvings and perfume; historically
             valuable.
-          description_marathi: 
           importRoutes: []
           exportRoutes: []
           distance: 1700km
@@ -1040,7 +915,6 @@ MonoBehaviour:
           thenMiningProcess: Wild harvest
           nowMiningProcess: Cultivation & strict controls
       - title: Ebony
-        title_marathi: 
         thumbnailPath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
         bookmarkMetadata:
           images:
@@ -1051,10 +925,8 @@ MonoBehaviour:
             title: Ebony 2
             subtitle: Dense black wood 2
           title: Ebony
-          title_marathi: 
           description: Very dense dark wood used for fine inlay, instrument parts
             and luxury goods.
-          description_marathi: 
           importRoutes: []
           exportRoutes: []
           distance: 3950km
@@ -1066,7 +938,6 @@ MonoBehaviour:
           thenMiningProcess: Selective cutting
           nowMiningProcess: Regulated logging
       - title: Rosewood (Dalbergia)
-        title_marathi: 
         thumbnailPath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
         bookmarkMetadata:
           images:
@@ -1083,10 +954,8 @@ MonoBehaviour:
             title: Rosewood 4
             subtitle: Dalbergia species 4
           title: Rosewood
-          title_marathi: 
           description: Highly prized for fine furniture and musical instruments;
             many species are now protected.
-          description_marathi: 
           importRoutes: []
           exportRoutes: []
           distance: 200km
@@ -1098,7 +967,6 @@ MonoBehaviour:
           thenMiningProcess: Logging
           nowMiningProcess: CITES-regulated harvest
       - title: Cedar of Lebanon
-        title_marathi: 
         thumbnailPath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
         bookmarkMetadata:
           images:
@@ -1118,10 +986,8 @@ MonoBehaviour:
             title: Cedar of Lebanon 5
             subtitle: Cedrus libani 5
           title: Cedar of Lebanon
-          title_marathi: 
           description: Anciently prized timber used by Phoenicians, Egyptians and
             others for shipbuilding and temples.
-          description_marathi: 
           importRoutes: []
           exportRoutes: []
           distance: 3900km
@@ -1133,7 +999,6 @@ MonoBehaviour:
           thenMiningProcess: Royal logging
           nowMiningProcess: Conservation & limited harvest
       - title: Mahogany
-        title_marathi: 
         thumbnailPath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
         bookmarkMetadata:
           images:
@@ -1150,10 +1015,8 @@ MonoBehaviour:
             title: Mahogany 4
             subtitle: Swietenia species 4
           title: Mahogany
-          title_marathi: 
           description: Tropical hardwood used for high-quality furniture and ship
             fittings.
-          description_marathi: 
           importRoutes: []
           exportRoutes: []
           distance: 4700km
@@ -1165,7 +1028,6 @@ MonoBehaviour:
           thenMiningProcess: Tropical logging
           nowMiningProcess: Sustainable forestry & regulation
       - title: Peacock Feathers
-        title_marathi: 
         thumbnailPath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
         bookmarkMetadata:
           images:
@@ -1182,10 +1044,8 @@ MonoBehaviour:
             title: Peacock Feather 4
             subtitle: Feathers traded historically 4
           title: Peacock Feathers
-          title_marathi: 
           description: Feathers used decoratively and ritually; traded regionally
             in Asia.
-          description_marathi: 
           importRoutes: []
           exportRoutes: []
           distance: 4600km
@@ -1197,7 +1057,6 @@ MonoBehaviour:
           thenMiningProcess: Collected naturally
           nowMiningProcess: Collected ethically / captive birds
       - title: Arabian Horse
-        title_marathi: 
         thumbnailPath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
         bookmarkMetadata:
           images:
@@ -1211,10 +1070,8 @@ MonoBehaviour:
             title: Arabian Horse 3
             subtitle: Historic horse breed 3
           title: Arabian Horse
-          title_marathi: 
           description: Elegant and valuable horses historically traded across the
             Middle East and beyond.
-          description_marathi: 
           importRoutes: []
           exportRoutes: []
           distance: 2900km
@@ -1226,7 +1083,6 @@ MonoBehaviour:
           thenMiningProcess: Breeding & caravan transport
           nowMiningProcess: Registered breeding programs
       - title: Leopard Skin
-        title_marathi: 
         thumbnailPath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
         bookmarkMetadata:
           images:
@@ -1246,10 +1102,8 @@ MonoBehaviour:
             title: Leopard Skin 5
             subtitle: Historic trophy/garment 5
           title: Leopard Skin
-          title_marathi: 
           description: Furs and skins were historically luxury items; many species
             are now protected.
-          description_marathi: 
           importRoutes: []
           exportRoutes: []
           distance: 850km
@@ -1261,7 +1115,6 @@ MonoBehaviour:
           thenMiningProcess: Hunting & skinning
           nowMiningProcess: Illegal trade / conservation
       - title: Scarlet Macaw
-        title_marathi: 
         thumbnailPath: https://png.pngtree.com/png-vector/20240617/ourmid/pngtree-hd-semi-precious-png-image_12736641.png
         bookmarkMetadata:
           images:
@@ -1278,10 +1131,8 @@ MonoBehaviour:
             title: Scarlet Macaw 4
             subtitle: Colorful parrot species 4
           title: Scarlet Macaw
-          title_marathi: 
           description: Exotic birds traded historically as prestige pets and ornaments;
             many species now protected.
-          description_marathi: 
           importRoutes: []
           exportRoutes: []
           distance: 1500km
@@ -1292,5 +1143,5 @@ MonoBehaviour:
           nowDuration: Conservation & regulated trade
           thenMiningProcess: Capture for trade
           nowMiningProcess: Breeding programs & protection
-    materialPageBottomLine: Select material to uncover trade routes
-    detailPageBottomLine: Now Showing Trade Routes
+    materialPageBottomLine: 
+    detailPageBottomLine: 

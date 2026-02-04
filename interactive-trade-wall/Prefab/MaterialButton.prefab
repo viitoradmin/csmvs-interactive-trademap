@@ -441,14 +441,11 @@ MonoBehaviour:
   _id: 0
   m_ItemData:
     title: 
-    title_marathi: 
     thumbnailPath: 
     bookmarkMetadata:
       images: []
       title: 
-      title_marathi: 
       description: 
-      description_marathi: 
       importRoutes: []
       exportRoutes: []
       distance: 
@@ -707,6 +704,7 @@ GameObject:
   - component: {fileID: 1992830703616288982}
   - component: {fileID: 7459607352908311047}
   - component: {fileID: 2746188329295220264}
+  - component: {fileID: 2502717806272382182}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -1059,3 +1057,16 @@ MonoBehaviour:
   m_OnChangedRate:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &2502717806272382182
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5703394790997629994}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6eee49ff1839be5438bbe1c6fcded721, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _localTextList: []

@@ -1,21 +1,16 @@
-﻿using Coffee.UIEffects;
+﻿using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
 using TMPro;
-//using TMPro.EditorUtilities;
-//using UnityEditor.Rendering;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.Networking;
 using UnityEngine.UI;
 using static InteractiveTradeWallDataSO;
 
-public class BookController : MonoBehaviour
-{
+public class BookController:MonoBehaviour {
     public MegaBookBuilder book;
     public static BookController instance;
-    public Language language;
     public MegaBookSwipeControl swipeController;
     public ItemsPagination bookmarkItemsPagination;
 
@@ -47,7 +42,6 @@ public class BookController : MonoBehaviour
     [Space]
     public TMP_Text backButtonPath;
     public TMP_Text materialTitleText;
-    public TMP_Text materialDetailsText;
     public Text materialDetailsTxt;
     [Space]
     public TMP_Text importRoutes_Button_Text;
@@ -71,11 +65,8 @@ public class BookController : MonoBehaviour
     public TMP_Text miningProcess_Then_Text;
     public TMP_Text miningProcess_Now_Text;
 
-    public int currentSelectedBookMarkId=-1;
+    public int currentSelectedBookMarkId = -1;
     public int currentSelectedItemId = -1;
-
-    public Font englisthFont, marathiFont;
-    public TMPro.TMP_FontAsset englishTmpFont, marathiTmpFont;
 
     [Header("UI Effects Related Data")]
     public UIEffectsController uIEffectsController;
@@ -83,53 +74,80 @@ public class BookController : MonoBehaviour
     [Header("Sample Bookmark Data")]
     //public Data dataSO;
     public InteractiveTradeWallDataSO dataSO;
-    public InteractiveTradeWallDataSO marathiDataSO;
 
-    public UnityAction onToggleLangugae; 
-    
     public float idleTimeThreshold = 15f; // Seconds before screensaver activates
     private float _idleTimer;
     public bool _isScreensaverActive;
-    private void Awake()
-    {
+    [SerializeField] private APIHandler APIHandler;
+    [SerializeField] private MediaManager mediaManager;
+    private void Awake() {
         instance = this;
     }
 
-    void Start()
-    {
+    void Start() {
         graphicRaycaster = canvasGroup.GetComponent<GraphicRaycaster>();
         //StartCoroutine(OpenBook());
-        canvasGroup.alpha = 0.0f;
-        StartCoroutine(uIEffectsController.PlayUIEffectsCoroutine(false, () =>
-          {
-              canvasGroup.alpha = 1.0f;
-          }));
-        SetupBookmarks();
+        //canvasGroup.alpha = 0.0f;
+        //StartCoroutine(uIEffectsController.PlayUIEffectsCoroutine(false,() => {
+        //    canvasGroup.alpha = 1.0f;
+        //}));
+        //SetupBookmarks();
         //ShowMaterials();
     }
+    private void OnEnable() {
+        APIHandler.OnDataFetchedEvent += StartPoint;
+    }
+    private void OnDisable() {
+        APIHandler.OnDataFetchedEvent -= StartPoint;
+    }
+    private bool once = true;
+    private void StartPoint(Root root) {
+        if (once) {
+            once = false;
+            canvasGroup.alpha = 0.0f;
+            StartCoroutine(uIEffectsController.PlayUIEffectsCoroutine(false,() => {
+                canvasGroup.alpha = 1.0f;
+            }));
+        }
+        SetupBookmarks();
+    }
+    void Update() {
+        if (!IsAnyInputDetected()) {
 
-    void Update()
-    {
-        if (!IsAnyInputDetected()) 
-        {
-
-            if (!_isScreensaverActive)
-            {
+            if (!_isScreensaverActive) {
                 _idleTimer += Time.deltaTime;
-                
+
                 if (!_isScreensaverActive && _idleTimer >= idleTimeThreshold) {
                     // Activate screensaver
                     //ShowScreenSaver();
                     OnClickBackButton();
                 }
             }
-        }
-        else if (IsAnyInputDetected())
-        {
+        } else if (IsAnyInputDetected()) {
             _idleTimer = 0f;
         }
+
+        if ((Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift))
+            && Input.GetKeyDown(KeyCode.D)) {
+            if (APIHandler != null) {
+                APIHandler.ClearLocalStoredData();
+            }
+            if (mediaManager != null) {
+                mediaManager.ClearLocalStoredData();
+            }
+            QuitApp();
+        }
+        if (Input.GetKeyDown(KeyCode.Escape)) { 
+            QuitApp();
+        }
     }
-    
+    internal void QuitApp() {
+#if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false;
+#else
+        Application.Quit();
+#endif
+    }
     private bool IsAnyInputDetected() {
         // Keyboard input
         if (Input.anyKeyDown) {
@@ -143,55 +161,49 @@ public class BookController : MonoBehaviour
         // Touch input
         return Input.touchCount > 0;
     }
-    
-    
-    public void ToogleLanguge()
-    {
-        if (language == Language.English)
-        {
-            language = Language.Marathi;
 
-        }
-        else if (language == Language.Marathi)
-        {
-            language = Language.English;
 
-        }
+    public void ToogleLanguge() {
+        //if (language == Language.English)
+        //{
+        //    language = Language.Marathi;
+
+        //}
+        //else if (language == Language.Marathi)
+        //{
+        //    language = Language.English;
+
+        //}
         Debug.Log("Current Page:" + book.GetCurrentPage());
-        if (book.GetCurrentPage() == 6)
-        {
+        if (book.GetCurrentPage() == 6) {
             Debug.Log("This is detailed page section");
             SetDetailPageUI(_LastSelectedItem);
         }
-        else
-        {
-            onToggleLangugae?.Invoke();
-        }
+        //else
+        //{
+        //    onToggleLangugae?.Invoke();
+        //}
     }
 
     [ContextMenu("Close book")]
-    public void CloseBook()
-    {
+    public void CloseBook() {
         canvasGroup.alpha = 0.0f;
         swipeController.CloseBook();
     }
     public BookmarkItem _LastSelectedItem;
-    public void ShowDetails(BookmarkItem _data, Texture _materialImage)
-    {
+    public void ShowDetails(BookmarkItem _data,Texture _materialImage) {
         // disable all Buttons and UI
-        Debug.Log($"open data called {_data.title}");
+        //Debug.Log($"open data called {_data.title}");
         _LastSelectedItem = _data;
         SetReturnPage();
         pinned_rawimage.texture = _materialImage;
-        StartCoroutine(GotoPage(detailsStartPageIndex, () =>
-        {
+        StartCoroutine(GotoPage(detailsStartPageIndex,() => {
             OpenDetailPanel();
             SetDetailPageUI(_data);
         }));
     }
 
-    public IEnumerator GotoPage(int _page_num, UnityAction unityAction)
-    {
+    public IEnumerator GotoPage(int _page_num,UnityAction unityAction) {
         //yield return ShowCanvas(false);
         SetRaycaster(false);
         yield return uIEffectsController.PlayUIEffectsCoroutine(false);
@@ -207,65 +219,56 @@ public class BookController : MonoBehaviour
 
 
     }
-    private void SetRaycaster(bool _enable)
-    {
+    private void SetRaycaster(bool _enable) {
         graphicRaycaster.enabled = _enable;
     }
 
-    public void SetupBookmarks()
-    {
-        if (bookmarkButtonPrefab == null || parentA == null || parentB == null)
-        {
+    public void SetupBookmarks() {
+        if (bookmarkButtonPrefab == null || parentA == null || parentB == null) {
             Debug.LogError("Setup missing in BookmarkDistributor!");
             return;
         }
 
         // Clean old children
-        foreach (Transform child in parentA) Destroy(child.gameObject);
-        foreach (Transform child in parentB) Destroy(child.gameObject);
+        foreach (Transform child in parentA)
+            Destroy(child.gameObject);
+        foreach (Transform child in parentB)
+            Destroy(child.gameObject);
         bookmarkToggles.Clear();
 
         // Distribute bookmarks equally
-        
-        
-            int mid = Mathf.CeilToInt(dataSO.root.bookmarks.Count / 2);
-            for (int i = 0; i < dataSO.root.bookmarks.Count; i++)
-            {
-                Transform targetParent = (i < mid) ? parentA : parentB; // alternate distribution
-                GameObject toggleObj = Instantiate(bookmarkButtonPrefab, targetParent);
 
-                Toggle _toggle = toggleObj.GetComponent<Toggle>();
-                BookmarkElement _bookmarkElement = toggleObj.GetComponent<BookmarkElement>();
-                _bookmarkElement._id = i;
-                int _index = i;
-                if (_bookmarkElement != null)
-                {
-                    _bookmarkElement.setupData(dataSO.root.bookmarks[_index]);
-                }
-                bookmarkToggles.Add(_toggle);
+
+        int mid = Mathf.CeilToInt(dataSO.root.bookmarks.Count / 2);
+        for (int i = 0;i < dataSO.root.bookmarks.Count;i++) {
+            Transform targetParent = (i < mid) ? parentA : parentB; // alternate distribution
+            GameObject toggleObj = Instantiate(bookmarkButtonPrefab,targetParent);
+
+            Toggle _toggle = toggleObj.GetComponent<Toggle>();
+            BookmarkElement _bookmarkElement = toggleObj.GetComponent<BookmarkElement>();
+            _bookmarkElement._id = i;
+            int _index = i;
+            if (_bookmarkElement != null) {
+                _bookmarkElement.setupData(dataSO.root.bookmarks[_index]);
             }
-        
+            bookmarkToggles.Add(_toggle);
+        }
+
 
         bookmarkToggles[0].isOn = true;
     }
 
-    public IEnumerator ShowCanvas(bool _show)
-    {
+    public IEnumerator ShowCanvas(bool _show) {
         float alpha = _show ? 1.0f : 0.0f;
-        if (_show)
-        {
-            while (canvasGroup.alpha < alpha)
-            {
+        if (_show) {
+            while (canvasGroup.alpha < alpha) {
                 canvasGroup.alpha += Time.deltaTime;
                 yield return new WaitForEndOfFrame();
             }
             graphicRaycaster.enabled = true;
-        }
-        else
-        {
+        } else {
             graphicRaycaster.enabled = false;
-            while (canvasGroup.alpha > alpha)
-            {
+            while (canvasGroup.alpha > alpha) {
                 canvasGroup.alpha -= Time.deltaTime;
                 yield return new WaitForEndOfFrame();
             }
@@ -273,12 +276,10 @@ public class BookController : MonoBehaviour
         canvasGroup.alpha = alpha;
     }
     public Bookmark _lastClickedBookMark;
-    public void OnClickBackButton()
-    {
-        StartCoroutine(GotoPage(swipeController.returnPageNumber, () =>
-        {
+    public void OnClickBackButton() {
+        StartCoroutine(GotoPage(swipeController.returnPageNumber,() => {
             OpenMatrialPanel();
-            
+
             bookmarkItemsPagination.ShowBookmarkItems(_lastClickedBookMark);
         }));
 
@@ -288,96 +289,90 @@ public class BookController : MonoBehaviour
         _isScreensaverActive = true;
     }
 
-    public void OpenMatrialPanel()
-    {
+    public void OpenMatrialPanel() {
         materialListPanel.SetActive(true);
         materialDetailsPanel.SetActive(false);
     }
-    public void OpenDetailPanel()
-    {
+    public void OpenDetailPanel() {
         materialListPanel.SetActive(false);
         materialDetailsPanel.SetActive(true);
     }
-    public void SetReturnPage()
-    {
-        swipeController.returnPageNumber = (int)Mathf.Clamp((int)swipeController.book.page, -1, swipeController.book.MaxPageVal()); ;
+    public void SetReturnPage() {
+        swipeController.returnPageNumber = (int)Mathf.Clamp((int)swipeController.book.page,-1,swipeController.book.MaxPageVal());
+        ;
     }
-    public void OnClickNextPage()
-    {
-        StartCoroutine(GotoPage((int)swipeController.book.page + 1, () =>
-        {
+    public void OnClickNextPage() {
+        StartCoroutine(GotoPage((int)swipeController.book.page + 1,() => {
             bookmarkItemsPagination.NextPage();
         }));
     }
-    public void OnClickPreviousPage()
-    {
-        StartCoroutine(GotoPage((int)swipeController.book.page - 1, () =>
-        {
+    public void OnClickPreviousPage() {
+        StartCoroutine(GotoPage((int)swipeController.book.page - 1,() => {
             bookmarkItemsPagination.NextPage();
         }));
     }
     public MarathiTextParser marathiParser;
-   
 
-    public void SetDetailPageUI(BookmarkItem itemData)
-    {
+
+    public void SetDetailPageUI(BookmarkItem itemData) {
         //backButtonPath.text = bookmarkItemsPagination.currentSelectedBookmark.title + " > " + itemData.title;
-        backButtonPath.text =  itemData.title;
+        backButtonPath.text = itemData.title;
         materialTitleText.text = itemData.bookmarkMetadata.title;
-//        materialDetailsText.text = language == Language.English ? itemData.bookmarkMetadata.description : marathiParser.GetMarathiText(itemData.bookmarkMetadata.description);
+        materialDetailsTxt.text = itemData.bookmarkMetadata.description;
+        //materialDetailsText.text = language == Language.English ? itemData.bookmarkMetadata.description : marathiParser.GetMarathiText(itemData.bookmarkMetadata.description);
 
-        if(language == Language.English)
-        {
-            materialDetailsTxt.font = englisthFont;
-            materialDetailsTxt.text = itemData.bookmarkMetadata.description;
-        }else if(language == Language.Marathi)
-        {
-            materialDetailsTxt.font = marathiFont;
-            materialDetailsTxt.text = marathiParser.GetMarathiText(itemData.bookmarkMetadata.description_marathi);
-        }
-        
+        //materialDetailsTxt.text = itemData.bookmarkMetadata.description;
 
-        importRoutes_Button_Text.text = language == Language.English ? "Import Routes" : "Āyāta mārga";
-        exportRoutes_Button_Text.text = language == Language.English ? "Export Routes" : "Niryāta mārga";
-        routeFacts_Title_Text.text = language == Language.English ? "Route Indicators" : "Mārga tathyē";
-        thenVSnow_Title_Text.text = language == Language.English ? "Then vs Now" : "Maga ātā vi";
-        distance_Title_Text.text = language == Language.English ? "Distance" : "Antara";
-        distance_Value_Text.text = itemData.bookmarkMetadata.distance;
-        meritimeRoute_Title_Text.text = language == Language.English ? "Meritime Route" : "Sāgarī mārga";
-        meritimeRoute_Value_Text.text = itemData.bookmarkMetadata.meritimeRoute;
-        overlandRoute_Title_Text.text = language == Language.English ? "Overland Route" : "Jaminīvaracā mārga\r\n";
-        overlandRoute_Value_Text.text = itemData.bookmarkMetadata.overlandRoute;
-        challenges_Title_Text.text = language == Language.English ? "Challenges" : "Āvhānē";
-        challenges_Value_Text.text = itemData.bookmarkMetadata.challenges;
-        journeyDuration_Then_Text.text = itemData.bookmarkMetadata.thenDuration;
-        journeyDuration_Now_Text.text = itemData.bookmarkMetadata.nowDuration;
-        miningProcess_Then_Text.text = itemData.bookmarkMetadata.thenMiningProcess;
-        miningProcess_Now_Text.text = itemData.bookmarkMetadata.nowMiningProcess;
+        //else if(language == Language.Marathi)
+        //{
+        //    materialDetailsTxt.font = marathiFont;
+        //    materialDetailsTxt.text = marathiParser.GetMarathiText(itemData.bookmarkMetadata.description_marathi);
+        //}
+
+
+        //importRoutes_Button_Text.text = language == Language.English ? "Import Routes" : "Āyāta mārga";
+        //exportRoutes_Button_Text.text = language == Language.English ? "Export Routes" : "Niryāta mārga";
+        //routeFacts_Title_Text.text = language == Language.English ? "Route Indicators" : "Mārga tathyē";
+        //thenVSnow_Title_Text.text = language == Language.English ? "Then vs Now" : "Maga ātā vi";
+        //distance_Title_Text.text = language == Language.English ? "Distance" : "Antara";
+        //distance_Value_Text.text = itemData.bookmarkMetadata.distance;
+        //meritimeRoute_Title_Text.text = language == Language.English ? "Meritime Route" : "Sāgarī mārga";
+        //meritimeRoute_Value_Text.text = itemData.bookmarkMetadata.meritimeRoute;
+        //overlandRoute_Title_Text.text = language == Language.English ? "Overland Route" : "Jaminīvaracā mārga\r\n";
+        //overlandRoute_Value_Text.text = itemData.bookmarkMetadata.overlandRoute;
+        //challenges_Title_Text.text = language == Language.English ? "Challenges" : "Āvhānē";
+        //challenges_Value_Text.text = itemData.bookmarkMetadata.challenges;
+        //journeyDuration_Then_Text.text = itemData.bookmarkMetadata.thenDuration;
+        //journeyDuration_Now_Text.text = itemData.bookmarkMetadata.nowDuration;
+        //miningProcess_Then_Text.text = itemData.bookmarkMetadata.thenMiningProcess;
+        //miningProcess_Now_Text.text = itemData.bookmarkMetadata.nowMiningProcess;
 
         //set slideshow
         slideShowManager.SetupSlides(itemData.bookmarkMetadata.images);
         SetBottomLine(false);
     }
 
-    public void SetBottomLine(bool isMaterialPage)
-    {
+    public void SetBottomLine(bool isMaterialPage) {
         bottomline_text.text = isMaterialPage ? dataSO.root.materialPageBottomLine : dataSO.root.detailPageBottomLine;
     }
 
-    public void LoadTextureFromResources(string url, RawImage rawImage)
-    {
+    public void LoadTextureFromResources(string url,RawImage rawImage) {
         rawImage.texture = Resources.Load<Texture2D>(url);
     }
-    
-    public void LoadImageFromURL(string url, RawImage rawImage)
-    {
-        StartCoroutine(DownloadImage(url, rawImage));
+    public void LoadTextureFromResources(string url,Action<Sprite> onLoaded) {
+        //rawImage.texture = Resources.Load<Texture2D>(url);
+        if (APIHandler.useOfflineFile) {
+            mediaManager.GetSpriteFromResource(url,onLoaded);
+        } else {
+            mediaManager.DownloadSingleMediaFileAsync(url,onLoaded);
+        }
+    }
+    public void LoadImageFromURL(string url,RawImage rawImage) {
+        StartCoroutine(DownloadImage(url,rawImage));
     }
 
-    private IEnumerator DownloadImage(string url, RawImage rawImage)
-    {
-        using (UnityWebRequest uwr = UnityWebRequestTexture.GetTexture(url))
-        {
+    private IEnumerator DownloadImage(string url,RawImage rawImage) {
+        using (UnityWebRequest uwr = UnityWebRequestTexture.GetTexture(url)) {
             yield return uwr.SendWebRequest();
 
 #if UNITY_2020_1_OR_NEWER
@@ -387,9 +382,7 @@ public class BookController : MonoBehaviour
 #endif
             {
                 Debug.LogError("Image Load Failed: " + uwr.error);
-            }
-            else
-            {
+            } else {
                 Texture2D texture = DownloadHandlerTexture.GetContent(uwr);
 
                 // If using RawImage (UI)
@@ -401,17 +394,15 @@ public class BookController : MonoBehaviour
             }
         }
     }
-    public RawImage SpawnRawImage(RectTransform parent)
-    {
-        if (parent == null)
-        {
+    public RawImage SpawnRawImage(RectTransform parent) {
+        if (parent == null) {
             Debug.LogError("❌ No parent assigned for RawImage!");
             return null;
         }
 
         // Create GameObject
-        GameObject go = new GameObject("SpawnedRawImage", typeof(RectTransform), typeof(RawImage));
-        go.transform.SetParent(parent, false);
+        GameObject go = new GameObject("SpawnedRawImage",typeof(RectTransform),typeof(RawImage));
+        go.transform.SetParent(parent,false);
 
         // Setup RectTransform size same as parent
         RectTransform rect = go.GetComponent<RectTransform>();
@@ -424,9 +415,4 @@ public class BookController : MonoBehaviour
         return rawImage;
     }
 
-}
-
-public enum Language
-{
-    English, Marathi
 }
