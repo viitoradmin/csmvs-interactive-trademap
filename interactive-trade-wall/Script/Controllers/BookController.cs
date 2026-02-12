@@ -80,6 +80,7 @@ public class BookController:MonoBehaviour {
     public bool _isScreensaverActive;
     [SerializeField] private APIHandler APIHandler;
     [SerializeField] private MediaManager mediaManager;
+    public static Action<bool> onEffectChangingEvent;
     private void Awake() {
         instance = this;
     }
@@ -204,6 +205,7 @@ public class BookController:MonoBehaviour {
     }
 
     public IEnumerator GotoPage(int _page_num,UnityAction unityAction) {
+        onEffectChangingEvent?.Invoke(true);
         //yield return ShowCanvas(false);
         SetRaycaster(false);
         yield return uIEffectsController.PlayUIEffectsCoroutine(false);
@@ -216,8 +218,7 @@ public class BookController:MonoBehaviour {
         //yield return ShowCanvas(true);
         yield return uIEffectsController.PlayUIEffectsCoroutine(true);
         SetRaycaster(transform);
-
-
+        onEffectChangingEvent?.Invoke(false);
     }
     private void SetRaycaster(bool _enable) {
         graphicRaycaster.enabled = _enable;

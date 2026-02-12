@@ -10,9 +10,14 @@ public class LanguageButtonHandler:MonoBehaviour {
     //[SerializeField] private AppController appController;
     private void OnEnable() {
         APIHandler.OnDataFetchedEvent += OnDataFetched;
+        BookController.onEffectChangingEvent += OnEffectChange;
     }
     private void OnDestroy() {
         APIHandler.OnDataFetchedEvent -= OnDataFetched;
+        BookController.onEffectChangingEvent -= OnEffectChange;
+    }
+    private void OnEffectChange(bool isChanegd) {
+        buttons.ForEach(button => button.interactable = !isChanegd);
     }
     private void OnDataFetched(Root root) {
         RefreshSelectedButtonUI();

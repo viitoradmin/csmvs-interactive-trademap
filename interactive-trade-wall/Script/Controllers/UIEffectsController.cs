@@ -1,6 +1,7 @@
 using Coffee.UIEffects;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -13,7 +14,7 @@ public class UIEffectsController : MonoBehaviour
     public float buffer_duration = 1;
 
     public Coroutine effect_coroutine;
-
+    [SerializeField] private List<UIEffectTweener> additionalEffectList;
     //void Start()
     //{
 
@@ -35,6 +36,8 @@ public class UIEffectsController : MonoBehaviour
     public IEnumerator PlayUIEffectsCoroutine(bool _forward, UnityAction onComplete = null)
     {
         uiEffects = GetComponentsInChildren<UIEffectTweener>(false);
+        uiEffects = new List<UIEffectTweener>(uiEffects).Concat(additionalEffectList).ToArray();
+                
         duration = uiEffects[0].duration;
         foreach (var e in uiEffects)
         {
