@@ -20,6 +20,10 @@ public class LanguageButtonHandler:MonoBehaviour {
         buttons.ForEach(button => button.interactable = !isChanegd);
     }
     private void OnDataFetched(Root root) {
+        if (!root.languageSwitchButton.isEnable) { 
+            DisableAllButtons();
+            return;
+        }
         RefreshSelectedButtonUI();
     }
     private void Awake() {
