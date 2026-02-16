@@ -37,6 +37,7 @@ public class InteractiveTradeWallDataSO:ScriptableObject {
         public List<Bookmark> bookmarks = new List<Bookmark>();
         public string materialPageBottomLine;
         public string detailPageBottomLine;
+        public LanguageSwitchButton languageSwitchButton = new LanguageSwitchButton();
 
         public void Convert(LanguageManager languageManager) {
             if (bookmarks != null) {
@@ -58,7 +59,11 @@ public class InteractiveTradeWallDataSO:ScriptableObject {
             }
         }
     }
-
+    
+    [Serializable]
+    public class LanguageSwitchButton {
+        public bool isEnable = true;
+    }
 
     [Serializable]
     public class Bookmark {
