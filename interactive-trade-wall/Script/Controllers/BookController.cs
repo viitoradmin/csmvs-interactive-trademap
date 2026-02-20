@@ -83,7 +83,6 @@ public class BookController:MonoBehaviour {
     [SerializeField] private APIHandler APIHandler;
     [SerializeField] private MediaManager mediaManager;
     public static Action<bool> onEffectChangingEvent;
-    [SerializeField] private TextMeshProUGUI appVersion;
     private void Awake() {
         instance = this;
     }
@@ -97,7 +96,6 @@ public class BookController:MonoBehaviour {
         //}));
         //SetupBookmarks();
         //ShowMaterials();
-        appVersion.text = "v" + Application.version;
     }
     private void OnEnable() {
         APIHandler.OnDataFetchedEvent += StartPoint;
