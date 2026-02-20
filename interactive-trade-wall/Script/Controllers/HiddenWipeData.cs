@@ -152,12 +152,10 @@ public class HiddenWipeData : MonoBehaviour
     private void RemoveLocalData()
     {
         if (apiHandler != null) {
-            //apiHandler.ClearLocalStoredData();
-            Debug.Log("//apiHandler.ClearLocalStoredData();");
+            apiHandler.ClearLocalStoredData();
         }
         if (mediaManager != null) {
-            //mediaManager.ClearLocalStoredData();
-            Debug.Log("//mediaManager.ClearLocalStoredData();");
+            mediaManager.ClearLocalStoredData();
         }
     }
 
