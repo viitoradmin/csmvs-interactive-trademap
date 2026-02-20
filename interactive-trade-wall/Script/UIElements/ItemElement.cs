@@ -40,6 +40,7 @@ public class ItemElement:MonoBehaviour {
 
         //[OLD]
         //BookController.instance.LoadTextureFromResources(m_ItemData.thumbnailPath,material_rawimage);
+        itemButton.onClick.AddListener(ViewDetails);
 
         //[NEW]
         BookController.instance.LoadTextureFromResources(m_ItemData.thumbnailPath,(sprite) => {
@@ -49,7 +50,6 @@ public class ItemElement:MonoBehaviour {
             pinnedImageTexture = sprite.texture;
         });
 
-        itemButton.onClick.AddListener(ViewDetails);
         // MarkThisItemAsSelected(_isSelected);
     }
 

@@ -1,9 +1,11 @@
 using Coffee.UIEffects;
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.Events;
+using Debug = UnityEngine.Debug;
 
 public class UIEffectsController : MonoBehaviour
 {
@@ -46,10 +48,8 @@ public class UIEffectsController : MonoBehaviour
             else
                 e.PlayReverse();
         }
-        yield return new WaitForSecondsRealtime(duration + buffer_duration);
+        yield return new WaitForSecondsRealtime(duration);
         onComplete?.Invoke();
         //effect_coroutine = null;
     }
-
-
 }

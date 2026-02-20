@@ -70,7 +70,8 @@ public class LanguageUpdate:MonoBehaviour {
     [SerializeField] private List<LegacyLanguageFontPair> _localLegacyFontList = new List<LegacyLanguageFontPair>(); // For Legacy Text
 
     [SerializeField] private List<LanguageTextPair> _localTextList = new List<LanguageTextPair>();
-
+    
+    public List<LanguageTextPair> LocalTextList { get => _localTextList; set => _localTextList = value; }
     private void Awake() {
         // Detect which component is present
         if (GetComponent<TMP_Text>() != null) {

@@ -1,12 +1,14 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.Networking;
 using UnityEngine.UI;
 using static InteractiveTradeWallDataSO;
+using Debug = UnityEngine.Debug;
 
 public class BookController:MonoBehaviour {
     public MegaBookBuilder book;
@@ -203,18 +205,19 @@ public class BookController:MonoBehaviour {
             SetDetailPageUI(_data);
         }));
     }
-
     public IEnumerator GotoPage(int _page_num,UnityAction unityAction) {
+        Debug.Log($"Goto Page {_page_num}");
         onEffectChangingEvent?.Invoke(true);
         //yield return ShowCanvas(false);
         SetRaycaster(false);
         yield return uIEffectsController.PlayUIEffectsCoroutine(false);
+        
         swipeController.GoToPage(_page_num);
         unityAction?.Invoke();
+        
         yield return new WaitUntil(() => Mathf.Abs(swipeController.book.Flip - swipeController.book.page) < cutoff_delta);
         //yield return new WaitUntil(() => swipeController.book.Flip == swipeController.book.page);
         //yield return new WaitForSeconds(.5f);
-
         //yield return ShowCanvas(true);
         yield return uIEffectsController.PlayUIEffectsCoroutine(true);
         SetRaycaster(transform);
