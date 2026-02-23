@@ -148,7 +148,7 @@ public class MediaManager : MonoBehaviour
     }
 
     private void AllMediaDownloaded(){
-        Debug.Log("AllMediaDownloaded: Loading: 100%");
+        //Debug.Log("AllMediaDownloaded: Loading: 100%");
     }
 
     public void GetSpriteFromResource(string assetURL, Action<Sprite> onDownloadCompleted = null){
