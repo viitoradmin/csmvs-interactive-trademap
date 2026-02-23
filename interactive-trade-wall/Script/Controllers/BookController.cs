@@ -44,6 +44,9 @@ public class BookController:MonoBehaviour {
     [Space]
     public TMP_Text backButtonPath;
     public TMP_Text materialTitleText;
+    
+    public Text backButtonPathL;
+    public Text materialTitleTextL;
     public Text materialDetailsTxt;
     [Space]
     public TMP_Text importRoutes_Button_Text;
@@ -206,7 +209,6 @@ public class BookController:MonoBehaviour {
         }));
     }
     public IEnumerator GotoPage(int _page_num,UnityAction unityAction) {
-        Debug.Log($"Goto Page {_page_num}");
         onEffectChangingEvent?.Invoke(true);
         //yield return ShowCanvas(false);
         SetRaycaster(false);
@@ -320,8 +322,10 @@ public class BookController:MonoBehaviour {
 
     public void SetDetailPageUI(BookmarkItem itemData) {
         //backButtonPath.text = bookmarkItemsPagination.currentSelectedBookmark.title + " > " + itemData.title;
-        backButtonPath.text = itemData.title;
-        materialTitleText.text = itemData.bookmarkMetadata.title;
+        // backButtonPath.text = itemData.title;
+        // materialTitleText.text = itemData.bookmarkMetadata.title;
+        backButtonPathL.text = itemData.title;
+        materialTitleTextL.text = itemData.bookmarkMetadata.title;
         materialDetailsTxt.text = itemData.bookmarkMetadata.description;
         //materialDetailsText.text = language == Language.English ? itemData.bookmarkMetadata.description : marathiParser.GetMarathiText(itemData.bookmarkMetadata.description);
 

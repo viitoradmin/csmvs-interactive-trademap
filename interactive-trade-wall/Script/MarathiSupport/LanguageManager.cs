@@ -39,7 +39,6 @@ public class LanguageManager: MonoBehaviour {
                     apiHandler.GetDataForMarathi();
                 break;
             }
-            OnLanguageChangedEvent?.Invoke(_currentLanguage);
         }
     }
     public static Action<Language> OnLanguageChangedEvent = delegate { };

@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
@@ -113,7 +114,6 @@ public class APIHandler:MonoBehaviour {
         APICall.Instance.RequestTradeRouteData(API.APIGetTradeRouteSO_En,
             (response) => {
                 // Get the raw Root object
-                PopupManager.Instance.HideLoading();
                 Root rootData = response.data;
 
                 if (rootData != null) {
@@ -165,7 +165,6 @@ public class APIHandler:MonoBehaviour {
         PopupManager.Instance.ShowLoading();
         APICall.Instance.RequestTradeRouteData(API.APIGetTradeRouteSO_Mr,
             (response) => {
-                PopupManager.Instance.HideLoading();
                 // Get the raw Root object
                 Root rootData = response.data;
 
@@ -221,6 +220,13 @@ public class APIHandler:MonoBehaviour {
         data = rootData;
         dataSO.root = rootData;
         OnDataFetchedEvent?.Invoke(rootData);
+        
+        StartCoroutine(HideLoading());
+    }
+
+    private IEnumerator HideLoading(){
+        yield return new WaitForSeconds(0.8f);
+        PopupManager.Instance.HideLoading();
     }
 
     // Helper method to save JSON to file

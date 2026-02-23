@@ -19,13 +19,11 @@ public class MediaList
 {
     public Dictionary<string, Media> list;
 
-    public MediaList()
-    {
+    public MediaList(){
         list = new Dictionary<string, Media>();
     }
 
-    public Media GetMedia(string fileName)
-    {
+    public Media GetMedia(string fileName){
         Media media = null;
         list.TryGetValue(fileName, out media);
         return media;
@@ -40,13 +38,11 @@ public class Media
     public string fileType;
     public string url;
 
-    public bool IsVideoFile()
-    {
+    public bool IsVideoFile(){
         return fileType == Extension.mp4;
     }
 
-    public bool IsImageFile()
-    {
+    public bool IsImageFile(){
         return fileType == Extension.jpg;
     }
 } //MediaInformation class end
@@ -64,49 +60,40 @@ public class MediaManager : MonoBehaviour
     [SerializeField] private List<string> assetURLList;
     [SerializeField] private TextAsset db;
 
-    private void Start()
-    {
-        if (db)
-        {
+    private void Start(){
+        if (db){
             ImagesListData imageList = JsonUtility.FromJson<ImagesListData>(db.text);
 
-            if (imageList != null)
-            {
+            if (imageList != null){
                 assetURLList = imageList.listOfImages;
                 DownloadMediaFilesAsync();
             }
-            else
-            {
+            else{
                 Debug.LogError("Failed to parse JSON. Make sure class names match JSON keys.");
             }
         }
     }
 
-    internal void AssignDownloadableUrl(List<string> downloadUrl)
-    {
+    internal void AssignDownloadableUrl(List<string> downloadUrl){
         assetURLList.Clear();
         assetURLList.AddRange(downloadUrl);
     }
 
-    public async void DownloadMediaFilesAsync(Action onDownloadCompleted = null)
-    {
-        if (assetURLList == null || assetURLList.Count == 0)
-        {
+    public async void DownloadMediaFilesAsync(Action onDownloadCompleted = null){
+        if (assetURLList == null || assetURLList.Count == 0){
             return;
         }
 
         //LoadingPage Loading 0%...
         Debug.Log("Loading: 0%");
-        if (PopupManager.Instance)
-        {
+        if (PopupManager.Instance){
             PopupManager.Instance.ShowLoading();
         }
 
         downloadTasks.Clear();
         _mediaList.list.Clear();
 
-        for (int i = 0; i < assetURLList.Count; i++)
-        {
+        for (int i = 0; i < assetURLList.Count; i++){
             downloadTasks.Add(DownloadUtility.DownloadAssetAsync(assetURLList[i],
                 GetDirectoryPath(),
                 OnDownloadComplete,
@@ -115,8 +102,7 @@ public class MediaManager : MonoBehaviour
         }
 
         await Task.WhenAll(downloadTasks);
-        for (int i = 0; i < assetURLList.Count; i++)
-        {
+        for (int i = 0; i < assetURLList.Count; i++){
             DownloadSingleMediaFileAsync(assetURLList[i], null);
         }
 
@@ -124,20 +110,17 @@ public class MediaManager : MonoBehaviour
         onDownloadCompleted?.Invoke();
     }
 
-    private string GetDirectoryPath()
-    {
+    private string GetDirectoryPath(){
         string path = Path.Combine(Application.persistentDataPath, "Images");
 
-        if (!Directory.Exists(path))
-        {
+        if (!Directory.Exists(path)){
             Directory.CreateDirectory(path);
         }
 
         return path;
     }
 
-    private void OnDownloadComplete(string filePath)
-    {
+    private void OnDownloadComplete(string filePath){
         Media media = new Media()
         {
             fileName = Path.GetFileName(filePath),
@@ -148,13 +131,12 @@ public class MediaManager : MonoBehaviour
         _mediaList.list[media.fileName] = media;
     }
 
-    private void OnDownloadFail(string errorMessage)
-    {
+    private void OnDownloadFail(string errorMessage){
         Debug.LogError($"Error OnDownloadFail: {errorMessage}");
+        PopupManager.Instance.HideLoading();
     }
 
-    private void DownloadingProgress(float progress)
-    {
+    private void DownloadingProgress(float progress){
         //LoadingPage.instance.SetProgressBar(true);
 
         string progressText =
@@ -165,34 +147,25 @@ public class MediaManager : MonoBehaviour
         //LoadingPage.instance.SetProgressBarValue(progress * 100f);
     }
 
-    private void AllMediaDownloaded()
-    {
-        //Debug.Log("AllMediaDownloaded: Loading: 100%");
-        if (PopupManager.Instance)
-        {
-            PopupManager.Instance.HideLoading();
-        }
+    private void AllMediaDownloaded(){
+        Debug.Log("AllMediaDownloaded: Loading: 100%");
     }
 
-    public void GetSpriteFromResource(string assetURL, Action<Sprite> onDownloadCompleted = null)
-    {
+    public void GetSpriteFromResource(string assetURL, Action<Sprite> onDownloadCompleted = null){
         Sprite loadedSprite = Resources.Load<Sprite>(assetURL);
         onDownloadCompleted?.Invoke(loadedSprite);
     }
 
     private Dictionary<string, Sprite> _spriteCache = new Dictionary<string, Sprite>();
 
-    public async void DownloadSingleMediaFileAsync(string assetURL, Action<Sprite> onDownloadCompleted = null)
-    {
-        if (string.IsNullOrEmpty(assetURL))
-        {
+    public async void DownloadSingleMediaFileAsync(string assetURL, Action<Sprite> onDownloadCompleted = null){
+        if (string.IsNullOrEmpty(assetURL)){
             Debug.LogError("Asset URL is null or empty");
             onDownloadCompleted?.Invoke(null);
             return;
         }
 
-        if (_spriteCache.ContainsKey(assetURL))
-        {
+        if (_spriteCache.ContainsKey(assetURL)){
             onDownloadCompleted?.Invoke(_spriteCache[assetURL]);
             return;
         }
@@ -223,19 +196,16 @@ public class MediaManager : MonoBehaviour
         // Replicate DownloadUtility's naming logic to find the file key
         string fileName = Path.GetFileName(assetURL).Replace("%20", " ");
 
-        if (_mediaList.list.ContainsKey(fileName))
-        {
+        if (_mediaList.list.ContainsKey(fileName)){
             string filePath = _mediaList.list[fileName].url;
 
-            if (File.Exists(filePath))
-            {
+            if (File.Exists(filePath)){
                 // Read bytes and create texture
                 byte[] fileData = File.ReadAllBytes(filePath);
                 Texture2D texture = new Texture2D(2, 2);
 
                 // LoadImage auto-resizes the texture dimensions
-                if (texture.LoadImage(fileData))
-                {
+                if (texture.LoadImage(fileData)){
                     resultSprite = Sprite.Create(
                         texture,
                         new Rect(0, 0, texture.width, texture.height),
@@ -243,14 +213,14 @@ public class MediaManager : MonoBehaviour
                     );
                 }
             }
-            else
-            {
+            else{
                 Debug.LogError($"File not found at path: {filePath}");
+                PopupManager.Instance.HideLoading();
             }
         }
-        else
-        {
+        else{
             Debug.LogError($"File {fileName} not found in _mediaList after download.");
+            PopupManager.Instance.HideLoading();
         }
 
         _spriteCache[assetURL] = resultSprite;
@@ -258,8 +228,7 @@ public class MediaManager : MonoBehaviour
         onDownloadCompleted?.Invoke(resultSprite);
     }
 
-    internal void ClearLocalStoredData()
-    {
+    internal void ClearLocalStoredData(){
         // 1. Clear the in-memory dictionary references
         _mediaList.list.Clear();
 
@@ -267,22 +236,18 @@ public class MediaManager : MonoBehaviour
         string path = GetDirectoryPath();
 
         // 3. Check if directory exists and delete it
-        if (Directory.Exists(path))
-        {
-            try
-            {
+        if (Directory.Exists(path)){
+            try{
                 // The 'true' parameter performs a recursive delete 
                 // (removes the folder AND all files inside it)
                 Directory.Delete(path, true);
                 Debug.Log($"<color=red>Successfully cleared local data at:</color> {path}");
             }
-            catch (Exception e)
-            {
+            catch (Exception e){
                 Debug.LogError($"Failed to clear local data: {e.Message}");
             }
         }
-        else
-        {
+        else{
             Debug.LogWarning("ClearLocalStoredData: Directory did not exist, nothing to delete.");
         }
     }
