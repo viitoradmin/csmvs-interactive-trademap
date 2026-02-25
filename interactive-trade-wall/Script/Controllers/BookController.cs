@@ -89,7 +89,7 @@ public class BookController:MonoBehaviour {
     private void Awake() {
         instance = this;
     }
-
+    
     void Start() {
         graphicRaycaster = canvasGroup.GetComponent<GraphicRaycaster>();
         //StartCoroutine(OpenBook());
@@ -102,10 +102,18 @@ public class BookController:MonoBehaviour {
     }
     private void OnEnable() {
         APIHandler.OnDataFetchedEvent += StartPoint;
+        LanguageManager.OnLanguageChangedEvent += OnLanguageChanged;
     }
     private void OnDisable() {
         APIHandler.OnDataFetchedEvent -= StartPoint;
+        LanguageManager.OnLanguageChangedEvent -= OnLanguageChanged;
     }
+
+    private void OnLanguageChanged(Language obj){
+        TVScreenManager.Instance.ShowMainScreen();
+        _isScreensaverActive = true;
+    }
+
     private bool once = true;
     private void StartPoint(Root root) {
         if (once) {
@@ -294,7 +302,7 @@ public class BookController:MonoBehaviour {
         TVScreenManager.Instance.ShowMainScreen();
         _isScreensaverActive = true;
     }
-
+    
     public void OpenMatrialPanel() {
         materialListPanel.SetActive(true);
         materialDetailsPanel.SetActive(false);
