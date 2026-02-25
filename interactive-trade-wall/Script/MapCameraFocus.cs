@@ -122,7 +122,7 @@ public class MapCameraFocus : MonoBehaviour
 
     public void MovetoActual(Vector2 pos,float orthoSize, Action onComplete = null)
     {
-        Debug.Log("<color=red>Camera pos should be:  </color>"+pos);
+        // Debug.Log("<color=red>Camera pos should be:  </color>"+pos);
         StartCoroutine(AnimateTo(pos, orthoSize, onComplete));
     }
 }
