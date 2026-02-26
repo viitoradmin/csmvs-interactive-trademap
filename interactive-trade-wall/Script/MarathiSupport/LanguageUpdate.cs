@@ -44,7 +44,7 @@ public class LanguageUpdate:MonoBehaviour {
     private TMP_Text _languageTextTMP;
     private TMP_Text LanguageTextTMP {
         get {
-            if (_languageTextTMP == null) {
+            if (_languageTextTMP == null && this != null) {
                 TryGetComponent<TMP_Text>(out _languageTextTMP);
             }
             return _languageTextTMP;
@@ -55,7 +55,7 @@ public class LanguageUpdate:MonoBehaviour {
     private Text _languageTextLegacy;
     private Text LanguageTextLegacy {
         get {
-            if (_languageTextLegacy == null) {
+            if (_languageTextLegacy == null && this != null) {
                 TryGetComponent<Text>(out _languageTextLegacy);
             }
             return _languageTextLegacy;
@@ -70,7 +70,8 @@ public class LanguageUpdate:MonoBehaviour {
     [SerializeField] private List<LegacyLanguageFontPair> _localLegacyFontList = new List<LegacyLanguageFontPair>(); // For Legacy Text
 
     [SerializeField] private List<LanguageTextPair> _localTextList = new List<LanguageTextPair>();
-
+    
+    public List<LanguageTextPair> LocalTextList { get => _localTextList; set => _localTextList = value; }
     private void Awake() {
         // Detect which component is present
         if (GetComponent<TMP_Text>() != null) {
@@ -95,7 +96,7 @@ public class LanguageUpdate:MonoBehaviour {
         UpdateFontAsset(LanguageManager.CurrentLanguage);
         UpdateFontText(LanguageManager.CurrentLanguage);
     }
-    private void OnDestroy() {
+    private void OnDisable() {
         LanguageManager.OnLanguageChangedEvent -= UpdateFontAsset;
         LanguageManager.OnLanguageChangedEvent -= UpdateFontText;
     }

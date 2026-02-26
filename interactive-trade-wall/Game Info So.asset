@@ -69,8 +69,8 @@ MonoBehaviour:
       title: Interactive Trade Wall
       companyName: ViitorCloud
       bundleId: 
-      version: 1.1.3
-      versionCode: 13
+      version: 1.1.6
+      versionCode: 16
       icon: {fileID: 0}
       splashScreenLogo: {fileID: 0}
       splashScreenLogoBg: {fileID: 0}

@@ -126,7 +126,7 @@ public class TVScreenManager : MonoBehaviour
         mapCam.MovetoActual(new Vector2(91.3f, -59.4f), 5f,
                    () =>
                    {
-                       Debug.Log("Camera Animation Completed");
+                       // Debug.Log("Camera Animation Completed");
                        mainScreenRoutesParent.SetActive(true);
                        cameraBreathingMotion.EnableBreathing();
                    });

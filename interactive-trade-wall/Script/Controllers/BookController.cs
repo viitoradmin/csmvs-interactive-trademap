@@ -1,12 +1,14 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.Networking;
 using UnityEngine.UI;
 using static InteractiveTradeWallDataSO;
+using Debug = UnityEngine.Debug;
 
 public class BookController:MonoBehaviour {
     public MegaBookBuilder book;
@@ -42,6 +44,9 @@ public class BookController:MonoBehaviour {
     [Space]
     public TMP_Text backButtonPath;
     public TMP_Text materialTitleText;
+    
+    public Text backButtonPathL;
+    public Text materialTitleTextL;
     public Text materialDetailsTxt;
     [Space]
     public TMP_Text importRoutes_Button_Text;
@@ -84,7 +89,7 @@ public class BookController:MonoBehaviour {
     private void Awake() {
         instance = this;
     }
-
+    
     void Start() {
         graphicRaycaster = canvasGroup.GetComponent<GraphicRaycaster>();
         //StartCoroutine(OpenBook());
@@ -97,10 +102,18 @@ public class BookController:MonoBehaviour {
     }
     private void OnEnable() {
         APIHandler.OnDataFetchedEvent += StartPoint;
+        LanguageManager.OnLanguageChangedEvent += OnLanguageChanged;
     }
     private void OnDisable() {
         APIHandler.OnDataFetchedEvent -= StartPoint;
+        LanguageManager.OnLanguageChangedEvent -= OnLanguageChanged;
     }
+
+    private void OnLanguageChanged(Language obj){
+        TVScreenManager.Instance.ShowMainScreen();
+        _isScreensaverActive = true;
+    }
+
     private bool once = true;
     private void StartPoint(Root root) {
         if (once) {
@@ -203,18 +216,18 @@ public class BookController:MonoBehaviour {
             SetDetailPageUI(_data);
         }));
     }
-
     public IEnumerator GotoPage(int _page_num,UnityAction unityAction) {
         onEffectChangingEvent?.Invoke(true);
         //yield return ShowCanvas(false);
         SetRaycaster(false);
         yield return uIEffectsController.PlayUIEffectsCoroutine(false);
+        
         swipeController.GoToPage(_page_num);
         unityAction?.Invoke();
+        
         yield return new WaitUntil(() => Mathf.Abs(swipeController.book.Flip - swipeController.book.page) < cutoff_delta);
         //yield return new WaitUntil(() => swipeController.book.Flip == swipeController.book.page);
         //yield return new WaitForSeconds(.5f);
-
         //yield return ShowCanvas(true);
         yield return uIEffectsController.PlayUIEffectsCoroutine(true);
         SetRaycaster(transform);
@@ -289,7 +302,7 @@ public class BookController:MonoBehaviour {
         TVScreenManager.Instance.ShowMainScreen();
         _isScreensaverActive = true;
     }
-
+    
     public void OpenMatrialPanel() {
         materialListPanel.SetActive(true);
         materialDetailsPanel.SetActive(false);
@@ -317,8 +330,10 @@ public class BookController:MonoBehaviour {
 
     public void SetDetailPageUI(BookmarkItem itemData) {
         //backButtonPath.text = bookmarkItemsPagination.currentSelectedBookmark.title + " > " + itemData.title;
-        backButtonPath.text = itemData.title;
-        materialTitleText.text = itemData.bookmarkMetadata.title;
+        // backButtonPath.text = itemData.title;
+        // materialTitleText.text = itemData.bookmarkMetadata.title;
+        backButtonPathL.text = itemData.title;
+        materialTitleTextL.text = itemData.bookmarkMetadata.title;
         materialDetailsTxt.text = itemData.bookmarkMetadata.description;
         //materialDetailsText.text = language == Language.English ? itemData.bookmarkMetadata.description : marathiParser.GetMarathiText(itemData.bookmarkMetadata.description);
 

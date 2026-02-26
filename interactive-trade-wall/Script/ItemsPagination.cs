@@ -72,7 +72,7 @@ public class ItemsPagination:MonoBehaviour {
 
         BookController.instance.SetBottomLine(true);
 
-        Debug.Log($"Page {pageIndex + 1}: showing {fill1 + fill2} minerals");
+        // Debug.Log($"Page {pageIndex + 1}: showing {fill1 + fill2} minerals");
     }
 
     private void SpawnMinerals(Transform parent,int count,int startIndex,bool isLeft) {

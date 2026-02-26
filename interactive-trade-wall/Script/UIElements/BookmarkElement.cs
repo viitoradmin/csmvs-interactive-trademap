@@ -1,8 +1,10 @@
 using System.Collections;
+using System.Diagnostics;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 using static InteractiveTradeWallDataSO;
+using Debug = UnityEngine.Debug;
 
 public class BookmarkElement : MonoBehaviour
 {
@@ -67,10 +69,9 @@ public class BookmarkElement : MonoBehaviour
             StartCoroutine(BookMarkClickCoroutine());
         }
     }
-
+    
     private IEnumerator BookMarkClickCoroutine()
     {
-        //Debug.Log($"Opening Material List");
         yield return StartCoroutine(controller.GotoPage(bookmark.pageNumber, () =>
         {
             controller.OpenMatrialPanel();

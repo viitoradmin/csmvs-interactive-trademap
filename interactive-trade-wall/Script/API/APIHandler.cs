@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
@@ -90,22 +91,21 @@ public class APIHandler:MonoBehaviour {
         string filePath = Path.Combine(Application.persistentDataPath,FILE_NAME_ENGLISH);
 
         // 1. Check if file is available in persistent data path
-        //if (File.Exists(filePath)) {
-        //    Debug.Log("Loading English Data from Local Cache: " + filePath);
-        //    try {
-        //        string json = File.ReadAllText(filePath);
-        //        Root cachedData = JsonUtility.FromJson<Root>(json);
+        if (File.Exists(filePath)) {
+            try {
+                string json = File.ReadAllText(filePath);
+                Root cachedData = JsonUtility.FromJson<Root>(json);
 
-        //        if (cachedData != null) {
-        //            DownloadAllMediaAndProceed(cachedData,() => {
-        //                ProcessFinalData(cachedData);
-        //            });
-        //            return; // Exit here, do not call API
-        //        }
-        //    } catch (Exception e) {
-        //        Debug.LogError("Error loading local file, falling back to API: " + e.Message);
-        //    }
-        //}
+                if (cachedData != null) {
+                    DownloadAllMediaAndProceed(cachedData,() => {
+                        ProcessFinalData(cachedData);
+                    });
+                    return; // Exit here, do not call API
+                }
+            } catch (Exception e) {
+                Debug.LogError("Error loading local file, falling back to API: " + e.Message);
+            }
+        }
 
         // 2. If no file, call API
         Debug.Log("API URL: " + API.APIGetTradeRouteSO_En);
@@ -113,7 +113,6 @@ public class APIHandler:MonoBehaviour {
         APICall.Instance.RequestTradeRouteData(API.APIGetTradeRouteSO_En,
             (response) => {
                 // Get the raw Root object
-                PopupManager.Instance.HideLoading();
                 Root rootData = response.data;
 
                 if (rootData != null) {
@@ -142,30 +141,28 @@ public class APIHandler:MonoBehaviour {
         string filePath = Path.Combine(Application.persistentDataPath,FILE_NAME_MARATHI);
 
         // 1. Check if file is available in persistent data path
-        //if (File.Exists(filePath)) {
-        //    Debug.Log("Loading Marathi Data from Local Cache: " + filePath);
-        //    try {
-        //        string json = File.ReadAllText(filePath);
-        //        Root cachedData = JsonUtility.FromJson<Root>(json);
+        if (File.Exists(filePath)) {
+            try {
+                string json = File.ReadAllText(filePath);
+                Root cachedData = JsonUtility.FromJson<Root>(json);
 
-        //        if (cachedData != null) {
-        //            // Apply Marathi specific conversion
-        //            cachedData.Convert(LanguageManager.Instance);
-        //            DownloadAllMediaAndProceed(cachedData,() => {
-        //                ProcessFinalData(cachedData);
-        //            });
-        //            return; // Exit here, do not call API
-        //        }
-        //    } catch (Exception e) {
-        //        Debug.LogError("Error loading local file, falling back to API: " + e.Message);
-        //    }
-        //}
+                if (cachedData != null) {
+                    // Apply Marathi specific conversion
+                    cachedData.Convert(LanguageManager.Instance);
+                    DownloadAllMediaAndProceed(cachedData,() => {
+                        ProcessFinalData(cachedData);
+                    });
+                    return; // Exit here, do not call API
+                }
+            } catch (Exception e) {
+                Debug.LogError("Error loading local file, falling back to API: " + e.Message);
+            }
+        }
 
         Debug.Log("API URL: " + API.APIGetTradeRouteSO_Mr);
         PopupManager.Instance.ShowLoading();
         APICall.Instance.RequestTradeRouteData(API.APIGetTradeRouteSO_Mr,
             (response) => {
-                PopupManager.Instance.HideLoading();
                 // Get the raw Root object
                 Root rootData = response.data;
 
@@ -221,6 +218,13 @@ public class APIHandler:MonoBehaviour {
         data = rootData;
         dataSO.root = rootData;
         OnDataFetchedEvent?.Invoke(rootData);
+        
+        StartCoroutine(HideLoading());
+    }
+
+    private IEnumerator HideLoading(){
+        yield return new WaitForSeconds(0.8f);
+        PopupManager.Instance.HideLoading();
     }
 
     // Helper method to save JSON to file
