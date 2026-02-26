@@ -91,22 +91,21 @@ public class APIHandler:MonoBehaviour {
         string filePath = Path.Combine(Application.persistentDataPath,FILE_NAME_ENGLISH);
 
         // 1. Check if file is available in persistent data path
-        //if (File.Exists(filePath)) {
-        //    Debug.Log("Loading English Data from Local Cache: " + filePath);
-        //    try {
-        //        string json = File.ReadAllText(filePath);
-        //        Root cachedData = JsonUtility.FromJson<Root>(json);
+        if (File.Exists(filePath)) {
+            try {
+                string json = File.ReadAllText(filePath);
+                Root cachedData = JsonUtility.FromJson<Root>(json);
 
-        //        if (cachedData != null) {
-        //            DownloadAllMediaAndProceed(cachedData,() => {
-        //                ProcessFinalData(cachedData);
-        //            });
-        //            return; // Exit here, do not call API
-        //        }
-        //    } catch (Exception e) {
-        //        Debug.LogError("Error loading local file, falling back to API: " + e.Message);
-        //    }
-        //}
+                if (cachedData != null) {
+                    DownloadAllMediaAndProceed(cachedData,() => {
+                        ProcessFinalData(cachedData);
+                    });
+                    return; // Exit here, do not call API
+                }
+            } catch (Exception e) {
+                Debug.LogError("Error loading local file, falling back to API: " + e.Message);
+            }
+        }
 
         // 2. If no file, call API
         Debug.Log("API URL: " + API.APIGetTradeRouteSO_En);
@@ -142,24 +141,23 @@ public class APIHandler:MonoBehaviour {
         string filePath = Path.Combine(Application.persistentDataPath,FILE_NAME_MARATHI);
 
         // 1. Check if file is available in persistent data path
-        //if (File.Exists(filePath)) {
-        //    Debug.Log("Loading Marathi Data from Local Cache: " + filePath);
-        //    try {
-        //        string json = File.ReadAllText(filePath);
-        //        Root cachedData = JsonUtility.FromJson<Root>(json);
+        if (File.Exists(filePath)) {
+            try {
+                string json = File.ReadAllText(filePath);
+                Root cachedData = JsonUtility.FromJson<Root>(json);
 
-        //        if (cachedData != null) {
-        //            // Apply Marathi specific conversion
-        //            cachedData.Convert(LanguageManager.Instance);
-        //            DownloadAllMediaAndProceed(cachedData,() => {
-        //                ProcessFinalData(cachedData);
-        //            });
-        //            return; // Exit here, do not call API
-        //        }
-        //    } catch (Exception e) {
-        //        Debug.LogError("Error loading local file, falling back to API: " + e.Message);
-        //    }
-        //}
+                if (cachedData != null) {
+                    // Apply Marathi specific conversion
+                    cachedData.Convert(LanguageManager.Instance);
+                    DownloadAllMediaAndProceed(cachedData,() => {
+                        ProcessFinalData(cachedData);
+                    });
+                    return; // Exit here, do not call API
+                }
+            } catch (Exception e) {
+                Debug.LogError("Error loading local file, falling back to API: " + e.Message);
+            }
+        }
 
         Debug.Log("API URL: " + API.APIGetTradeRouteSO_Mr);
         PopupManager.Instance.ShowLoading();
