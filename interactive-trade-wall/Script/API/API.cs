@@ -1,5 +1,5 @@
 public class API {
-    public static string APIDevelopmentBaseURL = "https://awg-api-csmvs.focalat.com/";
+    public static string APIDevelopmentBaseURL = "http://192.168.1.242:8000/";
     public static string APIProductionBaseURL = "https://api-csmvs.focalat.com/";
 
     public static string APILogin = APIBaseURL + "v1/login";

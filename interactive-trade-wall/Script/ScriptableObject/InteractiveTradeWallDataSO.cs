@@ -67,6 +67,7 @@ public class InteractiveTradeWallDataSO:ScriptableObject {
 
     [Serializable]
     public class Bookmark {
+        public string uuid;
         public string title;
         public int pageNumber;
         public List<BookmarkItem> items = new List<BookmarkItem>();
@@ -95,6 +96,7 @@ public class InteractiveTradeWallDataSO:ScriptableObject {
 
     [Serializable]
     public class BookmarkItem {
+        public string uuid;
         public string title;
         public string thumbnailPath;
         public string pinnedImagePath;
@@ -261,6 +263,7 @@ public class InteractiveTradeWallDataSO:ScriptableObject {
 
     [Serializable]
     public class BookmarkImage {
+        public string uuid;
         public string imagePath;
         public string title;
         public string subtitle;
