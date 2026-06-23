@@ -19,7 +19,7 @@ MonoBehaviour:
   _reportMinute: 30
   _internetCheckIntervalMinutes: 10
   _enableHttpPing: 1
-  _httpPingUrl: http://clients3.google.com/generate_204
+  _httpPingUrl: https://clients3.google.com/generate_204
   _enableLogging: 1
   _timezone: India Standard Time
   _emailRecipients: []
