@@ -51,8 +51,6 @@ namespace DataAnalytics.Runtime.Network
         /// </returns>
         public static Task<bool> SendReportAsync(DAPendingEmailData entry)
         {
-            DALogger.Log(DAConstants.MSG_EMAIL_PHASE2);
-
             // PHASE 2 IMPLEMENTATION TEMPLATE:
             //
             // var message = new MimeMessage();
@@ -83,7 +81,6 @@ namespace DataAnalytics.Runtime.Network
         /// </summary>
         public static Task<bool> TestConnectionAsync()
         {
-            DALogger.Log($"{DAConstants.MSG_EMAIL_PHASE2} (TestConnectionAsync)");
             return Task.FromResult(false);
         }
     }

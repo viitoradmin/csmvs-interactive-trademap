@@ -138,7 +138,6 @@ namespace DataAnalytics.Runtime.Managers
             if (loaded != null && loaded.weekStartDate == currentWeek)
             {
                 _data = loaded;
-                DALogger.Log($"Resumed week {currentWeek} from disk.");
             }
             else
             {
@@ -147,7 +146,6 @@ namespace DataAnalytics.Runtime.Managers
                     // A new week started while the app was closed. Archive the previous
                     // week's file before overwriting it so no analytics are ever lost
                     // (e.g. activity recorded after the Saturday report but before Monday).
-                    DALogger.Log($"New week detected. Previous: {loaded.weekStartDate} → Current: {currentWeek}");
                     DAStorageManager.ArchiveCurrentFile(loaded.weekStartDate);
                 }
 
@@ -203,7 +201,6 @@ namespace DataAnalytics.Runtime.Managers
             if (string.IsNullOrWhiteSpace(productName)) return;
             DAProductAnalytics entry = GetOrCreateProduct(productName);
             entry.clickCount++;
-            DALogger.Log($"Product click: {productName} = {entry.clickCount}");
         }
 
         /// <summary>
@@ -215,7 +212,6 @@ namespace DataAnalytics.Runtime.Managers
             if (string.IsNullOrWhiteSpace(languageName)) return;
             DALanguageAnalytics entry = GetOrCreateLanguage(languageName);
             entry.selectionCount++;
-            DALogger.Log($"Language selected: {languageName} = {entry.selectionCount}");
         }
 
         /// <summary>
@@ -228,7 +224,6 @@ namespace DataAnalytics.Runtime.Managers
             if (string.IsNullOrWhiteSpace(languageName) || seconds <= 0f) return;
             DALanguageAnalytics entry = GetOrCreateLanguage(languageName);
             entry.totalSeconds += seconds;
-            DALogger.Log($"Language duration: {languageName} +{seconds:F1}s = {DATimeUtility.FormatSeconds(entry.totalSeconds)}");
         }
 
         /// <summary>
@@ -240,7 +235,6 @@ namespace DataAnalytics.Runtime.Managers
             if (string.IsNullOrWhiteSpace(screenName)) return;
             DAScreenAnalytics entry = GetOrCreateScreen(screenName);
             entry.visitCount++;
-            DALogger.Log($"Screen visit: {screenName} = {entry.visitCount}");
         }
 
         /// <summary>
@@ -253,7 +247,6 @@ namespace DataAnalytics.Runtime.Managers
             if (string.IsNullOrWhiteSpace(screenName) || seconds <= 0f) return;
             DAScreenAnalytics entry = GetOrCreateScreen(screenName);
             entry.totalSeconds += seconds;
-            DALogger.Log($"Screen duration: {screenName} +{seconds:F1}s = {DATimeUtility.FormatSeconds(entry.totalSeconds)}");
         }
 
         /// <summary>
@@ -264,7 +257,6 @@ namespace DataAnalytics.Runtime.Managers
         {
             if (seconds <= 0f) return;
             _data.idle.totalIdleSeconds += seconds;
-            DALogger.Log($"Idle recorded: +{seconds:F1}s = {DATimeUtility.FormatSeconds(_data.idle.totalIdleSeconds)} total");
         }
 
         /// <summary>
@@ -276,7 +268,6 @@ namespace DataAnalytics.Runtime.Managers
             string newWeekStart = DATimeUtility.GetCurrentWeekStart();
             _data = DAAnalyticsData.CreateNew(newWeekStart);
             SaveNow();
-            DALogger.Log($"Analytics reset for new week starting {newWeekStart}.");
         }
 
         // ────────────────────────────────────────────────────────────────────────

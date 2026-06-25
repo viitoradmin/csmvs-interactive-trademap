@@ -125,16 +125,57 @@ namespace DataAnalytics.Runtime
         public string Timezone => _timezone;
 
         // ────────────────────────────────────────────────────────────────────────
-        // Email (Phase 2 — not used in Phase 1)
+        // Backend Report Upload
         // ────────────────────────────────────────────────────────────────────────
 
-        [Header("Email Recipients (Phase 2 — Not Active)")]
+        [Header("Backend Report Upload")]
         [Space(4)]
 
-        [Tooltip("List of email addresses that will receive weekly reports. PHASE 2 ONLY — not active in this version.")]
+        [Tooltip("Backend endpoint that receives the weekly report (multipart POST). " +
+                 "e.g. https://<server>/v1/analytics/report/upload. Blank = upload skipped.")]
+        [SerializeField] private string _backendUploadUrl = "";
+
+        /// <summary>Backend upload endpoint URL. Blank disables upload.</summary>
+        public string BackendUploadUrl => _backendUploadUrl;
+
+        [Tooltip("Shared API key sent as the X-API-Key header. Blank = upload skipped. " +
+                 "Keep DASettings.asset out of git — it holds this secret.")]
+        [SerializeField] private string _uploadApiKey = "";
+
+        /// <summary>Shared backend API key. Blank disables upload.</summary>
+        public string UploadApiKey => _uploadApiKey;
+
+        [Tooltip("Kiosk identifier used by the backend to dedupe per week. " +
+                 "Blank = SystemInfo.deviceUniqueIdentifier.")]
+        [SerializeField] private string _deviceId = "";
+
+        /// <summary>Device identifier for dedupe. Blank = device unique id.</summary>
+        public string DeviceId => _deviceId;
+
+        [Tooltip("Friendly app name shown in the email. Blank = Application.productName. " +
+                 "This is the only per-app difference across the shared package.")]
+        [SerializeField] private string _appDisplayName = "";
+
+        /// <summary>Human-readable app name for the email. Blank = product name.</summary>
+        public string AppDisplayName => _appDisplayName;
+
+        [Tooltip("TEMPORARY TESTING ONLY. When ON, a unique suffix is appended to device_id " +
+                 "each upload so the backend never treats it as a duplicate week — lets you " +
+                 "re-trigger the email repeatedly. TURN OFF for production.")]
+        [SerializeField] private bool _bypassDuplicateCheck = false;
+
+        /// <summary>TEMP testing flag — forces backend to re-send by varying device_id.</summary>
+        public bool BypassDuplicateCheck => _bypassDuplicateCheck;
+
+        // Recipients are configured on the SERVER, not in Unity. Field kept only as a
+        // non-functional reference note.
+        [Header("Email Recipients (configured on server — reference only)")]
+        [Space(4)]
+
+        [Tooltip("NON-FUNCTIONAL. Recipients are configured on the backend, not here.")]
         [SerializeField] private string[] _emailRecipients = new string[0];
 
-        /// <summary>Email recipients for weekly reports (Phase 2).</summary>
+        /// <summary>Reference only — recipients live on the backend.</summary>
         public string[] EmailRecipients => _emailRecipients;
     }
 }

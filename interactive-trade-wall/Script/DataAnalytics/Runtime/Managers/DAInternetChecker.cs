@@ -130,7 +130,6 @@ namespace DataAnalytics.Runtime.Managers
 
             if (_isConnected && !_wasConnected)
             {
-                DALogger.Log(DAConstants.MSG_INTERNET_RESTORED);
                 OnInternetRestored?.Invoke();
             }
         }

@@ -5,9 +5,11 @@
 // ============================================================
 
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using DataAnalytics.Runtime.Data;
+using DataAnalytics.Runtime.Network;
 using DataAnalytics.Runtime.Storage;
 using DataAnalytics.Runtime.Utilities;
 
@@ -38,6 +40,9 @@ namespace DataAnalytics.Runtime.Managers
 
         private List<DAPendingEmailData> _queue = new List<DAPendingEmailData>();
 
+        /// <summary>Guard against overlapping ProcessQueue runs.</summary>
+        private bool _isProcessing;
+
         /// <summary>Number of reports currently in the pending queue.</summary>
         public int PendingCount => _queue.Count;
 
@@ -63,9 +68,6 @@ namespace DataAnalytics.Runtime.Managers
 
             // Subscribe to internet restoration event
             DAInternetChecker.OnInternetRestored += OnInternetRestored;
-
-            if (_queue.Count > 0)
-                DALogger.Log($"{DAConstants.MSG_PENDING_REPORT} {_queue.Count} report(s) queued.");
         }
 
         private void OnDestroy()
@@ -92,7 +94,6 @@ namespace DataAnalytics.Runtime.Managers
 
             _queue.Add(entry);
             SaveQueue();
-            DALogger.Log($"Report enqueued: week {entry.reportWeek} (total queued: {_queue.Count}).");
         }
 
         /// <summary>
@@ -101,29 +102,58 @@ namespace DataAnalytics.Runtime.Managers
         /// </summary>
         public void ProcessQueue()
         {
-            if (_queue.Count == 0)
-            {
-                DALogger.Log("ProcessQueue: no pending reports.");
-                return;
-            }
+            if (_isProcessing || _queue.Count == 0) return;
+            StartCoroutine(ProcessQueueRoutine());
+        }
 
-            DALogger.Log($"ProcessQueue: attempting to send {_queue.Count} pending report(s).");
+        /// <summary>
+        /// Uploads pending reports oldest-first via <see cref="DAReportUploader"/>.
+        /// On success an entry is marked Sent; on failure it is marked Failed and the
+        /// run stops (retried later on <see cref="DAInternetChecker.OnInternetRestored"/>).
+        /// Sent entries are pruned so the queue cannot grow forever.
+        /// </summary>
+        private IEnumerator ProcessQueueRoutine()
+        {
+            _isProcessing = true;
 
-            // Process oldest-first (queue is already in insertion order)
-            foreach (var entry in _queue)
+            // Snapshot oldest-first so mutations during the run are safe.
+            var pending = new List<DAPendingEmailData>(_queue);
+
+            foreach (var entry in pending)
             {
                 if (entry.status == DAConstants.EMAIL_STATUS_SENT)
                     continue;
 
-                // PHASE 2: Replace this block with DAEmailService.SendReportAsync(entry)
-                DALogger.Log($"{DAConstants.MSG_EMAIL_PHASE2} Report: {entry.reportWeek}");
+                if (DAReportUploader.Instance == null)
+                {
+                    DALogger.Warn("ProcessQueue: DAReportUploader not found — aborting.");
+                    break;
+                }
 
-                // For now, mark as "sent" so the queue doesn't grow indefinitely.
-                // In Phase 2 this will only be set after confirmed delivery.
-                entry.status = DAConstants.EMAIL_STATUS_SENT;
+                bool done = false;
+                bool ok = false;
+                DAReportUploader.Instance.UploadReport(entry, success => { ok = success; done = true; });
+
+                while (!done) yield return null;
+
+                if (ok)
+                {
+                    entry.status = DAConstants.EMAIL_STATUS_SENT;
+                }
+                else
+                {
+                    // Stop on first failure; retried on OnInternetRestored.
+                    entry.status = DAConstants.EMAIL_STATUS_FAILED;
+                    SaveQueue();
+                    _isProcessing = false;
+                    yield break;
+                }
             }
 
+            // Prune sent entries.
+            _queue.RemoveAll(e => e.status == DAConstants.EMAIL_STATUS_SENT);
             SaveQueue();
+            _isProcessing = false;
         }
 
         // ────────────────────────────────────────────────────────────────────────

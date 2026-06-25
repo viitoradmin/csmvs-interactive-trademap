@@ -81,8 +81,6 @@ namespace DataAnalytics.Runtime.Storage
                 Directory.CreateDirectory(ReportsPath);
                 Directory.CreateDirectory(PendingReportsPath);
                 Directory.CreateDirectory(QueuePath);
-
-                DALogger.Log(DAConstants.MSG_DIRECTORIES_OK);
             }
             catch (Exception ex)
             {
@@ -113,7 +111,6 @@ namespace DataAnalytics.Runtime.Storage
                 data.lastSavedAt = DATimeUtility.GetTimestamp();
                 string json = JsonUtility.ToJson(data, prettyPrint: true);
                 File.WriteAllText(CurrentAnalyticsPath, json);
-                DALogger.Log(DAConstants.MSG_AUTOSAVE);
             }
             catch (Exception ex)
             {
@@ -139,7 +136,6 @@ namespace DataAnalytics.Runtime.Storage
 
                 string json = File.ReadAllText(CurrentAnalyticsPath);
                 DAAnalyticsData data = JsonUtility.FromJson<DAAnalyticsData>(json);
-                DALogger.Log(DAConstants.MSG_LOADED);
                 return data;
             }
             catch (Exception ex)
@@ -182,7 +178,6 @@ namespace DataAnalytics.Runtime.Storage
                 }
 
                 File.Move(CurrentAnalyticsPath, destination);
-                DALogger.Log($"Archived weekly data → {archiveFileName}");
             }
             catch (Exception ex)
             {
@@ -217,7 +212,6 @@ namespace DataAnalytics.Runtime.Storage
                 var wrapper = new EmailQueueWrapper { queue = queue };
                 string json = JsonUtility.ToJson(wrapper, prettyPrint: true);
                 File.WriteAllText(EmailQueuePath, json);
-                DALogger.Log($"Email queue saved ({queue.Count} entries).");
             }
             catch (Exception ex)
             {

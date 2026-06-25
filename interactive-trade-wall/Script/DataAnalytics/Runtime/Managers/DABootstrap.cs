@@ -6,6 +6,7 @@
 
 using UnityEngine;
 using UnityEngine.EventSystems;
+using DataAnalytics.Runtime.Network;
 using DataAnalytics.Runtime.Utilities;
 
 namespace DataAnalytics.Runtime.Managers
@@ -54,11 +55,10 @@ namespace DataAnalytics.Runtime.Managers
                 root.AddComponent<DAAnalyticsManager>();
                 root.AddComponent<DAInternetChecker>();
                 root.AddComponent<DAExcelReportGenerator>();
+                root.AddComponent<DAReportUploader>();
                 root.AddComponent<DAPendingEmailQueue>();
                 root.AddComponent<DAAnalyticsScheduler>();
                 root.AddComponent<DAIdleTimeTracker>();
-
-                DALogger.Log("Bootstrap complete — all managers auto-created. No manual scene setup required.");
             }
             catch (System.Exception ex)
             {

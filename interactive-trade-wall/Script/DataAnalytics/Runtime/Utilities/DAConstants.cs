@@ -88,6 +88,32 @@ namespace DataAnalytics.Runtime.Utilities
         public const string MSG_DIRECTORIES_OK  = "Storage directories verified.";
         public const string MSG_EMAIL_PHASE2    = "EMAIL PHASE 2: Not implemented yet.";
 
+        public const string MSG_UPLOAD_SUCCESS  = "Report uploaded to backend.";
+        public const string MSG_UPLOAD_FAILED   = "Report upload failed.";
+        public const string MSG_UPLOAD_SKIPPED  = "Report upload skipped — BackendUploadUrl or UploadApiKey not configured.";
+
+        // ────────────────────────────────────────────────────────────────────────
+        // Backend report upload (multipart/form-data)
+        // ────────────────────────────────────────────────────────────────────────
+
+        /// <summary>Multipart field name for the report file.</summary>
+        public const string UPLOAD_FIELD_FILE     = "file";
+
+        /// <summary>Multipart field name for the ISO week-start date.</summary>
+        public const string UPLOAD_FIELD_WEEK     = "week";
+
+        /// <summary>Multipart field name for the kiosk device identifier (dedupe).</summary>
+        public const string UPLOAD_FIELD_DEVICE   = "device_id";
+
+        /// <summary>Multipart field name for the human-readable app name.</summary>
+        public const string UPLOAD_FIELD_APP_NAME = "app_name";
+
+        /// <summary>Header carrying the shared backend API key.</summary>
+        public const string UPLOAD_HEADER_API_KEY = "X-API-Key";
+
+        /// <summary>MIME type for the uploaded CSV report.</summary>
+        public const string UPLOAD_CSV_MIME       = "text/csv";
+
         // ────────────────────────────────────────────────────────────────────────
         // CSV report section headers
         // ────────────────────────────────────────────────────────────────────────

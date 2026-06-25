@@ -83,8 +83,6 @@ namespace DataAnalytics.Runtime.Components
             _activeLanguage   = languageName;
             _segmentStartTime = Time.realtimeSinceStartup;
             _hasActive        = true;
-
-            DALogger.Log($"Language tracking switched to: {languageName}");
         }
 
         // ────────────────────────────────────────────────────────────────────────

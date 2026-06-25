@@ -76,3 +76,7 @@ ThirdPartyPackages/*
 ThirdPatyAssets/
 interactive-trade-wall/ThirdPartyPlugins/
 interactive-trade-wall/ThirdPartyPlugins.meta
+
+# DataAnalytics settings holds the backend upload API key — never commit.
+# Configured per-machine in the Unity Inspector.
+interactive-trade-wall/Script/DataAnalytics/Resources/DASettings.asset

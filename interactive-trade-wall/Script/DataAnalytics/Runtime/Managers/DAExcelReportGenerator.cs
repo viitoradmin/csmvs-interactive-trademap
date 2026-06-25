@@ -79,8 +79,6 @@ namespace DataAnalytics.Runtime.Managers
                 string csv = BuildCsv(data);
                 File.WriteAllText(reportPath, csv, Encoding.UTF8);
 
-                DALogger.Log($"{DAConstants.MSG_REPORT_GENERATED} → {reportPath}");
-
                 // Archive the JSON for this week
                 DAStorageManager.ArchiveCurrentFile(data.weekStartDate);
 

@@ -95,7 +95,6 @@ namespace DataAnalytics.Runtime.Managers
                     // Idle period just ended
                     float idleDuration = Time.realtimeSinceStartup - _idleStartTime;
                     _isIdle            = false;
-                    DALogger.Log($"{DAConstants.MSG_IDLE_ENDED} Duration: {DATimeUtility.FormatSeconds(idleDuration)}");
                     DAAnalyticsManager.Instance.RecordIdleTime(idleDuration);
                 }
             }
@@ -107,7 +106,6 @@ namespace DataAnalytics.Runtime.Managers
                 {
                     _isIdle        = true;
                     _idleStartTime = Time.realtimeSinceStartup;
-                    DALogger.Log(DAConstants.MSG_IDLE_STARTED);
                 }
             }
         }

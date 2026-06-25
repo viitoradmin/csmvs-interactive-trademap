@@ -82,8 +82,6 @@ namespace DataAnalytics.Runtime.Managers
 
         private IEnumerator SchedulerLoop()
         {
-            DALogger.Log("Scheduler started — watching for report time.");
-
             while (true)
             {
                 // Poll well within the one-minute target window so clock drift can
@@ -111,8 +109,6 @@ namespace DataAnalytics.Runtime.Managers
 
         private void TriggerReportGeneration()
         {
-            DALogger.Log("Report time reached — beginning weekly report generation.");
-
             DAAnalyticsData data = DAAnalyticsManager.Instance?.Data;
             if (data == null)
             {
@@ -120,52 +116,26 @@ namespace DataAnalytics.Runtime.Managers
                 return;
             }
 
-            // Generate CSV report
+            // Generate CSV report (persists in Reports/).
             string reportPath = DAExcelReportGenerator.Instance?.GenerateReport(data);
 
             if (string.IsNullOrEmpty(reportPath))
             {
-                DALogger.Error("Scheduler: Report generation failed — not queuing for email.");
+                DALogger.Error("Scheduler: Report generation failed — not queuing for upload.");
                 return;
             }
 
-            // Build queue entry
+            // Enqueue so a failed upload can retry from the persisted report.
             var entry = DAPendingEmailData.CreateNew(data.weekStartDate, reportPath);
+            DAPendingEmailQueue.Instance?.EnqueueReport(entry);
 
-            // Route based on internet availability
+            // Upload now if online; otherwise it stays queued and retries on
+            // OnInternetRestored.
             bool hasInternet = DAInternetChecker.Instance != null
                                && DAInternetChecker.Instance.IsConnected;
 
             if (hasInternet)
-            {
-                DALogger.Log("Internet available — queuing for immediate send (Phase 2).");
-                // Phase 2: DAEmailService.SendReportAsync(entry)
-                // For now, log and record as pending so Phase 2 can pick it up.
-                DALogger.Log(DAConstants.MSG_EMAIL_PHASE2);
-            }
-            else
-            {
-                DALogger.Log("No internet — storing report in PendingReports queue.");
-
-                // Move the report to PendingReports folder
-                string pendingPath = DAStorageManager.BuildPendingReportPath(
-                    data.weekStartDate.Replace("-", "_"));
-
-                try
-                {
-                    if (System.IO.File.Exists(reportPath))
-                        System.IO.File.Copy(reportPath, pendingPath, overwrite: false);
-                }
-                catch (System.Exception ex)
-                {
-                    DALogger.Exception("Scheduler: copy to PendingReports", ex);
-                }
-
-                entry.excelPath = pendingPath;
-            }
-
-            // Always enqueue so it can be retried
-            DAPendingEmailQueue.Instance?.EnqueueReport(entry);
+                DAPendingEmailQueue.Instance?.ProcessQueue();
         }
 
         // ────────────────────────────────────────────────────────────────────────
@@ -179,7 +149,6 @@ namespace DataAnalytics.Runtime.Managers
         [ContextMenu("Force Generate Report Now")]
         public void ForceGenerateNow()
         {
-            DALogger.Log("Manual report generation triggered.");
             TriggerReportGeneration();
         }
     }
