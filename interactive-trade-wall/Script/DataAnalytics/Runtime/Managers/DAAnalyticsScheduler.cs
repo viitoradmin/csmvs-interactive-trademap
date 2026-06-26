@@ -126,7 +126,7 @@ namespace DataAnalytics.Runtime.Managers
             }
 
             // Enqueue so a failed upload can retry from the persisted report.
-            var entry = DAPendingEmailData.CreateNew(data.weekStartDate, reportPath);
+            DAPendingEmailData entry = DAPendingEmailData.CreateNew(data.weekStartDate, reportPath);
             DAPendingEmailQueue.Instance?.EnqueueReport(entry);
 
             // Upload now if online; otherwise it stays queued and retries on

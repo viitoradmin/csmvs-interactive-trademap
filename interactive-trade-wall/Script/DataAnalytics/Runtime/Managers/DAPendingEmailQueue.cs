@@ -117,9 +117,9 @@ namespace DataAnalytics.Runtime.Managers
             _isProcessing = true;
 
             // Snapshot oldest-first so mutations during the run are safe.
-            var pending = new List<DAPendingEmailData>(_queue);
+            List<DAPendingEmailData> pending = new List<DAPendingEmailData>(_queue);
 
-            foreach (var entry in pending)
+            foreach (DAPendingEmailData entry in pending)
             {
                 if (entry.status == DAConstants.EMAIL_STATUS_SENT)
                     continue;

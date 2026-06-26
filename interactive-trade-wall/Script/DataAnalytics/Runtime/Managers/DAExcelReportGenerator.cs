@@ -100,10 +100,10 @@ namespace DataAnalytics.Runtime.Managers
 
         private string BuildCsv(DAAnalyticsData data)
         {
-            var sb = new StringBuilder();
+            StringBuilder sb = new StringBuilder();
 
             // ── TITLE ─────────────────────────────────────────────────────────
-            sb.AppendLine("INTERACTIVE TRADE WALL  -  ANALYTICS REPORT");
+            sb.AppendLine("ANALYTICS REPORT");
             sb.AppendLine();
 
             // ── REPORT PERIOD ─────────────────────────────────────────────────
@@ -119,7 +119,7 @@ namespace DataAnalytics.Runtime.Managers
 
             if (data.products != null && data.products.Count > 0)
             {
-                foreach (var p in data.products)
+                foreach (DAProductAnalytics p in data.products)
                     sb.AppendLine($"{EscapeCsv(p.productName.Trim())},{p.clickCount}");
             }
             else
@@ -135,7 +135,7 @@ namespace DataAnalytics.Runtime.Managers
 
             if (data.languages != null && data.languages.Count > 0)
             {
-                foreach (var l in data.languages)
+                foreach (DALanguageAnalytics l in data.languages)
                     sb.AppendLine($"{EscapeCsv(l.languageName)},{l.selectionCount},{FormatHHMM(l.totalSeconds)}");
             }
             else
@@ -151,7 +151,7 @@ namespace DataAnalytics.Runtime.Managers
 
             if (data.screens != null && data.screens.Count > 0)
             {
-                foreach (var s in data.screens)
+                foreach (DAScreenAnalytics s in data.screens)
                     sb.AppendLine($"{EscapeCsv(s.screenName)},{s.visitCount},{FormatHHMM(s.totalSeconds)}");
             }
             else

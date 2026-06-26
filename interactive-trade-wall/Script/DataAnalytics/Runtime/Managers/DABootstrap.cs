@@ -47,7 +47,7 @@ namespace DataAnalytics.Runtime.Managers
 
             try
             {
-                var root = new GameObject(RootObjectName);
+                GameObject root = new GameObject(RootObjectName);
                 Object.DontDestroyOnLoad(root);
 
                 // Order matters: the manager owns data + applies settings first,

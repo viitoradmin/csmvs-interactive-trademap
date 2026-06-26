@@ -45,10 +45,10 @@ namespace DataAnalytics.Runtime.Managers
 
         private static DAAnalyticsManager GetOrCreate()
         {
-            var existing = FindObjectOfType<DAAnalyticsManager>();
+            DAAnalyticsManager existing = FindObjectOfType<DAAnalyticsManager>();
             if (existing != null) return existing;
 
-            var go = new GameObject("[DA] AnalyticsManager");
+            GameObject go = new GameObject("[DA] AnalyticsManager");
             return go.AddComponent<DAAnalyticsManager>();
         }
 
@@ -276,30 +276,30 @@ namespace DataAnalytics.Runtime.Managers
 
         private DAProductAnalytics GetOrCreateProduct(string name)
         {
-            foreach (var p in _data.products)
+            foreach (DAProductAnalytics p in _data.products)
                 if (p.productName == name) return p;
 
-            var entry = new DAProductAnalytics { productName = name };
+            DAProductAnalytics entry = new DAProductAnalytics { productName = name };
             _data.products.Add(entry);
             return entry;
         }
 
         private DALanguageAnalytics GetOrCreateLanguage(string name)
         {
-            foreach (var l in _data.languages)
+            foreach (DALanguageAnalytics l in _data.languages)
                 if (l.languageName == name) return l;
 
-            var entry = new DALanguageAnalytics { languageName = name };
+            DALanguageAnalytics entry = new DALanguageAnalytics { languageName = name };
             _data.languages.Add(entry);
             return entry;
         }
 
         private DAScreenAnalytics GetOrCreateScreen(string name)
         {
-            foreach (var s in _data.screens)
+            foreach (DAScreenAnalytics s in _data.screens)
                 if (s.screenName == name) return s;
 
-            var entry = new DAScreenAnalytics { screenName = name };
+            DAScreenAnalytics entry = new DAScreenAnalytics { screenName = name };
             _data.screens.Add(entry);
             return entry;
         }

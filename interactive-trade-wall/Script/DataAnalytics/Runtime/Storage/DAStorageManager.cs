@@ -209,7 +209,7 @@ namespace DataAnalytics.Runtime.Storage
 
             try
             {
-                var wrapper = new EmailQueueWrapper { queue = queue };
+                EmailQueueWrapper wrapper = new EmailQueueWrapper { queue = queue };
                 string json = JsonUtility.ToJson(wrapper, prettyPrint: true);
                 File.WriteAllText(EmailQueuePath, json);
             }
@@ -235,7 +235,7 @@ namespace DataAnalytics.Runtime.Storage
                     return new List<DAPendingEmailData>();
 
                 string json        = File.ReadAllText(EmailQueuePath);
-                var wrapper        = JsonUtility.FromJson<EmailQueueWrapper>(json);
+                EmailQueueWrapper wrapper = JsonUtility.FromJson<EmailQueueWrapper>(json);
                 return wrapper?.queue ?? new List<DAPendingEmailData>();
             }
             catch (Exception ex)

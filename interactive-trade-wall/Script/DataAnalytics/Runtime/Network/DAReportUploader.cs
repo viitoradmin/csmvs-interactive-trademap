@@ -101,7 +101,7 @@ namespace DataAnalytics.Runtime.Network
 
             string fileName = Path.GetFileName(entry.excelPath);
 
-            var form = new List<IMultipartFormSection>
+            List<IMultipartFormSection> form = new List<IMultipartFormSection>
             {
                 new MultipartFormFileSection(
                     DAConstants.UPLOAD_FIELD_FILE, fileBytes, fileName, DAConstants.UPLOAD_CSV_MIME),
