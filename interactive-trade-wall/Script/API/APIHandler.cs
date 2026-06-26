@@ -32,8 +32,8 @@ public class APIHandler:MonoBehaviour {
     private const string FILE_NAME_MARATHI = "TradeMapData_Marathi.json";
     [SerializeField]
     private LoginData loginData = new LoginData() {
-        email = "admin@csmvs.in",
-        password = "A9$fK2@qM!"
+        email = "admin@csmvs.in",//admin@csmvs.local
+        password = "A9$fK2@qM!"//Admin@123
     };
     public bool useOfflineFile = false;
     [SerializeField] private MediaManager mediaManager;
