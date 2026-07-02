@@ -42,6 +42,7 @@ public class BookController:MonoBehaviour {
     public RawImage pinned_rawimage;
 
     [Space]
+    [SerializeField] private Button backButton;
     public TMP_Text backButtonPath;
     public TMP_Text materialTitleText;
     
@@ -291,16 +292,26 @@ public class BookController:MonoBehaviour {
     }
     public Bookmark _lastClickedBookMark;
     public void OnClickBackButton() {
-        StartCoroutine(GotoPage(swipeController.returnPageNumber,() => {
-            OpenMatrialPanel();
+        // Disable immediately so it can't be tapped again mid-flip; re-enabled once
+        // the page has finished flipping (see BackButtonRoutine).
+        if (backButton != null) backButton.interactable = false;
 
-            bookmarkItemsPagination.ShowBookmarkItems(_lastClickedBookMark);
-        }));
+        StartCoroutine(BackButtonRoutine());
 
         // TODO : Code in connection manager for moving back.
         //ConnectionManager.Instance.RaiseEventForBackButtonClick();
         TVScreenManager.Instance.ShowMainScreen();
         _isScreensaverActive = true;
+    }
+
+    private IEnumerator BackButtonRoutine() {
+        yield return GotoPage(swipeController.returnPageNumber,() => {
+            OpenMatrialPanel();
+            bookmarkItemsPagination.ShowBookmarkItems(_lastClickedBookMark);
+        });
+
+        // Page flip complete — re-enable the back button.
+        if (backButton != null) backButton.interactable = true;
     }
     
     public void OpenMatrialPanel() {
