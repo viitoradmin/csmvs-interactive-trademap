@@ -32,8 +32,8 @@ public class APIHandler:MonoBehaviour {
     private const string FILE_NAME_MARATHI = "TradeMapData_Marathi.json";
     [SerializeField]
     private LoginData loginData = new LoginData() {
-        email = "admin@csmvs.in",
-        password = "A9$fK2@qM!"
+        email = "admin@csmvs.in",//admin@csmvs.local
+        password = "A9$fK2@qM!"//Admin@123
     };
     public bool useOfflineFile = false;
     [SerializeField] private MediaManager mediaManager;
@@ -58,11 +58,9 @@ public class APIHandler:MonoBehaviour {
         APICall.Instance.RequestLogin(formData,API.APILogin,
             (response) => {
                 PopupManager.Instance.HideLoading();
-                Debug.Log("Login Success");
 
                 if (response.data != null) {
                     string token = response.data.access_token;
-                    Debug.Log("Token: " + token);
 
                     // 1. STORE THE TOKEN globally in your ServerCommunication script
                     ViitorCloud.API.ServerCommunication.ViitorCloudToken = token;

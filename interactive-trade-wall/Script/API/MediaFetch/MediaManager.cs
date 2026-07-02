@@ -139,9 +139,9 @@ public class MediaManager : MonoBehaviour
     private void DownloadingProgress(float progress){
         //LoadingPage.instance.SetProgressBar(true);
 
-        string progressText =
-            $"Loading: {_mediaList.list.Count}/{assetURLList.Count} {(progress * 100f).ToString("00.00")}%";
-        Debug.Log(progressText);
+        //string progressText =
+        //    $"Loading: {_mediaList.list.Count}/{assetURLList.Count} {(progress * 100f).ToString("00.00")}%";
+        //Debug.Log(progressText);
         //LoadingPage.instance.SetProgressText(progressText);
 
         //LoadingPage.instance.SetProgressBarValue(progress * 100f);

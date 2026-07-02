@@ -316,6 +316,7 @@ GameObject:
   - component: {fileID: 1469176127824490537}
   - component: {fileID: 3970828698799589046}
   - component: {fileID: 2539406047136614340}
+  - component: {fileID: 8084633453208351405}
   m_Layer: 5
   m_Name: MaterialButton
   m_TagString: Untagged
@@ -442,6 +443,7 @@ MonoBehaviour:
   m_ItemData:
     title: 
     thumbnailPath: 
+    pinnedImagePath: 
     bookmarkMetadata:
       images: []
       title: 
@@ -691,6 +693,19 @@ MonoBehaviour:
   m_OnChangedRate:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &8084633453208351405
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5664484046533299731}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fcfcfaeecf3bd744800083b5123673c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _productName: Bitumin
 --- !u!1 &5703394790997629994
 GameObject:
   m_ObjectHideFlags: 0
@@ -1069,4 +1084,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6eee49ff1839be5438bbe1c6fcded721, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _localLegacyFontList: []
   _localTextList: []

@@ -1,3 +1,4 @@
+using DataAnalytics.Runtime.Components;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -51,6 +52,17 @@ public class ItemElement:MonoBehaviour {
         });
 
         // MarkThisItemAsSelected(_isSelected);
+        // Always record the English title so analytics is readable and consistent.
+        // UUID deduplicates across languages; cache lookup maps uuid → English title
+        // when the active language is Marathi.
+        TryGetComponent(out DAProductViewCount productViewCount);
+        if (productViewCount != null)
+        {
+            string analyticsName = LanguageManager.Instance.CurrentLanguage == Language.English
+                ? m_ItemData.title
+                : BookmarkEnglishTitleCache.GetEnglishTitle(m_ItemData.uuid);
+            productViewCount.ProductName = analyticsName;
+        }
     }
 
     //void RefreshLanguage() {
