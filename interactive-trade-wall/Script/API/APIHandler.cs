@@ -58,11 +58,9 @@ public class APIHandler:MonoBehaviour {
         APICall.Instance.RequestLogin(formData,API.APILogin,
             (response) => {
                 PopupManager.Instance.HideLoading();
-                Debug.Log("Login Success");
 
                 if (response.data != null) {
                     string token = response.data.access_token;
-                    Debug.Log("Token: " + token);
 
                     // 1. STORE THE TOKEN globally in your ServerCommunication script
                     ViitorCloud.API.ServerCommunication.ViitorCloudToken = token;
