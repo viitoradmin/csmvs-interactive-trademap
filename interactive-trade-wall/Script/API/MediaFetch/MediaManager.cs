@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
@@ -85,7 +85,6 @@ public class MediaManager : MonoBehaviour
         }
 
         //LoadingPage Loading 0%...
-        Debug.Log("Loading: 0%");
         if (PopupManager.Instance){
             PopupManager.Instance.ShowLoading();
         }
