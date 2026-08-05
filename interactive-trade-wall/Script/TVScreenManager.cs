@@ -13,7 +13,7 @@ public class TVScreenManager : MonoBehaviour
     //[SerializeField] GameObject ExportRoute;
     [SerializeField] private GameObject itemRouteDetailsParent;
     [SerializeField] private GameObject[] itemRoutes = new GameObject[8];
-    [SerializeField] CameraBreathingMotion cameraBreathingMotion;
+    [SerializeField] TVScreenBreathingFX tvScreenBreathingFX;
 
     [SerializeField] private List<RouteCityLists> SourceCityLists;
     [SerializeField] private List<RouteCityLists> DestinationCityLists;
@@ -110,7 +110,7 @@ public class TVScreenManager : MonoBehaviour
         detailedScreenParent.SetActive(true);
         ManageItemDetailsObjects(selectedItemIndex);
         mainScreenRoutesParent.SetActive(false);
-        cameraBreathingMotion.DisableBreathing();
+        tvScreenBreathingFX.DisableBreathing();
         //cityLabelEffect.PlayReveal();
         FocusMesopotamia();
     }
@@ -128,7 +128,7 @@ public class TVScreenManager : MonoBehaviour
                    {
                        // Debug.Log("Camera Animation Completed");
                        mainScreenRoutesParent.SetActive(true);
-                       cameraBreathingMotion.EnableBreathing();
+                       tvScreenBreathingFX.EnableBreathing();
                    });
     }
     // public void ToggleImportRouteDisplay(bool _value)

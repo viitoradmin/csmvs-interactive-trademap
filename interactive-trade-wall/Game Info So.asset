@@ -18,6 +18,7 @@ MonoBehaviour:
     usesLocalization: 0
     gameID: interactive-trade-wall
     repoPath: https://github.com/vinayak-vc/interactive-trade-wall.git
+    applicationType: 0
     scenes:
     - active: 1
       scene: {fileID: 102900000, guid: 53d078975d04b4270a7b2fb2fe92b86e, type: 3}
@@ -69,8 +70,8 @@ MonoBehaviour:
       title: Interactive Trade Wall
       companyName: ViitorCloud
       bundleId: 
-      version: 1.1.7
-      versionCode: 16
+      version: 1.1.8
+      versionCode: 18
       icon: {fileID: 0}
       splashScreenLogo: {fileID: 0}
       splashScreenLogoBg: {fileID: 0}

@@ -1,6 +1,6 @@
-public class API {
-    public static string APIDevelopmentBaseURL = "http://192.168.1.242:8000/";
-    public static string APIProductionBaseURL = "https://api-csmvs.focalat.com/";
+﻿public class API {
+    public static string APIDevelopmentBaseURL = "https://api-csmvs.focalat.com/";
+    public static string APIProductionBaseURL = "https://awg-api.csmvs.org.in/";
 
     public static string APILogin = APIBaseURL + "v1/login";
     public static string APIGetTradeRouteSO_En = APIBaseURL + "v1/unity/get-bookmarks?lang=english";

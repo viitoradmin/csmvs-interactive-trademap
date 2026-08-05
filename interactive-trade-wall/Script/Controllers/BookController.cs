@@ -42,6 +42,8 @@ public class BookController:MonoBehaviour {
     public RawImage pinned_rawimage;
 
     [Space]
+    [SerializeField] private Button backButton;
+    [SerializeField] private GameObject instructionTitle;
     public TMP_Text backButtonPath;
     public TMP_Text materialTitleText;
     
@@ -221,7 +223,14 @@ public class BookController:MonoBehaviour {
         //yield return ShowCanvas(false);
         SetRaycaster(false);
         yield return uIEffectsController.PlayUIEffectsCoroutine(false);
-        
+
+        // Toggle the instruction title between the shared fade-out and fade-in so
+        // it is picked up by (or excluded from) that same fade — keeping its timing
+        // identical to every other element. Driving it from the destination page
+        // here covers every navigation path: item click, back, bookmark click,
+        // language change re-setup, pagination and the idle timeout.
+        ApplyInstructionTitleVisibility(_page_num);
+
         swipeController.GoToPage(_page_num);
         unityAction?.Invoke();
         
@@ -235,6 +244,20 @@ public class BookController:MonoBehaviour {
     }
     private void SetRaycaster(bool _enable) {
         graphicRaycaster.enabled = _enable;
+    }
+
+    /// <summary>
+    /// The instruction title belongs to the home / material pages only — it is
+    /// hidden on the material-details page. Call this while the UI is faded out
+    /// so the change is invisible and the following fade-in has the correct set
+    /// of elements.
+    /// </summary>
+    private void ApplyInstructionTitleVisibility(int _page_num) {
+        if (instructionTitle == null) return;
+
+        bool showTitle = _page_num != detailsStartPageIndex;
+        if (instructionTitle.activeSelf != showTitle)
+            instructionTitle.SetActive(showTitle);
     }
 
     public void SetupBookmarks() {
@@ -291,16 +314,26 @@ public class BookController:MonoBehaviour {
     }
     public Bookmark _lastClickedBookMark;
     public void OnClickBackButton() {
-        StartCoroutine(GotoPage(swipeController.returnPageNumber,() => {
-            OpenMatrialPanel();
+        // Disable immediately so it can't be tapped again mid-flip; re-enabled once
+        // the page has finished flipping (see BackButtonRoutine).
+        if (backButton != null) backButton.interactable = false;
 
-            bookmarkItemsPagination.ShowBookmarkItems(_lastClickedBookMark);
-        }));
+        StartCoroutine(BackButtonRoutine());
 
         // TODO : Code in connection manager for moving back.
         //ConnectionManager.Instance.RaiseEventForBackButtonClick();
         TVScreenManager.Instance.ShowMainScreen();
         _isScreensaverActive = true;
+    }
+
+    private IEnumerator BackButtonRoutine() {
+        yield return GotoPage(swipeController.returnPageNumber,() => {
+            OpenMatrialPanel();
+            bookmarkItemsPagination.ShowBookmarkItems(_lastClickedBookMark);
+        });
+
+        // Page flip complete — re-enable the back button.
+        if (backButton != null) backButton.interactable = true;
     }
     
     public void OpenMatrialPanel() {
